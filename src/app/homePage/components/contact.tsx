@@ -119,7 +119,7 @@ export default function ContactSection() {
             <span className="text-sm text-amber-800 font-medium">CONTACT US</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Let's Start a Conversation
+            {`Let's Start a Conversation`}
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Ready to elevate your footwear? Reach out today and discover how our expertise can bring your vision to life.
@@ -139,7 +139,7 @@ export default function ContactSection() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   Send us a Message
                 </h3>
-                <p className="text-slate-600 mb-8">Fill out the form and we'll get back to you shortly</p>
+                <p className="text-slate-600 mb-8">{`Fill out the form and we'll get back to you shortly`}</p>
                 
                 <div className="space-y-6">
                   {/* Name Input */}
