@@ -119,7 +119,7 @@ export default function ContactSection() {
             <span className="text-sm text-amber-800 font-medium">CONTACT US</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Let&apos;s Start a Conversation
+            {"Let`&apos;`s Start a Conversation"}
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Ready to elevate your footwear? Reach out today and discover how our expertise can bring your vision to life.
