@@ -188,7 +188,7 @@ function AboutSection() {
               <div className="relative pl-8 border-l-4 border-red-300 hover:border-red-500 transition-colors duration-300 group">
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-red-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300 animate-pulse"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-red-600 uppercase tracking-wider">{`Today's Excellence`}</div>
+                  <div className="text-sm font-bold text-red-600 uppercase tracking-wider">Today&apos;s Excellence</div>
                   <p className="text-slate-700 leading-relaxed">
                     A market leader <strong className="text-slate-900 bg-red-50 px-1 rounded">combining industrial production with artisanal quality</strong>, powered by innovation and skilled expertise.
                   </p>
