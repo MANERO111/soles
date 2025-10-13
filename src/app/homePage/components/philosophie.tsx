@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { Sparkles, Heart, Wrench, Users } from 'lucide-react';
+import Image from "next/image";
 
 function PhilosophySection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -104,10 +105,12 @@ function PhilosophySection() {
                   {/* Placeholder for actual image */}
                   <div className="w-full h-full flex items-center justify-center text-slate-400">
                     <div className="relative w-full h-full bg-gradient-to-br from-slate-100 to-amber-100 overflow-hidden">
-                      <img 
+                      <Image 
                         src="/img/broker.jpg" 
                         alt="Craftsmanship"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        width={500}
+                        height={500}
                       />
                       {/* Overlay gradient */}
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
