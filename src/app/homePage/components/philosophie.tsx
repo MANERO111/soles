@@ -105,8 +105,8 @@ function PhilosophySection() {
                   <div className="w-full h-full flex items-center justify-center text-slate-400">
                     <div className="relative w-full h-full bg-gradient-to-br from-slate-100 to-amber-100 overflow-hidden">
                       <img 
-                        src="/img/broker2.jpg" 
-                        alt="Craftsmanship" 
+                        src="/img/broker.jpg" 
+                        alt="Craftsmanship"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       {/* Overlay gradient */}
