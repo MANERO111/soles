@@ -407,7 +407,7 @@ function AboutUsPage() {
             Ready to Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Together?</span>
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Let's create something extraordinary. Reach out today and discover how our expertise can elevate your footwear brand.
+            Let&apos;s create something extraordinary. Reach out today and discover how our expertise can elevate your footwear brand.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a               

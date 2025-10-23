@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 // ============================================
 // NAVBAR COMPONENT (Reusable across pages)
@@ -52,12 +53,6 @@ function Navbar() {
     handleSectionNavigation(sectionId);
   };
 
-  // Handle regular page navigation
-  const handlePageNavigation = (path: string) => {
-    setMobileMenuOpen(false);
-    router.push(path);
-  };
-
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
@@ -67,62 +62,43 @@ function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl lg:text-3xl font-bold text-slate-900">
-              <a 
-                href="/" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  handlePageNavigation('/');
-                }}
-                className="cursor-pointer"
-              >
+              <Link href="/" className="cursor-pointer">
                 Sole<span className="text-amber-600">Tech</span>
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a 
+            <Link 
               href="/" 
-              onClick={(e) => {
-                e.preventDefault();
-                handlePageNavigation('/');
-              }}
               className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
             >
               Home
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/aboutUs" 
-              onClick={(e) => {
-                e.preventDefault();
-                handlePageNavigation('/aboutUs');
-              }}
               className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
             >
               About Us
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/products" 
-              onClick={(e) => {
-                e.preventDefault();
-                handlePageNavigation('/products');
-              }}
               className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
             >
               Products
-            </a>
+            </Link>
             <a 
               href="#news" 
               onClick={(e) => handleNavClick(e, 'news')}
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
+              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium cursor-pointer"
             >
               News
             </a>
             <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
+              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium cursor-pointer"
             >
               Contact
             </a>
@@ -153,49 +129,52 @@ function Navbar() {
         mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
       }`}>
         <div className="px-4 pt-2 pb-6 space-y-3 bg-white border-t border-slate-200">
-          <a 
+          <Link 
             href="/" 
-            onClick={(e) => {
-              e.preventDefault();
-              handlePageNavigation('/');
-            }}
+            onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
           >
             Home
-          </a>
-          <a 
-            href="#about" 
-            onClick={(e) => handleNavClick(e, 'about')}
+          </Link>
+          <Link 
+            href="/aboutUs" 
+            onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
           >
             About Us
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="/products" 
-            onClick={(e) => {
-              e.preventDefault();
-              handlePageNavigation('/products');
-            }}
+            onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
           >
             Products
-          </a>
+          </Link>
           <a 
             href="#news" 
-            onClick={(e) => handleNavClick(e, 'news')}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
+            onClick={(e) => {
+              handleNavClick(e, 'news');
+              setMobileMenuOpen(false);
+            }}
+            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors cursor-pointer"
           >
             News
           </a>
           <a 
             href="#contact" 
-            onClick={(e) => handleNavClick(e, 'contact')}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
+            onClick={(e) => {
+              handleNavClick(e, 'contact');
+              setMobileMenuOpen(false);
+            }}
+            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors cursor-pointer"
           >
             Contact
           </a>
           <button 
-            onClick={(e) => handleNavClick(e, 'contact')}
+            onClick={(e) => {
+              handleNavClick(e, 'contact');
+              setMobileMenuOpen(false);
+            }}
             className="w-full mt-4 px-6 py-2.5 bg-slate-900 text-white rounded-md font-medium text-sm cursor-pointer"
           >
             Get Quote
