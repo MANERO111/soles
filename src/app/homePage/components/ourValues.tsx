@@ -82,7 +82,7 @@ function ValuesSection() {
       <div className="absolute bottom-40 right-20 w-16 h-16 border-4 border-red-200 rounded-full animate-float-delayed opacity-30"></div>
       <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-slate-200 rounded-full animate-pulse opacity-20"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id='values' className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="relative inline-block">

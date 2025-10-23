@@ -166,7 +166,7 @@ function ProductsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full mb-4 animate-fade-in">
+          <div id='ourProducts' className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full mb-4 animate-fade-in">
             <span className="text-sm text-amber-800 font-medium uppercase tracking-wide">Our Products</span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">

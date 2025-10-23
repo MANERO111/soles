@@ -43,7 +43,7 @@ function AboutSection() {
       const progress = currentStep / steps;
       
       setCountUpValues({
-        years: Math.floor(10 * progress),
+        years: Math.floor(7 * progress),
         clients: Math.floor(1000 * progress),
         materials: Math.floor(4 * progress),
         exports: Math.floor(10 * progress)
@@ -51,7 +51,7 @@ function AboutSection() {
 
       if (currentStep >= steps) {
         clearInterval(interval);
-        setCountUpValues({ years: 10, clients: 1000, materials: 4, exports: 70 });
+        setCountUpValues({ years: 7, clients: 1000, materials: 4, exports: 70 });
       }
     }, stepDuration);
   };
@@ -137,7 +137,7 @@ function AboutSection() {
               {/* Floating Badge */}
               <div className="absolute -top-4 -right-4 bg-gradient-to-br from-amber-500 to-red-500 text-white px-6 py-3 rounded-full shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 z-20">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">10+</div>
+                  <div className="text-2xl font-bold">7+</div>
                   <div className="text-xs uppercase tracking-wide">Years</div>
                 </div>
               </div>
@@ -155,9 +155,9 @@ function AboutSection() {
               <div className="relative pl-8 border-l-4 border-amber-300 hover:border-amber-500 transition-colors duration-300 group">
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">2019 Foundation</div>
+                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">2018 Foundation</div>
                   <p className="text-slate-700 leading-relaxed">
-                    PBS Soles Srl was founded 70 years ago, originally producing <strong className="text-slate-900 bg-amber-50 px-1 rounded">wooden</strong> soles with traditional craftsmanship methods.
+                    PBS Soles Srl was founded 7 years ago, originally producing <strong className="text-slate-900 bg-amber-50 px-1 rounded">wooden</strong> soles with traditional craftsmanship methods.
                   </p>
                 </div>
               </div>

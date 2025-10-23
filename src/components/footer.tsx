@@ -14,17 +14,71 @@ import {
 } from 'lucide-react';
 
 export default function Footer() {
+  // Check if we're on the home page
+  const isHomePage = () => {
+    return window.location.pathname === '/' || window.location.pathname === '';
+  };
+
+  // Handle section navigation with timeout
+  const handleSectionNavigation = (sectionId: string) => {
+    if (isHomePage()) {
+      // If we're already on home page, scroll to section
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    } else {
+      // If we're on another page, navigate to home first, then scroll to section
+      window.location.href = '/';
+      
+      // Wait for page navigation to complete, then scroll to section
+      setTimeout(() => {
+        // This will run after the page navigation
+        if (window.location.pathname === '/') {
+          scrollToSection(sectionId);
+        }
+      }, 500); // Adjust this timeout based on your page load speed
+    }
+  };
+
+  // Scroll to specific section
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const elementRect = element.getBoundingClientRect();
+      const absoluteElementTop = elementRect.top + window.pageYOffset;
+      const offset = 100; // Adjust this based on your navbar height
+      
+      window.scrollTo({
+        top: absoluteElementTop - offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Handle footer link click
+  const handleFooterLinkClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    
+    // Check if it's a section link (starts with #)
+    if (href.startsWith('#')) {
+      const sectionId = href.substring(1); // Remove the # symbol
+      handleSectionNavigation(sectionId);
+    } else {
+      // Regular page navigation
+      window.location.href = href;
+    }
+  };
 
   const footerLinks = {
     company: [
-      { name: 'Home', href: '#home' },
+      { name: 'Home', href: '/' },
       { name: 'About Us', href: '#about' },
       { name: 'Our Values', href: '#values' },
       { name: 'Our Philosophy', href: '#philosophy' },
       { name: 'Contact', href: '#contact' }
     ],
     products: [
-      { name: 'Our Products', href: '#products' },
+      { name: 'Our Products', href: '#ourProducts' },
       { name: 'EVA Soles', href: '#eva' },
       { name: 'Microporous', href: '#microporous' },
       { name: 'Rubber Soles', href: '#rubber' },
@@ -32,14 +86,7 @@ export default function Footer() {
     ],
     support: [
       { name: 'Contact Us', href: '#contact' },
-      { name: 'FAQ', href: '#faq' },
     ],
-    legal: [
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
-      { name: 'Cookie Policy', href: '#cookies' },
-      { name: 'GDPR', href: '#gdpr' }
-    ]
   };
 
   const socialLinks = [
@@ -48,8 +95,6 @@ export default function Footer() {
     { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:bg-blue-700' },
     { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:bg-sky-500' }
   ];
-
-
 
   return (
     <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
@@ -75,19 +120,25 @@ export default function Footer() {
                   Sole<span className="text-amber-500">Tech</span>
                 </h3>
                 <p className="text-slate-400 leading-relaxed">
-                  Crafting premium shoe soles with 70 years of expertise. Where tradition meets innovation in every step.
+                  Crafting premium shoe soles with 10 years of expertise. Where tradition meets innovation in every step.
                 </p>
               </div>
 
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
-                <a href="tel:+391234567890" className="flex items-center gap-3 text-slate-400 hover:text-amber-500 transition-colors group">
+                <a 
+                  href="tel:+391234567890" 
+                  className="flex items-center gap-3 text-slate-400 hover:text-amber-500 transition-colors group"
+                >
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
                     <Phone className="w-5 h-5" />
                   </div>
                   <span className="text-sm">+39 123 456 7890</span>
                 </a>
-                <a href="mailto:info@soletech.com" className="flex items-center gap-3 text-slate-400 hover:text-amber-500 transition-colors group">
+                <a 
+                  href="mailto:info@soletech.com" 
+                  className="flex items-center gap-3 text-slate-400 hover:text-amber-500 transition-colors group"
+                >
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
@@ -130,7 +181,8 @@ export default function Footer() {
                     <li key={index}>
                       <a 
                         href={link.href}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300"
+                        onClick={(e) => handleFooterLinkClick(e, link.href)}
+                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
                       </a>
@@ -147,7 +199,8 @@ export default function Footer() {
                     <li key={index}>
                       <a 
                         href={link.href}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300"
+                        onClick={(e) => handleFooterLinkClick(e, link.href)}
+                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
                       </a>
@@ -164,24 +217,8 @@ export default function Footer() {
                     <li key={index}>
                       <a 
                         href={link.href}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300"
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Legal Links */}
-              <div className="animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                <h4 className="text-lg font-bold mb-4 text-white">Legal</h4>
-                <ul className="space-y-3">
-                  {footerLinks.legal.map((link, index) => (
-                    <li key={index}>
-                      <a 
-                        href={link.href}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300"
+                        onClick={(e) => handleFooterLinkClick(e, link.href)}
+                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
                       </a>
@@ -190,9 +227,6 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-
-            {/* Newsletter Column */}
-
           </div>
         </div>
 
@@ -203,7 +237,7 @@ export default function Footer() {
               <p className="text-sm text-slate-400 text-center md:text-left">
                 © 2025 SoleTech. All rights reserved. Made with{' '}
                 <Heart className="inline w-4 h-4 text-red-500 fill-current animate-pulse" />{' '}
-                in Italy
+                in Morocco
               </p>
               
               <div className="flex items-center gap-6">

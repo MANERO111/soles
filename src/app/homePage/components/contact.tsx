@@ -22,26 +22,41 @@ export default function ContactSection() {
     });
   };
 
-  const handleSubmit = (e : React.FormEvent) => {
+  const handleSubmit = async (e : React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSuccess(false);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
+          });
+        }, 3000);
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      }, 3000);
-    }, 1500);
+    }
   };
 
   const contactInfo = [
@@ -103,7 +118,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-slate-50 overflow-hidden">
+    <section id='contact' className="relative py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-slate-50 overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
