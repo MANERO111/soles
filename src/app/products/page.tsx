@@ -51,8 +51,8 @@ const ProductsShowcase: React.FC = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const productsResponse = await axios.get('/api/products');
-        const categoriesResponse = await axios.get('/api/categories');
+        const productsResponse = await axios.get('http://localhost:8000/api/products');
+        const categoriesResponse = await axios.get('http://localhost:8000/api/categories');
         
         const productsData = productsResponse.data.data || productsResponse.data;
         const categoriesData = categoriesResponse.data.data || categoriesResponse.data;
