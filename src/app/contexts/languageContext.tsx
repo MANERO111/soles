@@ -32,25 +32,33 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = newLocale;
   };
 
-  const t = (key: string): string => {
-    try {
-      const keys = key.split('.');
-      let value: any = translations[locale as keyof typeof translations] || translations.en;
-      
-      for (const k of keys) {
-        if (value && typeof value === 'object' && k in value) {
-          value = value[k];
-        } else {
-          return key;
-        }
+// Define a type for a single translation value or a nested translation object
+type TranslationValue = string | TranslationObject;
+interface TranslationObject extends Record<string, TranslationValue> {}
+
+const t = (key: string): string => {
+  try {
+    const keys = key.split('.');
+    // 💡 FIX HERE: Change 'any' to a type that allows property access
+    let value: TranslationObject | TranslationValue = 
+      translations[locale as keyof typeof translations] || translations.en;
+    
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        // Here, TypeScript knows 'value' is a TranslationObject
+        value = (value as TranslationObject)[k]; 
+      } else {
+        return key;
       }
-      
-      return value || key;
-    } catch (error) {
-      console.warn(`Translation key not found: ${key}`);
-      return key;
     }
-  };
+    
+    // Final result must be a string (the translation)
+    return (typeof value === 'string' ? value : key) || key;
+  } catch (error) {
+    console.warn(`Translation key not found: ${key}`);
+    return key;
+  }
+};
 
   return (
     <LanguageContext.Provider value={{ locale, switchLanguage, t }}>
