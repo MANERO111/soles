@@ -4,7 +4,17 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import en from '../locales/en/common.json';
 import fr from '../locales/fr/common.json';
 
-const translations = { en, fr };
+// Define the translation structure based on your JSON files
+type TranslationKey = string;
+type TranslationValue = string | { [key: string]: TranslationValue };
+type TranslationResource = Record<string, TranslationValue>;
+
+interface Translations {
+  en: TranslationResource;
+  fr: TranslationResource;
+}
+
+const translations: Translations = { en, fr };
 
 interface LanguageContextType {
   locale: string;
@@ -32,33 +42,26 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = newLocale;
   };
 
-// Define a type for a single translation value or a nested translation object
-type TranslationValue = string | TranslationObject;
-interface TranslationObject extends Record<string, TranslationValue> {}
-
-const t = (key: string): string => {
-  try {
-    const keys = key.split('.');
-    // 💡 FIX HERE: Change 'any' to a type that allows property access
-    let value: TranslationObject | TranslationValue = 
-      translations[locale as keyof typeof translations] || translations.en;
-    
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
-        // Here, TypeScript knows 'value' is a TranslationObject
-        value = (value as TranslationObject)[k]; 
-      } else {
-        return key;
+  const t = (key: string): string => {
+    try {
+      const keys = key.split('.');
+      let value: TranslationValue = translations[locale as keyof Translations] || translations.en;
+      
+      for (const k of keys) {
+        if (value && typeof value === 'object' && k in value) {
+          value = value[k];
+        } else {
+          return key; // Key not found, return the key itself
+        }
       }
+      
+      // Ensure we return a string
+      return typeof value === 'string' ? value : key;
+    } catch (error) {
+      console.warn(`Translation key not found: ${key}`);
+      return key;
     }
-    
-    // Final result must be a string (the translation)
-    return (typeof value === 'string' ? value : key) || key;
-  } catch (error) {
-    console.warn(`Translation key not found: ${key}`);
-    return key;
-  }
-};
+  };
 
   return (
     <LanguageContext.Provider value={{ locale, switchLanguage, t }}>
