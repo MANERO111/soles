@@ -2,6 +2,7 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/app/contexts/languageContext';
 
 function ProductsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,30 +12,31 @@ function ProductsSection() {
   const [dragOffset, setDragOffset] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+  const { t } = useLanguage();
 
   const products = [
     {
-      title: "Fashion Sole",
-      description: "Exclusive design and custom finishes.",
-      image: "/img/soles1.png",
+      title: t('product.items.lightSole.title'),
+      description: t('product.items.lightSole.description'),
+      image: "/img/17.png",
       color: "from-orange-50 to-amber-50"
     },
     {
-      title: "Orthopedic Soles",
-      description: "Anatomical support and postural comfort.",
-      image: "/img/soles2.png",
+      title: t('product.items.orthopedicSoles.title'),
+      description: t('product.items.orthopedicSoles.description'),
+      image: "/img/3.png",
       color: "from-slate-50 to-stone-50"
     },
     {
-      title: "Soles for sock shoes",
-      description: "Lightweight, elastic, and mold-free production.",
-      image: "/img/soles1.png",
+      title: t('product.items.flatHeelSoles.title'),
+      description: t('product.items.flatHeelSoles.description'),
+      image: "/img/7.png",
       color: "from-rose-50 to-pink-50"
     },
     {
-      title: "Sport Sole",
-      description: "High performance for any terrain.",
-      image: "/img/soles2.png",
+      title: t('product.items.fashionSole.title'),
+      description: t('product.items.fashionSole.description'),
+      image: "/img/15.png",
       color: "from-slate-50 to-gray-50"
     }
   ];
@@ -42,26 +44,26 @@ function ProductsSection() {
   const materials = [
     {
       icon: "👞",
-      name: "EVA (Ethylene Vinyl Acetate)",
-      description: "Lightweight, versatile, and highly resistant.",
+      name: t('product.materials.eva.name'),
+      description: t('product.materials.eva.description'),
       color: "bg-red-50 border-red-200"
     },
     {
       icon: "👟",
-      name: "Microporous",
-      description: "Great comfort and adaptability.",
+      name: t('product.materials.microporous.name'),
+      description: t('product.materials.microporous.description'),
       color: "bg-orange-50 border-orange-200"
     },
     {
       icon: "🥾",
-      name: "Rubber",
-      description: "Durable and resistant.",
+      name: t('product.materials.rubber.name'),
+      description: t('product.materials.rubber.description'),
       color: "bg-red-50 border-red-200"
     },
     {
       icon: "🌱",
-      name: "Agglomerated cork",
-      description: "A natural material for eco-friendly solutions.",
+      name: t('product.materials.cork.name'),
+      description: t('product.materials.cork.description'),
       color: "bg-orange-50 border-orange-200"
     }
   ];
@@ -167,13 +169,15 @@ function ProductsSection() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <div id='ourProducts' className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full mb-4 animate-fade-in">
-            <span className="text-sm text-amber-800 font-medium uppercase tracking-wide">Our Products</span>
+            <span className="text-sm text-amber-800 font-medium uppercase tracking-wide">
+              {t('product.badge')}
+            </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-            Technology and <span className="text-amber-600">Craftsmanship</span>
+            {t('product.title.line1')} <span className="text-amber-600">{t('product.title.line2')}</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Tailor-made soles for every need, designed to combine functionality, comfort, and style, adaptable to all types of footwear, from technical to fashion.
+            {t('product.description')}
           </p>
         </div>
 
@@ -182,11 +186,10 @@ function ProductsSection() {
           {/* Left Side - Materials List */}
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-slate-900 mb-8">
-              Soles for every style,<br />
-              function, and material
+              {t('product.materials.title')}
             </h3>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              PBS Soles Srl offers a wide range of soles for footwear, ensuring the perfect balance between innovation and tradition. Thanks to flexible production, we also manufacture custom soles in small quantities.
+              {t('product.materials.description')}
             </p>
 
             <div className="space-y-4">
@@ -268,7 +271,7 @@ function ProductsSection() {
                           <h3 className="text-2xl font-bold text-slate-900">{product.title}</h3>
                           <p className="text-slate-600">{product.description}</p>
                           <button className="group inline-flex items-center gap-2 text-amber-600 font-medium hover:gap-3 transition-all">
-                            Go to product
+                            {t('product.cta.product')}
                             <ArrowRight className="w-4 h-4" />
                           </button>
                         </div>
@@ -281,7 +284,7 @@ function ProductsSection() {
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 pointer-events-none">
                   <div className="flex items-center gap-2 text-slate-400 text-sm animate-pulse">
                     <ChevronLeft className="w-4 h-4" />
-                    <span>Swipe</span>
+                    <span>{t('product.swipe')}</span>
                     <ChevronRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -329,7 +332,7 @@ function ProductsSection() {
         {/* Bottom CTA */}
         <div className="text-center">
           <button className="group px-8 py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-amber-600 transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105 active:scale-95">
-            View All Products
+            {t('product.cta.allProducts')}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

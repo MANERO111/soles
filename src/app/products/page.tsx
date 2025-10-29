@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import axios from '@/lib/axios';
 import { getProductImageUrl } from '@/utils/imageHelper';
+import { useLanguage } from '@/app/contexts/languageContext';
 
 interface Product {
   id: number;
@@ -40,6 +41,7 @@ const ProductsShowcase: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   // Handle client-side mounting
   useEffect(() => {
@@ -62,20 +64,20 @@ const ProductsShowcase: React.FC = () => {
         
         setProducts(safeProductsData);
         setFilteredProducts(safeProductsData);
-        setCategories([{ id: 'all', name: 'All Products' }, ...safeCategoriesData]);
+        setCategories([{ id: 'all', name: t('products.categories.all') }, ...safeCategoriesData]);
         
       } catch (error) {
         console.error('Error fetching data:', error);
         setProducts([]);
         setFilteredProducts([]);
-        setCategories([{ id: 'all', name: 'All Products' }]);
+        setCategories([{ id: 'all', name: t('products.categories.all') }]);
       } finally {
         setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, [t]);
 
   // Intersection Observer
   useEffect(() => {
@@ -136,7 +138,7 @@ const ProductsShowcase: React.FC = () => {
         <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-slate-50 to-amber-50">
           <img 
             src={getProductImageUrl(product.image_url)} 
-            alt={product.name || 'Product'}
+            alt={product.name || t('products.defaults.name')}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           
@@ -144,18 +146,18 @@ const ProductsShowcase: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
             <button className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 px-6 py-3 bg-white text-slate-900 rounded-full font-semibold flex items-center gap-2 hover:scale-110 active:scale-95">
               <Eye size={18} />
-              View Details
+              {t('products.actions.viewDetails')}
             </button>
           </div>
 
           {/* Stock Badge */}
           {product.stock_quantity > 0 ? (
             <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-300">
-              In Stock
+              {t('products.stock.inStock')}
             </div>
           ) : (
             <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-300">
-              Out of Stock
+              {t('products.stock.outOfStock')}
             </div>
           )}
         </div>
@@ -163,11 +165,11 @@ const ProductsShowcase: React.FC = () => {
         {/* Content */}
         <div className="p-6">
           <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors duration-300 line-clamp-1">
-            {product.name || 'Product Name'}
+            {product.name || t('products.defaults.name')}
           </h3>
           
           <p className="text-slate-600 text-sm mb-4 line-clamp-2">
-            {product.description || 'Product description'}
+            {product.description || t('products.defaults.description')}
           </p>
 
           {/* Stock Info */}
@@ -177,7 +179,11 @@ const ProductsShowcase: React.FC = () => {
                 ? 'bg-green-50 text-green-700 border border-green-200' 
                 : 'bg-red-50 text-red-700 border border-red-200'
             }`}>
-              {product.stock_quantity > 0 ? `${product.stock_quantity} units available` : 'Currently unavailable'}
+              {product.stock_quantity > 0 
+                ? t('products.stock.available')
+                : t('products.stock.unavailable')
+              }
+              {product.stock_quantity > 0 && ` (${product.stock_quantity})`}
             </span>
           </div>
 
@@ -185,9 +191,9 @@ const ProductsShowcase: React.FC = () => {
           <div className="flex items-center justify-between pt-4 border-t border-slate-100">
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-slate-900">
-                {product.price ? `$${Number(product.price).toFixed(2)}` : 'Price not available'}
+                {product.price ? `${t('products.currency')}${Number(product.price).toFixed(2)}` : t('products.defaults.price')}
               </span>
-              <span className="text-sm text-slate-500">per unit</span>
+              <span className="text-sm text-slate-500">{t('products.perUnit')}</span>
             </div>
             
             <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center group-hover:bg-amber-500 transition-colors duration-300">
@@ -210,7 +216,7 @@ const ProductsShowcase: React.FC = () => {
           <div className="relative flex-shrink-0 w-48 h-48 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-amber-50">
             <img 
               src={getProductImageUrl(product.image_url)} 
-              alt={product.name || 'Product'}
+              alt={product.name || t('products.defaults.name')}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
             <div className={`absolute top-3 right-3 ${
@@ -218,7 +224,7 @@ const ProductsShowcase: React.FC = () => {
                 ? 'bg-gradient-to-r from-green-500 to-green-600' 
                 : 'bg-gradient-to-r from-red-500 to-red-600'
             } text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg`}>
-              {product.stock_quantity > 0 ? 'In Stock' : 'Out of Stock'}
+              {product.stock_quantity > 0 ? t('products.stock.inStock') : t('products.stock.outOfStock')}
             </div>
           </div>
 
@@ -226,11 +232,11 @@ const ProductsShowcase: React.FC = () => {
           <div className="flex-1 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3 hover:text-amber-600 transition-colors duration-300">
-                {product.name || 'Product Name'}
+                {product.name || t('products.defaults.name')}
               </h3>
               
               <p className="text-slate-600 mb-4 leading-relaxed">
-                {product.description || 'Product description'}
+                {product.description || t('products.defaults.description')}
               </p>
 
               {/* Stock Badge */}
@@ -240,7 +246,11 @@ const ProductsShowcase: React.FC = () => {
                     ? 'bg-green-50 text-green-700 border border-green-200' 
                     : 'bg-red-50 text-red-700 border border-red-200'
                 }`}>
-                  {product.stock_quantity > 0 ? `${product.stock_quantity} units available` : 'Currently unavailable'}
+                  {product.stock_quantity > 0 
+                    ? t('products.stock.available')
+                    : t('products.stock.unavailable')
+                  }
+                  {product.stock_quantity > 0 && ` (${product.stock_quantity})`}
                 </span>
               </div>
             </div>
@@ -249,14 +259,14 @@ const ProductsShowcase: React.FC = () => {
             <div className="flex items-center justify-between pt-4 border-t border-slate-100">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-slate-900">
-                  {product.price ? `$${Number(product.price).toFixed(2)}` : 'Price not available'}
+                  {product.price ? `${t('products.currency')}${Number(product.price).toFixed(2)}` : t('products.defaults.price')}
                 </span>
-                <span className="text-sm text-slate-500">per unit</span>
+                <span className="text-sm text-slate-500">{t('products.perUnit')}</span>
               </div>
               
               <button className="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-semibold flex items-center gap-2 hover:scale-105 active:scale-95 transition-transform duration-300 shadow-lg">
                 <Eye size={18} />
-                View Details
+                {t('products.actions.viewDetails')}
               </button>
             </div>
           </div>
@@ -282,15 +292,19 @@ const ProductsShowcase: React.FC = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-amber-50 border-2 border-amber-200 rounded-full mb-6 shadow-lg">
             <Tag className="w-5 h-5 text-amber-600" />
-            <span className="text-sm text-amber-800 font-semibold uppercase tracking-wider">Our Products</span>
+            <span className="text-sm text-amber-800 font-semibold uppercase tracking-wider">
+              {t('products.badge')}
+            </span>
           </div>
 
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
-            Premium Sole <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Collection</span>
+            {t('products.title.line1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
+              {t('products.title.line2')}
+            </span>
           </h2>
           
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Explore our extensive range of high-quality shoe soles, designed for performance and durability
+            {t('products.subtitle')}
           </p>
         </div>
 
@@ -302,7 +316,7 @@ const ProductsShowcase: React.FC = () => {
               <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder={t('products.search.placeholder')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-14 pr-6 py-4 border-2 border-slate-200 rounded-2xl focus:outline-none focus:border-amber-500 focus:ring-4 focus:ring-amber-500/20 transition-all duration-300 text-slate-900 placeholder-slate-400"
@@ -358,7 +372,8 @@ const ProductsShowcase: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
               <p className="text-slate-700 font-medium">
-                {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} available
+                {t('products.results.count')}
+                {filteredProducts.length}
               </p>
             </div>
           </div>
@@ -404,10 +419,10 @@ const ProductsShowcase: React.FC = () => {
               <Search className="text-slate-600" size={32} />
             </div>
             <h3 className="text-3xl font-bold text-slate-900 mb-3">
-              No Products Found
+              {t('products.noResults.title')}
             </h3>
             <p className="text-slate-600 mb-8 max-w-md mx-auto">
-              No products match your search criteria. Try adjusting your filters.
+              {t('products.noResults.description')}
             </p>
             <button
               onClick={() => {
@@ -416,7 +431,7 @@ const ProductsShowcase: React.FC = () => {
               }}
               className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
             >
-              Reset Filters
+              {t('products.noResults.reset')}
             </button>
           </div>
         )}

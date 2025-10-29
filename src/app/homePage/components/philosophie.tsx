@@ -1,13 +1,14 @@
 'use client';
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { Sparkles, Heart, Wrench, Users } from 'lucide-react';
-import Image from "next/image";
+import { useLanguage } from '@/app/contexts/languageContext';
 
 function PhilosophySection() {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const sectionRef = useRef(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const { t } = useLanguage();
 
   // Generate particles once with useMemo to prevent hydration mismatch
   const particles = useMemo(() => {
@@ -86,7 +87,9 @@ function PhilosophySection() {
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500/20 to-red-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full mb-6">
             <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
-            <span className="text-sm text-amber-200 font-semibold uppercase tracking-widest">Our Philosophy</span>
+            <span className="text-sm text-amber-200 font-semibold uppercase tracking-widest">
+              {t('philosophy.badge')}
+            </span>
           </div>
         </div>
 
@@ -106,8 +109,8 @@ function PhilosophySection() {
                   <div className="w-full h-full flex items-center justify-center text-slate-400">
                     <div className="relative w-full h-full bg-gradient-to-br from-slate-100 to-amber-100 overflow-hidden">
                       <img 
-                        src="/img/Broker.jpg" 
-                        alt="Craftsmanship"
+                        src="/img/LOT00006 copie.jpg" 
+                        alt={t('philosophy.images.craftsmanship')}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       {/* Overlay gradient */}
@@ -151,9 +154,9 @@ function PhilosophySection() {
             {/* Title */}
             <div>
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
-                Craftsmanship meets
+                {t('philosophy.title.line1')}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 animate-shimmer">
-                  Innovation
+                  {t('philosophy.title.line2')}
                 </span>
               </h2>
             </div>
@@ -161,30 +164,30 @@ function PhilosophySection() {
             {/* Description Paragraphs */}
             <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
               <p className="group hover:text-white transition-colors duration-300">
-                As a <span className="text-amber-400 font-semibold">growing company</span>, we believe in the perfect balance between modern technology and traditional handcrafted techniques. Our approach ensures each sole is crafted with precision and passion.
+                {t('philosophy.description.paragraph1')}
               </p>
               
               <div className="relative pl-6 border-l-4 border-amber-500/50 hover:border-amber-500 transition-colors duration-300">
                 <p>
-                  <span className="text-amber-400 font-bold">50% of our production</span> remains handcrafted - a unique advantage that allows us to handle custom orders, create prototypes, and produce limited-edition collections with unmatched flexibility and quality.
+                  {t('philosophy.description.paragraph2')}
                 </p>
               </div>
 
               <p className="group hover:text-white transition-colors duration-300">
-                Every sole is <span className="text-white font-semibold">designed in collaboration</span> with designers and manufacturers, combining functionality, style, and superior materials. Our attention to detail ensures industrial efficiency with artisanal excellence.
+                {t('philosophy.description.paragraph3')}
               </p>
             </div>
 
             {/* Feature Pills */}
             <div className="flex flex-wrap gap-3 pt-4">
               <div className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 rounded-full text-amber-300 text-sm font-medium hover:bg-amber-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-                ✨ Custom Solutions
+                {t('philosophy.features.custom')}
               </div>
               <div className="px-4 py-2 bg-red-500/20 border border-red-500/40 rounded-full text-red-300 text-sm font-medium hover:bg-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-                🎯 Quality Focus
+                {t('philosophy.features.quality')}
               </div>
               <div className="px-4 py-2 bg-slate-500/20 border border-slate-500/40 rounded-full text-slate-300 text-sm font-medium hover:bg-slate-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-                🚀 Fast Delivery
+                {t('philosophy.features.delivery')}
               </div>
             </div>
 
@@ -192,7 +195,7 @@ function PhilosophySection() {
             <div className="pt-6">
               <button className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
                 <span className="relative z-10 flex items-center gap-3">
-                  Get in Touch
+                  {t('philosophy.cta')}
                   <Users className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-amber-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>

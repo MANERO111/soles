@@ -1,0 +1,435 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "news": "News",
+      "contact": "Contact",
+      "getQuote": "Get Quote"
+    },
+    "hero": {
+      "badge": "7 Years of Excellence",
+      "titleLine1": "Premium",
+      "titleLine2": "Shoe Soles",
+      "titleLine3": "Manufacturing",
+      "description": "Where tradition meets innovation. Crafting high-performance soles with cutting-edge technology and artisanal expertise for the global footwear industry.",
+      "ctaPrimary": "Explore Products",
+      "ctaSecondary": "Contact Us",
+      "stats": {
+        "export": "Export Worldwide",
+        "clients": "Happy Clients",
+        "materials": "Sole Materials"
+      }
+    },
+    "common": {
+      "years": "Years of Excellence",
+      "export": "Export Worldwide",
+      "clients": "Happy Clients",
+      "materials": "Sole Materials"
+    },
+    
+    "product": {
+        "badge": "Our Products",
+        "title": {
+        "line1": "Technology and",
+        "line2": "Craftsmanship"
+        },
+        "description": "Tailor-made soles for every need, designed to combine functionality, comfort, and style, adaptable to all types of footwear, from technical to fashion.",
+        "materials": {
+        "title": "Soles for every style, function, and material",
+        "description": "PBS Soles Srl offers a wide range of soles for footwear, ensuring the perfect balance between innovation and tradition. Thanks to flexible production, we also manufacture custom soles in small quantities.",
+        "eva": {
+            "name": "EVA (Ethylene Vinyl Acetate)",
+            "description": "Lightweight, versatile, and highly resistant."
+        },
+        "microporous": {
+            "name": "Microporous",
+            "description": "Great comfort and adaptability."
+        },
+        "rubber": {
+            "name": "Rubber",
+            "description": "Durable and resistant."
+        },
+        "cork": {
+            "name": "Agglomerated cork",
+            "description": "A natural material for eco-friendly solutions."
+        }
+        },
+        "items": {
+        "lightSole": {
+            "title": "Light Sole",
+            "description": "Exclusive style and lightweight comfort."
+        },
+        "orthopedicSoles": {
+            "title": "Orthopedic Soles",
+            "description": "Anatomical support and postural comfort."
+        },
+        "flatHeelSoles": {
+            "title": "Soles Flat heel",
+            "description": "Postural comfort, flat heel and durability."
+        },
+        "fashionSole": {
+            "title": "Fashion Sole",
+            "description": "Exclusive design and custom finishes."
+        }
+        },
+        "cta": {
+        "product": "Go to product",
+        "allProducts": "View All Products"
+        },
+        "swipe": "Swipe"
+    },
+    "aboutLegacy": {
+        "badge": "About Our Legacy",
+        "title": {
+          "line1": "A Continuous",
+          "line2": "Evolution"
+        },
+        "subtitle": "Rooted in tradition, always looking toward the future",
+        "years": "Years",
+        "images": {
+          "manufacturing": "Manufacturing excellence",
+          "craftsmanship": "Craftsmanship detail",
+          "quality": "Quality production"
+        },
+        "timeline": {
+          "2018": {
+            "year": "2018 Foundation",
+            "description": "PBS Soles Srl was founded 7 years ago, originally producing wooden soles with traditional craftsmanship methods."
+          },
+          "2020": {
+            "year": "2020 Innovation",
+            "description": "Growing demand for cork led the company to invest in revolutionary new technologies and expand production capabilities."
+          },
+          "2022": {
+            "year": "2022 Advancement",
+            "description": "Advanced materials like EVA, microporous compounds, and rubber became essential. We upgraded all machinery for top-quality production."
+          },
+          "today": {
+            "year": "Today's Excellence",
+            "description": "A market leader combining industrial production with artisanal quality, powered by innovation and skilled expertise."
+          }
+        },
+        "cta": "Discover Our Journey",
+        "stats": {
+          "years": "Years of Excellence",
+          "clients": "Happy Clients",
+          "materials": "Material Types",
+          "exports": "Export Worldwide"
+        }
+      },
+      "values": {
+        "title": "our values",
+        "cta": {
+          "learnMore": "Learn More",
+          "exploreProcess": "Explore Our Process",
+          "contactTeam": "Contact Our Team"
+        },
+        "items": {
+          "expertise": {
+            "title": "5+ Years of Expertise",
+            "description": "Our company takes pride in a team of highly skilled professionals dedicated to excellence in sole manufacturing. With decades of acquired expertise, we master the art of blending materials and technologies to create diverse, customized solutions tailored to each customer's unique requirements.",
+            "badge": "⭐ Experienced"
+          },
+          "innovation": {
+            "title": "Innovative Technology",
+            "description": "Through extensive research and development, we've pioneered advanced systems that significantly reduce the weight of TR, TPU, and PU soles. Our cutting-edge technology delivers distinctive benefits, creating footwear solutions that prioritize lightweight design, superior performance, and exceptional comfort.",
+            "badge": "💡 Innovative"
+          },
+          "flexibility": {
+            "title": "Flexible Order Solutions",
+            "description": "At PBS Soles, we understand diverse client needs and welcome orders of all sizes. With over 20 years of expertise in sole production, we're committed to delivering premium products regardless of order volume. From small batches of 100 pairs to large-scale production, expect efficient service, timely delivery, and unwavering quality.",
+            "badge": "🚀 Flexible"
+          }
+        }
+      },
+      "philosophy": {
+        "badge": "Our Philosophy",
+        "title": {
+          "line1": "Craftsmanship meets",
+          "line2": "Innovation"
+        },
+        "description": {
+          "paragraph1": "As a growing company, we believe in the perfect balance between modern technology and traditional handcrafted techniques. Our approach ensures each sole is crafted with precision and passion.",
+          "paragraph2": "50% of our production remains handcrafted - a unique advantage that allows us to handle custom orders, create prototypes, and produce limited-edition collections with unmatched flexibility and quality.",
+          "paragraph3": "Every sole is designed in collaboration with designers and manufacturers, combining functionality, style, and superior materials. Our attention to detail ensures industrial efficiency with artisanal excellence."
+        },
+        "features": {
+          "custom": "✨ Custom Solutions",
+          "quality": "🎯 Quality Focus",
+          "delivery": "🚀 Fast Delivery"
+        },
+        "cta": "Get in Touch",
+        "images": {
+          "craftsmanship": "Craftsmanship"
+        }
+      },
+      "contact": {
+        "badge": "CONTACT US",
+        "title": "Let's Start a Conversation",
+        "subtitle": "Ready to elevate your footwear? Reach out today and discover how our expertise can bring your vision to life.",
+        "form": {
+          "title": "Send us a Message",
+          "subtitle": "Fill out the form and we'll get back to you shortly",
+          "name": {
+            "label": "Full Name",
+            "placeholder": "John Doe"
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "john@example.com"
+          },
+          "phone": {
+            "label": "Phone Number",
+            "placeholder": "+1 234 567 890"
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Tell us about your project..."
+          },
+          "submit": "Send Message",
+          "sending": "Sending...",
+          "success": "Message Sent!",
+          "error": "Failed to send message. Please try again."
+        },
+        "info": {
+          "title": "Contact Information",
+          "phone": {
+            "title": "Phone",
+            "content": "+39 123 456 7890"
+          },
+          "email": {
+            "title": "Email",
+            "content": "info@soletech.com"
+          },
+          "address": {
+            "title": "Address",
+            "content": "Via Example 123, 12345 City, Italy"
+          },
+          "hours": {
+            "title": "Business Hours",
+            "content": "Mon - Fri: 9:00 AM - 6:00 PM"
+          }
+        },
+        "map": {
+          "title": "Our Location",
+          "address": "Via Example 123, City, Italy",
+          "cta": "Click to view on map"
+        },
+        "features": {
+          "title": "Why Partner With Us",
+          "custom": {
+            "title": "Custom Solutions",
+            "description": "Tailored soles for your specific needs"
+          },
+          "response": {
+            "title": "Fast Response",
+            "description": "We reply within 24 hours"
+          },
+          "shipping": {
+            "title": "Global Shipping",
+            "description": "Worldwide delivery available"
+          },
+          "support": {
+            "title": "Expert Support",
+            "description": "Dedicated team to assist you"
+          }
+        }
+      },
+      "footer": {
+        "logoAlt": "casaSemelle logo",
+        "description": "Crafting premium shoe soles with 10 years of expertise. Where tradition meets innovation in every step.",
+        "contact": {
+          "phone": "+39 123 456 7890",
+          "email": "info@soletech.com",
+          "address": "Via Example 123, 12345 City, Italy"
+        },
+        "sections": {
+          "company": "Company",
+          "about": "About Us", 
+          "products": "Products",
+          "support": "Support"
+        },
+        "links": {
+          "company": {
+            "home": "Home",
+            "about": "About Us",
+            "values": "Our Values",
+            "philosophy": "Our Philosophy",
+            "contact": "Contact"
+          },
+          "about": {
+            "ourJourney": "Our Journey",
+            "ourMission": "Our Mission", 
+            "ourValues": "Our Values",
+            "ourTeam": "Our Team"
+          },
+          "products": {
+            "ourProducts": "Our Products",
+            "eva": "EVA Soles",
+            "microporous": "Microporous",
+            "rubber": "Rubber Soles",
+            "cork": "Cork Soles"
+          },
+          "support": {
+            "contact": "Contact Us"
+          }
+        },
+        "copyright": "© 2025 SoleTech. All rights reserved. Made with",
+        "madeIn": "in Morocco",
+        "certifications": {
+          "quality": "Quality Certified",
+          "iso": "ISO 9001"
+        }
+      },
+      "products": {
+        "badge": "Our Products",
+        "title": {
+          "line1": "Premium Sole",
+          "line2": "Collection"
+        },
+        "subtitle": "Explore our extensive range of high-quality shoe soles, designed for performance and durability",
+        "search": {
+          "placeholder": "Search products..."
+        },
+        "categories": {
+          "all": "All Products"
+        },
+        "actions": {
+          "viewDetails": "View Details"
+        },
+        "stock": {
+          "inStock": "In Stock",
+          "outOfStock": "Out of Stock",
+          "available": "units available",
+          "unavailable": "Currently unavailable"
+        },
+        "defaults": {
+          "name": "Product Name",
+          "description": "Product description",
+          "price": "Price not available"
+        },
+        "currency": "$",
+        "perUnit": "per unit",
+        "results": {
+          "count": " products available "
+        },
+        "noResults": {
+          "title": "No Products Found",
+          "description": "No products match your search criteria. Try adjusting your filters.",
+          "reset": "Reset Filters"
+        }
+      },
+      "about": {
+        "hero": {
+          "badge": "About Our Company",
+          "title": {
+            "line1": "Crafting Excellence",
+            "line2": "Since 2018"
+          },
+          "subtitle": "A legacy of innovation, quality, and dedication to the art of sole manufacturing. From our humble beginnings to becoming a global leader, our story is one of passion and perseverance.",
+          "cta": {
+            "discover": "Discover Our Journey",
+            "contact": "Contact Us"
+          }
+        },
+        "stats": {
+          "years": "Years of Experience",
+          "clients": "Happy Clients",
+          "countries": "Countries Served",
+          "products": "Products Made"
+        },
+        "purpose": {
+          "title": {
+            "prefix": "Our",
+            "highlight": "Purpose"
+          },
+          "mission": {
+            "title": "Our Mission",
+            "description": "To deliver exceptional shoe soles that combine traditional craftsmanship with modern innovation, exceeding client expectations through quality, flexibility, and personalized service."
+          },
+          "vision": {
+            "title": "Our Vision",
+            "description": "To be the global benchmark for sole manufacturing excellence, recognized for our commitment to sustainability, innovation, and the perfect balance of industrial efficiency with artisanal quality."
+          },
+          "promise": {
+            "title": "Our Promise",
+            "description": "Every sole tells a story of dedication, precision, and care. We promise consistent quality, reliable partnerships, and solutions that help bring your footwear visions to life."
+          }
+        },
+        "timeline": {
+          "title": {
+            "prefix": "Our",
+            "highlight": "Journey"
+          },
+          "subtitle": "Seven decades of evolution, innovation, and unwavering commitment to excellence",
+          "2018": {
+            "year": "2018",
+            "title": "Foundation",
+            "description": "Started as a small workshop producing handcrafted wooden soles"
+          },
+          "2020": {
+            "year": "2020",
+            "title": "Cork Innovation",
+            "description": "Expanded into cork sole production with new technologies"
+          },
+          "2022": {
+            "year": "2022",
+            "title": "Material Revolution",
+            "description": "Introduced EVA, microporous compounds, and rubber materials"
+          },
+          "2024": {
+            "year": "2024",
+            "title": "Global Expansion",
+            "description": "Established presence in 50+ countries worldwide"
+          },
+          "today": {
+            "year": "Today",
+            "title": "Industry Leader",
+            "description": "Combining industrial scale with artisanal quality"
+          }
+        },
+        "values": {
+          "title": {
+            "prefix": "Our Core",
+            "highlight": "Values"
+          },
+          "subtitle": "The principles that guide everything we do",
+          "quality": {
+            "title": "Passion for Quality",
+            "description": "Every sole we produce reflects our commitment to excellence and craftsmanship that has defined us for over 7 years."
+          },
+          "trust": {
+            "title": "Trust & Reliability",
+            "description": "Building lasting relationships with our clients through consistent quality and dependable service every single time."
+          },
+          "innovation": {
+            "title": "Innovation Drive",
+            "description": "Constantly evolving with cutting-edge technology while honoring traditional craftsmanship techniques."
+          },
+          "customer": {
+            "title": "Customer Focus",
+            "description": "Your success is our mission. We tailor solutions to meet your unique requirements with precision and care."
+          }
+        },
+        "team": {
+          "title": {
+            "prefix": "Meet Our",
+            "highlight": "Team"
+          },
+          "subtitle": "Talented professionals dedicated to your success",
+          "craftsmen": "Master Craftsmen",
+          "designers": "Design Experts",
+          "quality": "Quality Controllers",
+          "innovation": "Innovation Team"
+        },
+        "cta": {
+          "title": {
+            "prefix": "Ready to Work",
+            "highlight": "Together?"
+          },
+          "subtitle": "Let's create something extraordinary. Reach out today and discover how our expertise can elevate your footwear brand.",
+          "button": "Get In Touch"
+        }
+      }
+  }

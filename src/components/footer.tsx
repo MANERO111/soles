@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { 
   Facebook, 
   Instagram, 
@@ -12,46 +13,53 @@ import {
   Heart,
   ExternalLink
 } from 'lucide-react';
+import { useLanguage } from '@/app/contexts/languageContext';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Footer() {
-  // Check if we're on the home page
-  const isHomePage = () => {
-    return window.location.pathname === '/' || window.location.pathname === '';
-  };
+  const { t } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
 
   // Handle section navigation with timeout
   const handleSectionNavigation = (sectionId: string) => {
-    if (isHomePage()) {
-      // If we're already on home page, scroll to section
-      setTimeout(() => {
-        scrollToSection(sectionId);
-      }, 100);
+    // If we're not on the home page, navigate to home page first
+    if (pathname !== '/') {
+      router.push(`/#${sectionId}`);
     } else {
-      // If we're on another page, navigate to home first, then scroll to section
-      window.location.href = '/';
-      
-      // Wait for page navigation to complete, then scroll to section
       setTimeout(() => {
-        // This will run after the page navigation
-        if (window.location.pathname === '/') {
-          scrollToSection(sectionId);
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const offset = 100;
+          window.scrollTo({
+            top: absoluteElementTop - offset,
+            behavior: 'smooth'
+          });
         }
-      }, 500); // Adjust this timeout based on your page load speed
+      }, 100);
     }
   };
 
-  // Scroll to specific section
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const elementRect = element.getBoundingClientRect();
-      const absoluteElementTop = elementRect.top + window.pageYOffset;
-      const offset = 100; // Adjust this based on your navbar height
-      
-      window.scrollTo({
-        top: absoluteElementTop - offset,
-        behavior: 'smooth'
-      });
+  // Handle about page section navigation
+  const handleAboutPageNavigation = (sectionId: string) => {
+    // If we're not on the about page, navigate to about page first
+    if (pathname !== '/aboutUs') {
+      router.push(`/aboutUs#${sectionId}`);
+    } else {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const offset = 100;
+          window.scrollTo({
+            top: absoluteElementTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
     }
   };
 
@@ -65,27 +73,39 @@ export default function Footer() {
       handleSectionNavigation(sectionId);
     } else {
       // Regular page navigation
-      window.location.href = href;
+      router.push(href);
     }
+  };
+
+  // Handle about page link click
+  const handleAboutPageLinkClick = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    handleAboutPageNavigation(sectionId);
   };
 
   const footerLinks = {
     company: [
-      { name: 'Home', href: '/' },
-      { name: 'About Us', href: '#about' },
-      { name: 'Our Values', href: '#values' },
-      { name: 'Our Philosophy', href: '#philosophy' },
-      { name: 'Contact', href: '#contact' }
+      { name: t('footer.links.company.home'), href: '/' },
+      { name: t('footer.links.company.about'), href: '/about' },
+      { name: t('footer.links.company.values'), href: 'values' },
+      { name: t('footer.links.company.philosophy'), href: 'philosophy' },
+      { name: t('footer.links.company.contact'), href: 'contact' },
+    ],
+    about: [
+      { name: t('footer.links.about.ourMission'), href: 'mission' },
+      { name: t('footer.links.about.ourJourney'), href: 'our-journey' },
+      { name: t('footer.links.about.ourValues'), href: 'values' },
+      { name: t('footer.links.about.ourTeam'), href: 'team' },
     ],
     products: [
-      { name: 'Our Products', href: '#ourProducts' },
-      { name: 'EVA Soles', href: '#eva' },
-      { name: 'Microporous', href: '#microporous' },
-      { name: 'Rubber Soles', href: '#rubber' },
-      { name: 'Cork Soles', href: '#cork' }
+      { name: t('footer.links.products.ourProducts'), href: '/products' },
+      // { name: t('footer.links.products.eva'), href: '/products?category=eva' },
+      // { name: t('footer.links.products.microporous'), href: '/products?category=microporous' },
+      // { name: t('footer.links.products.rubber'), href: '/products?category=rubber' },
+      // { name: t('footer.links.products.cork'), href: '/products?category=cork' },
     ],
     support: [
-      { name: 'Contact Us', href: '#contact' },
+      { name: t('footer.links.support.contact'), href: '#contact' },
     ],
   };
 
@@ -97,7 +117,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-slate-500 via-slate-800 to-slate-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse"></div>
@@ -116,11 +136,11 @@ export default function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-4 animate-slide-in-left">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold mb-3">
-                  Sole<span className="text-amber-500">Tech</span>
-                </h3>
+                <Link href="/" className="cursor-pointer" style={{fontFamily: 'cursive'}}>
+                  <img src="img/casaSemelle.png" alt={t('footer.logoAlt')} className="h-24" />
+                </Link>
                 <p className="text-slate-400 leading-relaxed">
-                  Crafting premium shoe soles with 10 years of expertise. Where tradition meets innovation in every step.
+                  {t('footer.description')}
                 </p>
               </div>
 
@@ -133,7 +153,7 @@ export default function Footer() {
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">+39 123 456 7890</span>
+                  <span className="text-sm">{t('footer.contact.phone')}</span>
                 </a>
                 <a 
                   href="mailto:info@soletech.com" 
@@ -142,13 +162,13 @@ export default function Footer() {
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">info@soletech.com</span>
+                  <span className="text-sm">{t('footer.contact.email')}</span>
                 </a>
                 <div className="flex items-start gap-3 text-slate-400 group">
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">Via Example 123,<br />12345 City, Italy</span>
+                  <span className="text-sm">{t('footer.contact.address')}</span>
                 </div>
               </div>
 
@@ -172,16 +192,43 @@ export default function Footer() {
             </div>
 
             {/* Links Columns */}
-            <div className="lg:col-span-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
               {/* Company Links */}
               <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-                <h4 className="text-lg font-bold mb-4 text-white">Company</h4>
+                <h4 className="text-lg font-bold mb-4 text-white">{t('footer.sections.company')}</h4>
                 <ul className="space-y-3">
                   {footerLinks.company.map((link, index) => (
                     <li key={index}>
+                      {link.href.startsWith('/') ? (
+                        <Link 
+                          href={link.href}
+                          className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                        >
+                          {link.name}
+                        </Link>
+                      ) : (
+                        <a 
+                          href={link.href}
+                          onClick={(e) => handleFooterLinkClick(e, link.href)}
+                          className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                        >
+                          {link.name}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* About Us Sections */}
+              <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+                <h4 className="text-lg font-bold mb-4 text-white">{t('footer.sections.about')}</h4>
+                <ul className="space-y-3">
+                  {footerLinks.about.map((link, index) => (
+                    <li key={index}>
                       <a 
-                        href={link.href}
-                        onClick={(e) => handleFooterLinkClick(e, link.href)}
+                        href={`#${link.href}`}
+                        onClick={(e) => handleAboutPageLinkClick(e, link.href)}
                         className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
@@ -192,26 +239,25 @@ export default function Footer() {
               </div>
 
               {/* Products Links */}
-              <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                <h4 className="text-lg font-bold mb-4 text-white">Products</h4>
+              <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+                <h4 className="text-lg font-bold mb-4 text-white">{t('footer.sections.products')}</h4>
                 <ul className="space-y-3">
                   {footerLinks.products.map((link, index) => (
                     <li key={index}>
-                      <a 
+                      <Link 
                         href={link.href}
-                        onClick={(e) => handleFooterLinkClick(e, link.href)}
                         className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Support Links */}
-              <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-                <h4 className="text-lg font-bold mb-4 text-white">Support</h4>
+              <div className="animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+                <h4 className="text-lg font-bold mb-4 text-white">{t('footer.sections.support')}</h4>
                 <ul className="space-y-3">
                   {footerLinks.support.map((link, index) => (
                     <li key={index}>
@@ -235,18 +281,18 @@ export default function Footer() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-slate-400 text-center md:text-left">
-                © 2025 SoleTech. All rights reserved. Made with{' '}
+                {t('footer.copyright')}{' '}
                 <Heart className="inline w-4 h-4 text-red-500 fill-current animate-pulse" />{' '}
-                in Morocco
+                {t('footer.madeIn')}
               </p>
               
               <div className="flex items-center gap-6">
                 <a href="#" className="text-sm text-slate-400 hover:text-amber-500 transition-colors flex items-center gap-1">
-                  Quality Certified
+                  {t('footer.certifications.quality')}
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <a href="#" className="text-sm text-slate-400 hover:text-amber-500 transition-colors flex items-center gap-1">
-                  ISO 9001
+                  {t('footer.certifications.iso')}
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>

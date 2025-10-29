@@ -1,0 +1,434 @@
+{
+    "nav": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "products": "Produits",
+      "news": "Actualités",
+      "contact": "Contact",
+      "getQuote": "Obtenir un Devis"
+    },
+    "hero": {
+      "badge": "7 Ans d'Excellence",
+      "titleLine1": "Semelles de",
+      "titleLine2": "Chaussures Premium",
+      "titleLine3": "Fabrication",
+      "description": "Là où la tradition rencontre l'innovation. Fabrication de semelles haute performance avec une technologie de pointe et un savoir-faire artisanal pour l'industrie mondiale de la chaussure.",
+      "ctaPrimary": "Découvrir les Produits",
+      "ctaSecondary": "Nous Contacter",
+      "stats": {
+        "export": "Exportation Mondiale",
+        "clients": "Clients Satisfaits",
+        "materials": "Types de Matériaux"
+      }
+    },
+    "common": {
+      "years": "Ans d'Excellence",
+      "export": "Exportation Mondiale",
+      "clients": "Clients Satisfaits",
+      "materials": "Types de Matériaux"
+    },
+    "product": {
+        "badge": "Nos Produits",
+        "title": {
+          "line1": "Technologie et",
+          "line2": "Savoir-Faire"
+        },
+        "description": "Des semelles sur mesure pour chaque besoin, conçues pour allier fonctionnalité, confort et style, adaptables à tous types de chaussures, du technique à la mode.",
+        "materials": {
+          "title": "Semelles pour chaque style, fonction et matériau",
+          "description": "PBS Soles Srl offre une large gamme de semelles pour chaussures, garantissant l'équilibre parfait entre innovation et tradition. Grâce à une production flexible, nous fabriquons également des semelles personnalisées en petites quantités.",
+          "eva": {
+            "name": "EVA (Acétate de Vinyle Éthylène)",
+            "description": "Léger, polyvalent et très résistant."
+          },
+          "microporous": {
+            "name": "Microporous",
+            "description": "Grand confort et adaptabilité."
+          },
+          "rubber": {
+            "name": "Caoutchouc",
+            "description": "Durable et résistant."
+          },
+          "cork": {
+            "name": "Liège aggloméré",
+            "description": "Un matériau naturel pour des solutions écologiques."
+          }
+        },
+        "items": {
+          "lightSole": {
+            "title": "Semelle Légère",
+            "description": "Style exclusif et confort léger."
+          },
+          "orthopedicSoles": {
+            "title": "Semelles Orthopédiques",
+            "description": "Support anatomique et confort postural."
+          },
+          "flatHeelSoles": {
+            "title": "Semelles à talon plat",
+            "description": "Confort postural, talon plat et durabilité."
+          },
+          "fashionSole": {
+            "title": "Semelle de Mode",
+            "description": "Design exclusif et finitions personnalisées."
+          }
+        },
+        "cta": {
+          "product": "Voir le produit",
+          "allProducts": "Voir Tous les Produits"
+        },
+        "swipe": "Glisser"
+      },
+      "aboutLegacy": {
+        "badge": "Notre Héritage",
+        "title": {
+          "line1": "Une Évolution",
+          "line2": "Continue"
+        },
+        "subtitle": "Enracinés dans la tradition, toujours tournés vers l'avenir",
+        "years": "Ans",
+        "images": {
+          "manufacturing": "Excellence manufacturière",
+          "craftsmanship": "Détail du savoir-faire",
+          "quality": "Production de qualité"
+        },
+        "timeline": {
+          "2018": {
+            "year": "Fondation 2018",
+            "description": "PBS Soles Srl a été fondée il y a 7 ans, produisant à l'origine des semelles en bois avec des méthodes de fabrication traditionnelles."
+          },
+          "2020": {
+            "year": "Innovation 2020",
+            "description": "La demande croissante de liège a conduit l'entreprise à investir dans de nouvelles technologies révolutionnaires et à étendre ses capacités de production."
+          },
+          "2022": {
+            "year": "Avancement 2022",
+            "description": "Les matériaux avancés comme l'EVA, les composés microporieux et le caoutchouc sont devenus essentiels. Nous avons modernisé toutes les machines pour une production de qualité supérieure."
+          },
+          "today": {
+            "year": "Excellence Actuelle",
+            "description": "Un leader du marché combinant production industrielle et qualité artisanale, alimenté par l'innovation et une expertise qualifiée."
+          }
+        },
+        "cta": "Découvrez Notre Parcours",
+        "stats": {
+          "years": "Ans d'Excellence",
+          "clients": "Clients Satisfaits",
+          "materials": "Types de Matériaux",
+          "exports": "Exportation Mondiale"
+        }
+      },
+      "values": {
+        "title": "nos valeurs",
+        "cta": {
+          "learnMore": "En Savoir Plus",
+          "exploreProcess": "Explorer Notre Processus",
+          "contactTeam": "Contacter Notre Équipe"
+        },
+        "items": {
+          "expertise": {
+            "title": "5+ Ans d'Expertise",
+            "description": "Notre entreprise s'enorgueillit d'une équipe de professionnels hautement qualifiés dédiés à l'excellence dans la fabrication de semelles. Avec des décennies d'expertise acquise, nous maîtrisons l'art de mélanger les matériaux et les technologies pour créer des solutions diversifiées et personnalisées adaptées aux exigences uniques de chaque client.",
+            "badge": "⭐ Expérimenté"
+          },
+          "innovation": {
+            "title": "Technologie Innovante",
+            "description": "Grâce à une recherche et un développement approfondis, nous avons été les pionniers de systèmes avancés qui réduisent considérablement le poids des semelles TR, TPU et PU. Notre technologie de pointe offre des avantages distinctifs, créant des solutions de chaussures qui privilégient la conception légère, les performances supérieures et le confort exceptionnel.",
+            "badge": "💡 Innovant"
+          },
+          "flexibility": {
+            "title": "Solutions de Commande Flexibles",
+            "description": "Chez PBS Soles, nous comprenons les besoins diversifiés des clients et accueillons les commandes de toutes tailles. Avec plus de 20 ans d'expertise dans la production de semelles, nous nous engageons à fournir des produits premium quel que soit le volume de commande. Des petits lots de 100 paires à la production à grande échelle, attendez-vous à un service efficace, une livraison ponctuelle et une qualité inébranlable.",
+            "badge": "🚀 Flexible"
+          }
+        }
+      },
+      "philosophy": {
+        "badge": "Notre Philosophie",
+        "title": {
+          "line1": "Savoir-faire rencontre",
+          "line2": "Innovation"
+        },
+        "description": {
+          "paragraph1": "En tant qu'entreprise en croissance, nous croyons en l'équilibre parfait entre la technologie moderne et les techniques artisanales traditionnelles. Notre approche garantit que chaque semelle est fabriquée avec précision et passion.",
+          "paragraph2": "50% de notre production reste artisanale - un avantage unique qui nous permet de traiter les commandes personnalisées, de créer des prototypes et de produire des collections en édition limitée avec une flexibilité et une qualité inégalées.",
+          "paragraph3": "Chaque semelle est conçue en collaboration avec des designers et des fabricants, combinant fonctionnalité, style et matériaux supérieurs. Notre souci du détail garantit une efficacité industrielle avec une excellence artisanale."
+        },
+        "features": {
+          "custom": "✨ Solutions Personnalisées",
+          "quality": "🎯 Focus Qualité",
+          "delivery": "🚀 Livraison Rapide"
+        },
+        "cta": "Entrer en Contact",
+        "images": {
+          "craftsmanship": "Savoir-faire"
+        }
+      },
+      "contact": {
+        "badge": "NOUS CONTACTER",
+        "title": "Commençons une Conversation",
+        "subtitle": "Prêt à élever votre chaussure ? Contactez-nous dès aujourd'hui et découvrez comment notre expertise peut donner vie à votre vision.",
+        "form": {
+          "title": "Envoyez-nous un Message",
+          "subtitle": "Remplissez le formulaire et nous vous répondrons sous peu",
+          "name": {
+            "label": "Nom Complet",
+            "placeholder": "Jean Dupont"
+          },
+          "email": {
+            "label": "Adresse Email",
+            "placeholder": "jean@exemple.com"
+          },
+          "phone": {
+            "label": "Numéro de Téléphone",
+            "placeholder": "+33 1 23 45 67 89"
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Parlez-nous de votre projet..."
+          },
+          "submit": "Envoyer le Message",
+          "sending": "Envoi en cours...",
+          "success": "Message Envoyé !",
+          "error": "Échec de l'envoi du message. Veuillez réessayer."
+        },
+        "info": {
+          "title": "Informations de Contact",
+          "phone": {
+            "title": "Téléphone",
+            "content": "+39 123 456 7890"
+          },
+          "email": {
+            "title": "Email",
+            "content": "info@soletech.com"
+          },
+          "address": {
+            "title": "Adresse",
+            "content": "Via Example 123, 12345 Ville, Italie"
+          },
+          "hours": {
+            "title": "Heures d'Ouverture",
+            "content": "Lun - Ven: 9h00 - 18h00"
+          }
+        },
+        "map": {
+          "title": "Notre Localisation",
+          "address": "Via Example 123, Ville, Italie",
+          "cta": "Cliquez pour voir sur la carte"
+        },
+        "features": {
+          "title": "Pourquoi Travailler Avec Nous",
+          "custom": {
+            "title": "Solutions Personnalisées",
+            "description": "Semelles adaptées à vos besoins spécifiques"
+          },
+          "response": {
+            "title": "Réponse Rapide",
+            "description": "Nous répondons sous 24 heures"
+          },
+          "shipping": {
+            "title": "Livraison Mondiale",
+            "description": "Livraison disponible dans le monde entier"
+          },
+          "support": {
+            "title": "Support Expert",
+            "description": "Équipe dédiée pour vous assister"
+          }
+        }
+      },
+      "footer": {
+        "logoAlt": "logo casaSemelle",
+        "description": "Fabrication de semelles de chaussures premium avec 10 ans d'expertise. Là où la tradition rencontre l'innovation à chaque pas.",
+        "contact": {
+          "phone": "+39 123 456 7890",
+          "email": "info@soletech.com",
+          "address": "Via Example 123, 12345 Ville, Italie"
+        },
+        "sections": {
+          "company": "Entreprise",
+          "about": "À Propos",
+          "products": "Produits",
+          "support": "Support"
+        },
+        "links": {
+          "company": {
+            "home": "Accueil",
+            "about": "À Propos",
+            "values": "Nos Valeurs",
+            "philosophy": "Notre Philosophie",
+            "contact": "Contact"
+          },
+          "about": {
+            "ourJourney": "Notre Parcours",
+            "ourMission": "Notre Mission",
+            "ourValues": "Nos Valeurs", 
+            "ourTeam": "Notre Équipe"
+          },
+          "products": {
+            "ourProducts": "Nos Produits",
+            "eva": "Semelles EVA",
+            "microporous": "Microporous",
+            "rubber": "Semelles Caoutchouc",
+            "cork": "Semelles Liège"
+          },
+          "support": {
+            "contact": "Contactez-Nous"
+          }
+        },
+        "copyright": "© 2025 SoleTech. Tous droits réservés. Fait avec",
+        "madeIn": "au Maroc",
+        "certifications": {
+          "quality": "Certifié Qualité",
+          "iso": "ISO 9001"
+        }
+      },
+      "products": {
+        "badge": "Nos Produits",
+        "title": {
+          "line1": "Collection de",
+          "line2": "Semelles Premium"
+        },
+        "subtitle": "Découvrez notre vaste gamme de semelles de chaussures de haute qualité, conçues pour la performance et la durabilité",
+        "search": {
+          "placeholder": "Rechercher des produits..."
+        },
+        "categories": {
+          "all": "Tous les Produits"
+        },
+        "actions": {
+          "viewDetails": "Voir les Détails"
+        },
+        "stock": {
+          "inStock": "En Stock",
+          "outOfStock": "Rupture de Stock",
+          "available": "unités disponibles",
+          "unavailable": "Actuellement indisponible"
+        },
+        "defaults": {
+          "name": "Nom du Produit",
+          "description": "Description du produit",
+          "price": "Prix non disponible"
+        },
+        "currency": "$",
+        "perUnit": "par unité",
+        "results": {
+          "count": "produits disponibles "
+        },
+        "noResults": {
+          "title": "Aucun Produit Trouvé",
+          "description": "Aucun produit ne correspond à vos critères de recherche. Essayez d'ajuster vos filtres.",
+          "reset": "Réinitialiser les Filtres"
+        }
+      },
+      "about": {
+        "hero": {
+          "badge": "À Propos de Notre Entreprise",
+          "title": {
+            "line1": "Excellence Artisanale",
+            "line2": "Depuis 2018"
+          },
+          "subtitle": "Un héritage d'innovation, de qualité et de dévouement à l'art de la fabrication de semelles. De nos débuts modestes à notre statut de leader mondial, notre histoire est celle de la passion et de la persévérance.",
+          "cta": {
+            "discover": "Découvrez Notre Parcours",
+            "contact": "Contactez-Nous"
+          }
+        },
+        "stats": {
+          "years": "Années d'Expérience",
+          "clients": "Clients Satisfaits",
+          "countries": "Pays Desservis",
+          "products": "Produits Fabriqués"
+        },
+        "purpose": {
+          "title": {
+            "prefix": "Notre",
+            "highlight": "Mission"
+          },
+          "mission": {
+            "title": "Notre Mission",
+            "description": "Fournir des semelles de chaussures exceptionnelles qui allient artisanat traditionnel et innovation moderne, dépassant les attentes des clients grâce à la qualité, la flexibilité et un service personnalisé."
+          },
+          "vision": {
+            "title": "Notre Vision",
+            "description": "Être la référence mondiale de l'excellence en fabrication de semelles, reconnue pour notre engagement envers la durabilité, l'innovation et l'équilibre parfait entre efficacité industrielle et qualité artisanale."
+          },
+          "promise": {
+            "title": "Notre Promesse",
+            "description": "Chaque semelle raconte une histoire de dévouement, de précision et de soin. Nous promettons une qualité constante, des partenariats fiables et des solutions qui aident à concrétiser vos visions de chaussures."
+          }
+        },
+        "timeline": {
+          "title": {
+            "prefix": "Notre",
+            "highlight": "Parcours"
+          },
+          "subtitle": "Sept décennies d'évolution, d'innovation et d'engagement indéfectible envers l'excellence",
+          "2018": {
+            "year": "2018",
+            "title": "Fondation",
+            "description": "Début en tant qu'atelier artisanal produisant des semelles en bois faites à la main"
+          },
+          "2020": {
+            "year": "2020",
+            "title": "Innovation Liège",
+            "description": "Expansion dans la production de semelles en liège avec de nouvelles technologies"
+          },
+          "2022": {
+            "year": "2022",
+            "title": "Révolution Matériaux",
+            "description": "Introduction des matériaux EVA, composites microcellulaires et caoutchouc"
+          },
+          "2024": {
+            "year": "2024",
+            "title": "Expansion Mondiale",
+            "description": "Présence établie dans plus de 50 pays à travers le monde"
+          },
+          "today": {
+            "year": "Aujourd'hui",
+            "title": "Leader du Secteur",
+            "description": "Combinant échelle industrielle et qualité artisanale"
+          }
+        },
+        "values": {
+          "title": {
+            "prefix": "Nos Valeurs",
+            "highlight": "Fondamentales"
+          },
+          "subtitle": "Les principes qui guident tout ce que nous faisons",
+          "quality": {
+            "title": "Passion pour la Qualité",
+            "description": "Chaque semelle que nous produisons reflète notre engagement envers l'excellence et le savoir-faire qui nous définit depuis plus de 7 ans."
+          },
+          "trust": {
+            "title": "Confiance & Fiabilité",
+            "description": "Construire des relations durables avec nos clients grâce à une qualité constante et un service fiable à chaque fois."
+          },
+          "innovation": {
+            "title": "Esprit d'Innovation",
+            "description": "Évolution constante avec les technologies de pointe tout en honorant les techniques artisanales traditionnelles."
+          },
+          "customer": {
+            "title": "Orientation Client",
+            "description": "Votre succès est notre mission. Nous adaptons les solutions pour répondre à vos exigences uniques avec précision et soin."
+          }
+        },
+        "team": {
+          "title": {
+            "prefix": "Rencontrez Notre",
+            "highlight": "Équipe"
+          },
+          "subtitle": "Des professionnels talentueux dédiés à votre succès",
+          "craftsmen": "Maîtres Artisans",
+          "designers": "Experts en Design",
+          "quality": "Contrôleurs Qualité",
+          "innovation": "Équipe Innovation"
+        },
+        "cta": {
+          "title": {
+            "prefix": "Prêt à Travailler",
+            "highlight": "Ensemble ?"
+          },
+          "subtitle": "Créons quelque chose d'extraordinaire. Contactez-nous dès aujourd'hui et découvrez comment notre expertise peut élever votre marque de chaussures.",
+          "button": "Prendre Contact"
+        }
+      }
+  }

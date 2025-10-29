@@ -1,19 +1,20 @@
 'use client';
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from 'lucide-react';
+import { useLanguage } from '@/app/contexts/languageContext';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [focusedField, setFocusedField] = useState('');
+  const { t } = useLanguage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -49,11 +50,11 @@ export default function ContactSection() {
           });
         }, 3000);
       } else {
-        alert('Failed to send message. Please try again.');
+        alert(t('contact.form.error'));
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('Failed to send message. Please try again.');
+      alert(t('contact.form.error'));
     } finally {
       setIsSubmitting(false);
     }
@@ -62,29 +63,29 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      content: '+39 123 456 7890',
+      title: t('contact.info.phone.title'),
+      content: t('contact.info.phone.content'),
       link: 'tel:+391234567890',
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: Mail,
-      title: 'Email',
-      content: 'info@soletech.com',
+      title: t('contact.info.email.title'),
+      content: t('contact.info.email.content'),
       link: 'mailto:info@soletech.com',
       color: 'from-amber-500 to-amber-600'
     },
     {
       icon: MapPin,
-      title: 'Address',
-      content: 'Via Example 123, 12345 City, Italy',
+      title: t('contact.info.address.title'),
+      content: t('contact.info.address.content'),
       link: '#',
       color: 'from-green-500 to-green-600'
     },
     {
       icon: Clock,
-      title: 'Business Hours',
-      content: 'Mon - Fri: 9:00 AM - 6:00 PM',
+      title: t('contact.info.hours.title'),
+      content: t('contact.info.hours.content'),
       link: '#',
       color: 'from-purple-500 to-purple-600'
     }
@@ -93,26 +94,26 @@ export default function ContactSection() {
   const features = [
     {
       icon: '🎯',
-      title: 'Custom Solutions',
-      description: 'Tailored soles for your specific needs',
+      title: t('contact.features.custom.title'),
+      description: t('contact.features.custom.description'),
       delay: '0'
     },
     {
       icon: '⚡',
-      title: 'Fast Response',
-      description: 'We reply within 24 hours',
+      title: t('contact.features.response.title'),
+      description: t('contact.features.response.description'),
       delay: '100'
     },
     {
       icon: '🌍',
-      title: 'Global Shipping',
-      description: 'Worldwide delivery available',
+      title: t('contact.features.shipping.title'),
+      description: t('contact.features.shipping.description'),
       delay: '200'
     },
     {
       icon: '🤝',
-      title: 'Expert Support',
-      description: 'Dedicated team to assist you',
+      title: t('contact.features.support.title'),
+      description: t('contact.features.support.description'),
       delay: '300'
     }
   ];
@@ -131,13 +132,13 @@ export default function ContactSection() {
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-amber-200 rounded-full mb-6 shadow-sm">
             <div className="w-2 h-2 bg-amber-600 rounded-full animate-pulse"></div>
-            <span className="text-sm text-amber-800 font-medium">CONTACT US</span>
+            <span className="text-sm text-amber-800 font-medium">{t('contact.badge')}</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Let&apos;s Start a Conversation
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to elevate your footwear? Reach out today and discover how our expertise can bring your vision to life.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -152,15 +153,15 @@ export default function ContactSection() {
               
               <div className="relative">
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                  Send us a Message
+                  {t('contact.form.title')}
                 </h3>
-                <p className="text-slate-600 mb-8">Fill out the form and we&apos;ll get back to you shortly</p>
+                <p className="text-slate-600 mb-8">{t('contact.form.subtitle')}</p>
                 
                 <div className="space-y-6">
                   {/* Name Input */}
                   <div className="group">
                     <label className="block text-sm font-semibold text-slate-700 mb-2 transition-colors">
-                      Full Name <span className="text-red-500">*</span>
+                      {t('contact.form.name.label')} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -174,14 +175,14 @@ export default function ContactSection() {
                           ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
                           : 'border-slate-200 hover:border-slate-300'
                       }`}
-                      placeholder="John Doe"
+                      placeholder={t('contact.form.name.placeholder')}
                     />
                   </div>
 
                   {/* Email Input */}
                   <div className="group">
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                      {t('contact.form.email.label')} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -195,35 +196,35 @@ export default function ContactSection() {
                           ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
                           : 'border-slate-200 hover:border-slate-300'
                       }`}
-                      placeholder="john@example.com"
+                      placeholder={t('contact.form.email.placeholder')}
                     />
                   </div>
 
-                  {/* Phone and Company Row */}
-                    <div className="group">
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        onFocus={() => setFocusedField('phone')}
-                        onBlur={() => setFocusedField('')}
-                        className={`w-full px-4 py-3.5 bg-slate-50 border-2 rounded-xl transition-all duration-300 outline-none ${
-                          focusedField === 'phone' 
-                            ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
-                            : 'border-slate-200 hover:border-slate-300'
-                        }`}
-                        placeholder="+1 234 567 890"
-                      />
-                    </div>
+                  {/* Phone Input */}
+                  <div className="group">
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">
+                      {t('contact.form.phone.label')}
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      onFocus={() => setFocusedField('phone')}
+                      onBlur={() => setFocusedField('')}
+                      className={`w-full px-4 py-3.5 bg-slate-50 border-2 rounded-xl transition-all duration-300 outline-none ${
+                        focusedField === 'phone' 
+                          ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
+                          : 'border-slate-200 hover:border-slate-300'
+                      }`}
+                      placeholder={t('contact.form.phone.placeholder')}
+                    />
+                  </div>
 
                   {/* Message Textarea */}
                   <div className="group">
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Message <span className="text-red-500">*</span>
+                      {t('contact.form.message.label')} <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       name="message"
@@ -237,7 +238,7 @@ export default function ContactSection() {
                           ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
                           : 'border-slate-200 hover:border-slate-300'
                       }`}
-                      placeholder="Tell us about your project..."
+                      placeholder={t('contact.form.message.placeholder')}
                     />
                   </div>
 
@@ -256,16 +257,16 @@ export default function ContactSection() {
                       {isSubmitting ? (
                         <>
                           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                          Sending...
+                          {t('contact.form.sending')}
                         </>
                       ) : isSuccess ? (
                         <>
                           <CheckCircle className="w-5 h-5" />
-                          Message Sent!
+                          {t('contact.form.success')}
                         </>
                       ) : (
                         <>
-                          Send Message
+                          {t('contact.form.submit')}
                           <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </>
                       )}
@@ -280,7 +281,7 @@ export default function ContactSection() {
           <div className="space-y-8 animate-slide-in-right">
             <div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                Contact Information
+                {t('contact.info.title')}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => {
@@ -317,9 +318,9 @@ export default function ContactSection() {
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:rotate-3 transition-transform duration-300">
                     <MapPin className="w-10 h-10" />
                   </div>
-                  <p className="text-slate-900 font-bold text-lg">Our Location</p>
-                  <p className="text-sm text-slate-600 mt-1">Via Example 123, City, Italy</p>
-                  <p className="text-xs text-amber-600 font-medium mt-2">Click to view on map</p>
+                  <p className="text-slate-900 font-bold text-lg">{t('contact.map.title')}</p>
+                  <p className="text-sm text-slate-600 mt-1">{t('contact.map.address')}</p>
+                  <p className="text-xs text-amber-600 font-medium mt-2">{t('contact.map.cta')}</p>
                 </div>
               </div>
             </div>
@@ -329,7 +330,7 @@ export default function ContactSection() {
         {/* Features Grid */}
         <div>
           <h3 className="text-3xl font-bold text-slate-900 text-center mb-12">
-            Why Partner With Us
+            {t('contact.features.title')}
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (

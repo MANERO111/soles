@@ -1,11 +1,13 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { Briefcase, Lightbulb, Rocket, Shield, Target, Zap } from 'lucide-react';
+import { useLanguage } from '@/app/contexts/languageContext';
 
 function ValuesSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null)
   const sectionRef = useRef(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,33 +35,36 @@ function ValuesSection() {
   const values = [
     {
       icon: Briefcase,
-      title: "5+ Years of Expertise",
-      description: "Our company takes pride in a team of highly skilled professionals dedicated to excellence in sole manufacturing. With decades of acquired expertise, we master the art of blending materials and technologies to create diverse, customized solutions tailored to each customer's unique requirements.",
+      title: t('values.items.expertise.title'),
+      description: t('values.items.expertise.description'),
       color: "from-red-500 to-orange-500",
       bgColor: "from-red-50 to-orange-50",
       iconBg: "bg-red-100",
       iconColor: "text-red-600",
-      accentColor: "border-red-200"
+      accentColor: "border-red-200",
+      badge: t('values.items.expertise.badge')
     },
     {
       icon: Lightbulb,
-      title: "Innovative Technology",
-      description: "Through extensive research and development, we've pioneered advanced systems that significantly reduce the weight of TR, TPU, and PU soles. Our cutting-edge technology delivers distinctive benefits, creating footwear solutions that prioritize lightweight design, superior performance, and exceptional comfort.",
+      title: t('values.items.innovation.title'),
+      description: t('values.items.innovation.description'),
       color: "from-amber-500 to-yellow-500",
       bgColor: "from-amber-50 to-yellow-50",
       iconBg: "bg-amber-100",
       iconColor: "text-amber-600",
-      accentColor: "border-amber-200"
+      accentColor: "border-amber-200",
+      badge: t('values.items.innovation.badge')
     },
     {
       icon: Rocket,
-      title: "Flexible Order Solutions",
-      description: "At PBS Soles, we understand diverse client needs and welcome orders of all sizes. With over 20 years of expertise in sole production, we're committed to delivering premium products regardless of order volume. From small batches of 100 pairs to large-scale production, expect efficient service, timely delivery, and unwavering quality.",
+      title: t('values.items.flexibility.title'),
+      description: t('values.items.flexibility.description'),
       color: "from-slate-600 to-slate-800",
       bgColor: "from-slate-50 to-gray-50",
       iconBg: "bg-slate-100",
       iconColor: "text-slate-600",
-      accentColor: "border-slate-200"
+      accentColor: "border-slate-200",
+      badge: t('values.items.flexibility.badge')
     }
   ];
 
@@ -87,10 +92,10 @@ function ValuesSection() {
         <div className={`mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="relative inline-block">
             <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-300 via-amber-100 to-slate-200 leading-tight tracking-tight">
-              our values
+              {t('values.title')}
             </h2>
             <div className="absolute inset-0 text-7xl sm:text-8xl lg:text-9xl font-black text-slate-900 leading-tight tracking-tight opacity-10 blur-sm">
-              our values
+              {t('values.title')}
             </div>
           </div>
           <div className="mt-4 h-2 w-32 bg-gradient-to-r from-red-500 via-amber-500 to-slate-600 rounded-full animate-pulse"></div>
@@ -153,7 +158,7 @@ function ValuesSection() {
                     {/* Read More Link */}
                     <div className="pt-4">
                       <button className={`inline-flex items-center gap-2 text-sm font-semibold ${value.iconColor} opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300`}>
-                        Learn More
+                        {t('values.cta.learnMore')}
                         <Zap className="w-4 h-4" />
                       </button>
                     </div>
@@ -166,17 +171,17 @@ function ValuesSection() {
                 {/* Floating badge for emphasis */}
                 {index === 0 && (
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl transform rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 z-20">
-                    ⭐ Experienced
+                    {value.badge}
                   </div>
                 )}
                 {index === 1 && (
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl transform rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 z-20">
-                    💡 Innovative
+                    {value.badge}
                   </div>
                 )}
                 {index === 2 && (
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-slate-600 to-slate-800 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl transform rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 z-20">
-                    🚀 Flexible
+                    {value.badge}
                   </div>
                 )}
               </div>
@@ -189,14 +194,14 @@ function ValuesSection() {
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-amber-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
-                Explore Our Process
+                {t('values.cta.exploreProcess')}
                 <Target className="w-5 h-5 group-hover:rotate-90 transition-transform duration-500" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
             
             <button className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
-              Contact Our Team
+              {t('values.cta.contactTeam')}
             </button>
           </div>
         </div>

@@ -1,11 +1,13 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { Sparkles, Award, Users, Globe } from 'lucide-react';
+import { useLanguage } from '@/app/contexts/languageContext';
 
 function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [countUpValues, setCountUpValues] = useState({ years: 0, clients: 0, materials: 0, exports: 0 });
   const sectionRef = useRef(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +48,7 @@ function AboutSection() {
         years: Math.floor(7 * progress),
         clients: Math.floor(1000 * progress),
         materials: Math.floor(4 * progress),
-        exports: Math.floor(10 * progress)
+        exports: Math.floor(70 * progress)
       });
 
       if (currentStep >= steps) {
@@ -75,14 +77,18 @@ function AboutSection() {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-50 to-red-50 border-2 border-amber-200/50 rounded-full mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <Sparkles className="w-5 h-5 text-amber-600 animate-pulse" />
-            <span className="text-sm text-slate-800 font-semibold uppercase tracking-wider">About Our Legacy</span>
+            <span className="text-sm text-slate-800 font-semibold uppercase tracking-wider">
+              {t('aboutLegacy.badge')}
+            </span>
           </div>
 
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
-            A Continuous <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-red-600 animate-gradient">Evolution</span>
+            {t('aboutLegacy.title.line1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-red-600 animate-gradient">
+              {t('aboutLegacy.title.line2')}
+            </span>
           </h2>
           <p className="text-xl sm:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Rooted in tradition, always looking toward the future
+            {t('aboutLegacy.subtitle')}
           </p>
         </div>
 
@@ -98,8 +104,8 @@ function AboutSection() {
                   <div className="relative bg-white p-3 rounded-3xl shadow-2xl overflow-hidden transform group-hover:-translate-y-2 group-hover:shadow-amber-300/50 transition-all duration-500">
                     <div className="aspect-[16/9] bg-gradient-to-br from-slate-100 to-amber-100 rounded-2xl overflow-hidden">
                       <img 
-                        src="img/Chi-siamo-6.jpg" 
-                        alt="Manufacturing excellence" 
+                        src="img/LOT00060 copie.jpg" 
+                        alt={t('aboutLegacy.images.manufacturing')} 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
@@ -112,8 +118,8 @@ function AboutSection() {
                   <div className="relative bg-white p-3 rounded-3xl shadow-xl overflow-hidden transform group-hover:-translate-y-2 group-hover:rotate-2 transition-all duration-500">
                     <div className="aspect-square bg-gradient-to-br from-red-100 to-amber-100 rounded-2xl overflow-hidden">
                       <img 
-                        src="img/Chi-siamo-5.jpg" 
-                        alt="Craftsmanship detail" 
+                        src="img/LOT00010 copie.jpg" 
+                        alt={t('aboutLegacy.images.craftsmanship')} 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
@@ -125,8 +131,8 @@ function AboutSection() {
                   <div className="relative bg-white p-3 rounded-3xl shadow-xl overflow-hidden transform group-hover:-translate-y-2 group-hover:-rotate-2 transition-all duration-500">
                     <div className="aspect-square bg-gradient-to-br from-amber-100 to-slate-100 rounded-2xl overflow-hidden">
                       <img 
-                        src="img/Chi-siamo-4.jpg" 
-                        alt="Quality production" 
+                        src="img/LOT00008 copie.jpg" 
+                        alt={t('aboutLegacy.images.quality')} 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
@@ -138,7 +144,7 @@ function AboutSection() {
               <div className="absolute -top-4 -right-4 bg-gradient-to-br from-amber-500 to-red-500 text-white px-6 py-3 rounded-full shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 z-20">
                 <div className="text-center">
                   <div className="text-2xl font-bold">7+</div>
-                  <div className="text-xs uppercase tracking-wide">Years</div>
+                  <div className="text-xs uppercase tracking-wide">{t('aboutLegacy.years')}</div>
                 </div>
               </div>
 
@@ -155,9 +161,11 @@ function AboutSection() {
               <div className="relative pl-8 border-l-4 border-amber-300 hover:border-amber-500 transition-colors duration-300 group">
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">2018 Foundation</div>
+                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
+                    {t('aboutLegacy.timeline.2018.year')}
+                  </div>
                   <p className="text-slate-700 leading-relaxed">
-                    PBS Soles Srl was founded 7 years ago, originally producing <strong className="text-slate-900 bg-amber-50 px-1 rounded">wooden</strong> soles with traditional craftsmanship methods.
+                    {t('aboutLegacy.timeline.2018.description')}
                   </p>
                 </div>
               </div>
@@ -166,9 +174,11 @@ function AboutSection() {
               <div className="relative pl-8 border-l-4 border-amber-300 hover:border-amber-500 transition-colors duration-300 group">
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">2020 Innovation</div>
+                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
+                    {t('aboutLegacy.timeline.2020.year')}
+                  </div>
                   <p className="text-slate-700 leading-relaxed">
-                    Growing demand for <strong className="text-slate-900 bg-amber-50 px-1 rounded">cork</strong> led the company to invest in revolutionary new technologies and expand production capabilities.
+                    {t('aboutLegacy.timeline.2020.description')}
                   </p>
                 </div>
               </div>
@@ -177,9 +187,11 @@ function AboutSection() {
               <div className="relative pl-8 border-l-4 border-amber-300 hover:border-amber-500 transition-colors duration-300 group">
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">2022 Advancement</div>
+                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
+                    {t('aboutLegacy.timeline.2022.year')}
+                  </div>
                   <p className="text-slate-700 leading-relaxed">
-                    Advanced materials like <strong className="text-slate-900 bg-amber-50 px-1 rounded">EVA, microporous compounds, and rubber</strong> became essential. We upgraded all machinery for top-quality production.
+                    {t('aboutLegacy.timeline.2022.description')}
                   </p>
                 </div>
               </div>
@@ -188,9 +200,11 @@ function AboutSection() {
               <div className="relative pl-8 border-l-4 border-red-300 hover:border-red-500 transition-colors duration-300 group">
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-red-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300 animate-pulse"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-red-600 uppercase tracking-wider">Today&apos;s Excellence</div>
+                  <div className="text-sm font-bold text-red-600 uppercase tracking-wider">
+                    {t('aboutLegacy.timeline.today.year')}
+                  </div>
                   <p className="text-slate-700 leading-relaxed">
-                    A market leader <strong className="text-slate-900 bg-red-50 px-1 rounded">combining industrial production with artisanal quality</strong>, powered by innovation and skilled expertise.
+                    {t('aboutLegacy.timeline.today.description')}
                   </p>
                 </div>
               </div>
@@ -199,7 +213,7 @@ function AboutSection() {
             {/* CTA Button */}
             <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-amber-600 text-white rounded-xl font-semibold overflow-hidden hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95">
               <span className="relative z-10 flex items-center gap-2">
-                Discover Our Journey
+                {t('aboutLegacy.cta')}
                 <Award className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
@@ -216,7 +230,7 @@ function AboutSection() {
             <div className="text-5xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
               {countUpValues.years}+
             </div>
-            <div className="text-slate-600 font-medium">Years of Excellence</div>
+            <div className="text-slate-600 font-medium">{t('aboutLegacy.stats.years')}</div>
           </div>
 
           <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-200">
@@ -226,7 +240,7 @@ function AboutSection() {
             <div className="text-5xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
               {countUpValues.clients}+
             </div>
-            <div className="text-slate-600 font-medium">Happy Clients</div>
+            <div className="text-slate-600 font-medium">{t('aboutLegacy.stats.clients')}</div>
           </div>
 
           <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-amber-200">
@@ -236,7 +250,7 @@ function AboutSection() {
             <div className="text-5xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
               {countUpValues.materials}
             </div>
-            <div className="text-slate-600 font-medium">Material Types</div>
+            <div className="text-slate-600 font-medium">{t('aboutLegacy.stats.materials')}</div>
           </div>
 
           <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-200">
@@ -246,7 +260,7 @@ function AboutSection() {
             <div className="text-5xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
               {countUpValues.exports}%
             </div>
-            <div className="text-slate-600 font-medium">Export Worldwide</div>
+            <div className="text-slate-600 font-medium">{t('aboutLegacy.stats.exports')}</div>
           </div>
         </div>
       </div>

@@ -2,20 +2,21 @@
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { Award, Users, Factory, Globe, TrendingUp, Heart, Shield, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/app/contexts/languageContext';
 
 function AboutUsPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState('mission');
   const [countUpValues, setCountUpValues] = useState({ years: 0, clients: 0, countries: 0, products: 0 });
   const sectionRef = useRef(null);
-    const router = useRouter();
-    const pathname = usePathname();
+  const router = useRouter();
+  const pathname = usePathname();
+  const { t } = useLanguage();
+
   const handleSectionNavigation = (sectionId: string) => {
-    // If we're not on the home page, navigate to home page first
     if (pathname !== '/') {
       router.push(`/#${sectionId}`);
     } else {
-      // If we're already on home page, scroll to section
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -31,6 +32,7 @@ function AboutUsPage() {
       }, 100);
     }
   };
+
   const scrollToSection = (sectionId: string) => {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
@@ -45,12 +47,13 @@ function AboutUsPage() {
         });
       }
     }, 100);
-  }
-    const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
-      e.preventDefault();
-      handleSectionNavigation(sectionId);
-    };
-  
+  };
+
+  const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    handleSectionNavigation(sectionId);
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -89,59 +92,59 @@ function AboutUsPage() {
         years: Math.floor(7 * progress),
         clients: Math.floor(1000 * progress),
         countries: Math.floor(50 * progress),
-        products: Math.floor(10000 * progress)
+        products: Math.floor(100 * progress)
       });
 
       if (currentStep >= steps) {
         clearInterval(interval);
-        setCountUpValues({ years: 7, clients: 1000, countries: 50, products: 1000 });
+        setCountUpValues({ years: 7, clients: 1000, countries: 50, products: 100 });
       }
     }, stepDuration);
   };
 
   const stats = [
-    { icon: Award, label: 'Years of Experience', value: countUpValues.years, suffix: '+', color: 'from-amber-500 to-orange-500' },
-    { icon: Users, label: 'Happy Clients', value: countUpValues.clients, suffix: '+', color: 'from-blue-500 to-cyan-500' },
-    { icon: Globe, label: 'Countries Served', value: countUpValues.countries, suffix: '+', color: 'from-green-500 to-emerald-500' },
-    { icon: Factory, label: 'Products Made', value: countUpValues.products, suffix: '+', color: 'from-purple-500 to-pink-500' }
+    { icon: Award, label: t('about.stats.years'), value: countUpValues.years, suffix: '+', color: 'from-amber-500 to-orange-500' },
+    { icon: Users, label: t('about.stats.clients'), value: countUpValues.clients, suffix: '+', color: 'from-blue-500 to-cyan-500' },
+    { icon: Globe, label: t('about.stats.countries'), value: countUpValues.countries, suffix: '+', color: 'from-green-500 to-emerald-500' },
+    { icon: Factory, label: t('about.stats.products'), value: countUpValues.products, suffix: '+', color: 'from-purple-500 to-pink-500' }
   ];
 
   const values = [
     {
       icon: Heart,
-      title: 'Passion for Quality',
-      description: 'Every sole we produce reflects our commitment to excellence and craftsmanship that has defined us for over 7 years.'
+      title: t('about.values.quality.title'),
+      description: t('about.values.quality.description')
     },
     {
       icon: Shield,
-      title: 'Trust & Reliability',
-      description: 'Building lasting relationships with our clients through consistent quality and dependable service every single time.'
+      title: t('about.values.trust.title'),
+      description: t('about.values.trust.description')
     },
     {
       icon: Zap,
-      title: 'Innovation Drive',
-      description: 'Constantly evolving with cutting-edge technology while honoring traditional craftsmanship techniques.'
+      title: t('about.values.innovation.title'),
+      description: t('about.values.innovation.description')
     },
     {
       icon: Target,
-      title: 'Customer Focus',
-      description: 'Your success is our mission. We tailor solutions to meet your unique requirements with precision and care.'
+      title: t('about.values.customer.title'),
+      description: t('about.values.customer.description')
     }
   ];
 
   const milestones = [
-    { year: '2018s', title: 'Foundation', description: 'Started as a small workshop producing handcrafted wooden soles', icon: '🏭' },
-    { year: '2020s', title: 'Cork Innovation', description: 'Expanded into cork sole production with new technologies', icon: '🌱' },
-    { year: '2022s', title: 'Material Revolution', description: 'Introduced EVA, microporous compounds, and rubber materials', icon: '⚡' },
-    { year: '2024s', title: 'Global Expansion', description: 'Established presence in 50+ countries worldwide', icon: '🌍' },
-    { year: 'Today', title: 'Industry Leader', description: 'Combining industrial scale with artisanal quality', icon: '👑' }
+    { year: t('about.timeline.2018.year'), title: t('about.timeline.2018.title'), description: t('about.timeline.2018.description'), icon: '🏭' },
+    { year: t('about.timeline.2020.year'), title: t('about.timeline.2020.title'), description: t('about.timeline.2020.description'), icon: '🌱' },
+    { year: t('about.timeline.2022.year'), title: t('about.timeline.2022.title'), description: t('about.timeline.2022.description'), icon: '⚡' },
+    { year: t('about.timeline.2024.year'), title: t('about.timeline.2024.title'), description: t('about.timeline.2024.description'), icon: '🌍' },
+    { year: t('about.timeline.today.year'), title: t('about.timeline.today.title'), description: t('about.timeline.today.description'), icon: '👑' }
   ];
 
   const team = [
-    { role: 'Master Craftsmen', count: '25+', icon: '👨‍🔧', color: 'from-amber-500 to-orange-500' },
-    { role: 'Design Experts', count: '15+', icon: '🎨', color: 'from-blue-500 to-cyan-500' },
-    { role: 'Quality Controllers', count: '12+', icon: '✅', color: 'from-green-500 to-emerald-500' },
-    { role: 'Innovation Team', count: '8+', icon: '💡', color: 'from-purple-500 to-pink-500' }
+    { role: t('about.team.craftsmen'), count: '25+', icon: '👨‍🔧', color: 'from-amber-500 to-orange-500' },
+    { role: t('about.team.designers'), count: '15+', icon: '🎨', color: 'from-blue-500 to-cyan-500' },
+    { role: t('about.team.quality'), count: '12+', icon: '✅', color: 'from-green-500 to-emerald-500' },
+    { role: t('about.team.innovation'), count: '8+', icon: '💡', color: 'from-purple-500 to-pink-500' }
   ];
 
   return (
@@ -159,31 +162,33 @@ function AboutUsPage() {
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-amber-50 border-2 border-amber-200 rounded-full mb-8 shadow-lg">
               <Factory className="w-5 h-5 text-amber-600 animate-pulse" />
-              <span className="text-sm text-amber-800 font-semibold uppercase tracking-wider">About Our Company</span>
+              <span className="text-sm text-amber-800 font-semibold uppercase tracking-wider">
+                {t('about.hero.badge')}
+              </span>
             </div>
 
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-slate-900 leading-tight mb-8">
-              Crafting Excellence
+              {t('about.hero.title.line1')}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 animate-gradient">
-                Since 2018
+                {t('about.hero.title.line2')}
               </span>
             </h1>
 
             <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-12">
-              A legacy of innovation, quality, and dedication to the art of sole manufacturing. 
-              From our humble beginnings to becoming a global leader, our story is one of passion and perseverance.
+              {t('about.hero.subtitle')}
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
               <button onClick={() => scrollToSection("our-journey")} className="group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
-                Discover Our Journey
+                {t('about.hero.cta.discover')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               <a
-              href="#contact" 
-              onClick={(e) => handleNavClick(e, 'contact')}
-              className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-2xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
-                Contact Us
+                href="#contact" 
+                onClick={(e) => handleNavClick(e, 'contact')}
+                className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-2xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+              >
+                {t('about.hero.cta.contact')}
               </a>
             </div>
           </div>
@@ -219,31 +224,31 @@ function AboutUsPage() {
       </section>
 
       {/* Mission/Vision Section */}
-      <section className="relative py-32">
+      <section id='mission' className="relative py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Purpose</span>
+              {t('about.purpose.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">{t('about.purpose.title.highlight')}</span>
             </h2>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {[
               { 
-                title: 'Our Mission', 
-                content: 'To deliver exceptional shoe soles that combine traditional craftsmanship with modern innovation, exceeding client expectations through quality, flexibility, and personalized service.',
+                title: t('about.purpose.mission.title'),
+                content: t('about.purpose.mission.description'),
                 icon: Target,
                 color: 'from-amber-500 to-orange-500'
               },
               { 
-                title: 'Our Vision', 
-                content: 'To be the global benchmark for sole manufacturing excellence, recognized for our commitment to sustainability, innovation, and the perfect balance of industrial efficiency with artisanal quality.',
+                title: t('about.purpose.vision.title'),
+                content: t('about.purpose.vision.description'),
                 icon: Globe,
                 color: 'from-blue-500 to-cyan-500'
               },
               { 
-                title: 'Our Promise', 
-                content: 'Every sole tells a story of dedication, precision, and care. We promise consistent quality, reliable partnerships, and solutions that help bring your footwear visions to life.',
+                title: t('about.purpose.promise.title'),
+                content: t('about.purpose.promise.description'),
                 icon: Heart,
                 color: 'from-green-500 to-emerald-500'
               }
@@ -278,10 +283,10 @@ function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Journey</span>
+              {t('about.timeline.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">{t('about.timeline.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Seven decades of evolution, innovation, and unwavering commitment to excellence
+              {t('about.timeline.subtitle')}
             </p>
           </div>
 
@@ -328,14 +333,14 @@ function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section className="relative py-32">
+      <section id='values' className="relative py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6">
-              Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Values</span>
+              {t('about.values.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">{t('about.values.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              The principles that guide everything we do
+              {t('about.values.subtitle')}
             </p>
           </div>
 
@@ -368,14 +373,14 @@ function AboutUsPage() {
       </section>
 
       {/* Team Section */}
-      <section className="relative py-32 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section id='team' className="relative py-32 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6">
-              Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Team</span>
+              {t('about.team.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">{t('about.team.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Talented professionals dedicated to your success
+              {t('about.team.subtitle')}
             </p>
           </div>
 
@@ -404,16 +409,18 @@ function AboutUsPage() {
       <section className="relative py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-bold text-white mb-8">
-            Ready to Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Together?</span>
+            {t('about.cta.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">{t('about.cta.title.highlight')}</span>
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Let&apos;s create something extraordinary. Reach out today and discover how our expertise can elevate your footwear brand.
+            {t('about.cta.subtitle')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a               
               href="#contact" 
-              onClick={(e) => handleNavClick(e, 'contact')} className="group px-10 py-5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
-              Get In Touch
+              onClick={(e) => handleNavClick(e, 'contact')} 
+              className="group px-10 py-5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
+            >
+              {t('about.cta.button')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
