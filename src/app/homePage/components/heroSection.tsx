@@ -190,16 +190,16 @@ function HeroSection() {
             }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full">
-              <span className="w-2 h-2 bg-amber-600 rounded-full"></span>
-              <span className="text-sm text-amber-800 font-medium">{t('hero.badge')}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#f2413b] rounded-full">
+              <span className="w-2 h-2 bg-[#f2413b] rounded-full"></span>
+              <span className="text-sm text-[#f2413b] font-medium">{t('hero.badge')}</span>
             </div>
 
             {/* Heading */}
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-slate-900">
                 {t('hero.titleLine1')}
-                <span className="block text-amber-600">{t('hero.titleLine2')}</span>
+                <span className="block text-[#f2413b]">{t('hero.titleLine2')}</span>
                 {t('hero.titleLine3')}
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed">
@@ -301,7 +301,7 @@ function HeroSection() {
         }}
       >
         <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-amber-600 rounded-full mt-2"></div>
+          <div className="w-1.5 h-3 bg-[#f2413b] rounded-full mt-2"></div>
         </div>
       </div>
     </section>

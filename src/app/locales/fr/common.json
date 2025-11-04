@@ -81,40 +81,40 @@
       "aboutLegacy": {
         "badge": "Notre Héritage",
         "title": {
-          "line1": "Une Évolution",
-          "line2": "Continue"
+          "line1": "Le N°1 Marocain",
+          "line2": "Depuis 2018"
         },
-        "subtitle": "Enracinés dans la tradition, toujours tournés vers l'avenir",
-        "years": "Ans",
+        "subtitle": "Leader historique dans la fabrication de semelles - alliant excellence industrielle et expertise inégalée",
+        "years": "Années",
         "images": {
-          "manufacturing": "Excellence manufacturière",
-          "craftsmanship": "Détail du savoir-faire",
-          "quality": "Production de qualité"
+          "manufacturing": "Usine de fabrication Casa Semelle",
+          "craftsmanship": "Artisanat de semelles de précision",
+          "quality": "Contrôle qualité et production"
         },
         "timeline": {
           "2018": {
-            "year": "Fondation 2018",
-            "description": "PBS Soles Srl a été fondée il y a 7 ans, produisant à l'origine des semelles en bois avec des méthodes de fabrication traditionnelles."
+            "year": "Janvier 2018 - Fondation",
+            "description": "Casa Semelle a été fondée le 16 janvier 2018 à Casablanca avec une vision claire : devenir la référence marocaine en fabrication de semelles grâce à la qualité et l'innovation."
           },
           "2020": {
-            "year": "Innovation 2020",
-            "description": "La demande croissante de liège a conduit l'entreprise à investir dans de nouvelles technologies révolutionnaires et à étendre ses capacités de production."
+            "year": "2020 - Leadership sur le Marché",
+            "description": "Atteinte de la position numéro un sur le marché marocain, gagnant la confiance des grandes marques locales et nous établissant comme le partenaire privilégié pour des semelles de qualité."
           },
           "2022": {
-            "year": "Avancement 2022",
-            "description": "Les matériaux avancés comme l'EVA, les composés microporieux et le caoutchouc sont devenus essentiels. Nous avons modernisé toutes les machines pour une production de qualité supérieure."
+            "year": "2022 - Reconnaissance Internationale",
+            "description": "Le partenariat avec le groupe Inditex valide notre capacité à répondre aux standards internationaux. Expertise matériaux étendue à travers l'EVA, le Caoutchouc, le PU, TPU, TR et le Cuir."
           },
           "today": {
-            "year": "Excellence Actuelle",
-            "description": "Un leader du marché combinant production industrielle et qualité artisanale, alimenté par l'innovation et une expertise qualifiée."
+            "year": "Aujourd'hui - Pionnier de l'Industrie",
+            "description": "Le leader historique au service des grandes marques, ateliers industriels, artisans et groupes internationaux. Une machinerie moderne alliée à un savoir-faire expert fait de nous la référence incontestée."
           }
         },
-        "cta": "Découvrez Notre Parcours",
+        "cta": "Découvrez Notre Histoire",
         "stats": {
-          "years": "Ans d'Excellence",
-          "clients": "Clients Satisfaits",
+          "years": "Années d'Excellence",
+          "clients": "Clients Majeurs",
           "materials": "Types de Matériaux",
-          "exports": "Exportation Mondiale"
+          "exports": "Marchés d'Exportation"
         }
       },
       "values": {
@@ -195,15 +195,15 @@
           "title": "Informations de Contact",
           "phone": {
             "title": "Téléphone",
-            "content": "+39 123 456 7890"
+            "content": "+212 522359446 / +212 661214798"
           },
           "email": {
             "title": "Email",
-            "content": "info@soletech.com"
+            "content": "casasemelle@gmail.com"
           },
           "address": {
             "title": "Adresse",
-            "content": "Via Example 123, 12345 Ville, Italie"
+            "content": "22 Rue Abou Bakr Ibnou Koutia Oukacha Casablanca, Maroc"
           },
           "hours": {
             "title": "Heures d'Ouverture",
@@ -212,7 +212,7 @@
         },
         "map": {
           "title": "Notre Localisation",
-          "address": "Via Example 123, Ville, Italie",
+          "address": "22 Rue Abou Bakr Ibnou Koutia Oukacha Casablanca, Maroc",
           "cta": "Cliquez pour voir sur la carte"
         },
         "features": {
@@ -236,31 +236,31 @@
         }
       },
       "footer": {
-        "logoAlt": "logo casaSemelle",
-        "description": "Fabrication de semelles de chaussures premium avec 10 ans d'expertise. Là où la tradition rencontre l'innovation à chaque pas.",
+        "logoAlt": "Logo Casa Semelle",
+        "description": "Numéro un marocain de la fabrication de semelles. Leader historique avec 7+ ans d'expertise, au service des grandes marques avec qualité, innovation et fiabilité.",
         "contact": {
-          "phone": "+39 123 456 7890",
-          "email": "info@soletech.com",
-          "address": "Via Example 123, 12345 Ville, Italie"
+          "phone": "+212 522 359 446 / +212 661 214 798",
+          "email": "casasemelle@gmail.com",
+          "address": "22 Rue Abou Bakr Ibnou Koutia Oukacha, Casablanca, Maroc"
         },
         "sections": {
           "company": "Entreprise",
-          "about": "À Propos",
+          "about": "À propos", 
           "products": "Produits",
           "support": "Support"
         },
         "links": {
           "company": {
             "home": "Accueil",
-            "about": "À Propos",
+            "about": "À propos",
             "values": "Nos Valeurs",
-            "philosophy": "Notre Philosophie",
+            "philosophy": "Notre Expertise",
             "contact": "Contact"
           },
           "about": {
             "ourJourney": "Notre Parcours",
-            "ourMission": "Notre Mission",
-            "ourValues": "Nos Valeurs", 
+            "ourMission": "Notre Mission", 
+            "ourValues": "Nos Valeurs",
             "ourTeam": "Notre Équipe"
           },
           "products": {
@@ -274,11 +274,11 @@
             "contact": "Contactez-Nous"
           }
         },
-        "copyright": "© 2025 SoleTech. Tous droits réservés. Fait avec",
+        "copyright": "© 2025 Casa Semelle. Tous droits réservés. Fait avec",
         "madeIn": "au Maroc",
         "certifications": {
           "quality": "Certifié Qualité",
-          "iso": "ISO 9001"
+          "iso": "Normes ISO"
         }
       },
       "products": {
@@ -320,115 +320,115 @@
         }
       },
       "about": {
-        "hero": {
-          "badge": "À Propos de Notre Entreprise",
-          "title": {
-            "line1": "Excellence Artisanale",
-            "line2": "Depuis 2018"
+          "hero": {
+            "badge": "Leader dans la Fabrication de Semelles",
+            "title": {
+              "line1": "Le N°1 Marocain",
+              "line2": "en Fabrication de Semelles"
+            },
+            "subtitle": "Casa Semelle est le leader historique et numéro un sur le marché marocain de la fabrication de semelles pour chaussures. Avec des décennies d'expertise, nous sommes la référence dans l'industrie de la chaussure et de la semelle au Maroc.",
+            "cta": {
+              "discover": "Découvrez Notre Parcours",
+              "contact": "Contactez-Nous"
+            }
           },
-          "subtitle": "Un héritage d'innovation, de qualité et de dévouement à l'art de la fabrication de semelles. De nos débuts modestes à notre statut de leader mondial, notre histoire est celle de la passion et de la persévérance.",
+          "stats": {
+            "years": "Années d'Excellence",
+            "clients": "Clients Majeurs",
+            "countries": "Marchés d'Exportation",
+            "products": "Types de Semelles"
+          },
+          "purpose": {
+            "title": {
+              "prefix": "Notre",
+              "highlight": "Raison d'Être"
+            },
+            "mission": {
+              "title": "Notre Mission",
+              "description": "Fournir aux fabricants de chaussures des semelles innovantes, durables et performantes qui répondent aux standards internationaux et aux spécificités du marché marocain. Nous allions excellence industrielle et solutions sur mesure."
+            },
+            "vision": {
+              "title": "Notre Vision",
+              "description": "Valoriser l'expertise marocaine dans l'industrie de la chaussure à l'international, au service de la performance, du confort et de la durabilité. Nous aspirons à être le partenaire privilégié des grandes marques et fabricants au Maroc et à l'international."
+            },
+            "promise": {
+              "title": "Notre Engagement",
+              "description": "Expertise reconnue et présence dominante sur le marché local. Collaboration avec des groupes de renommée mondiale comme Inditex. Machinerie industrielle moderne et capacité de production élevée. Livraison dans les délais et constance qualité exemplaire."
+            }
+          },
+          "timeline": {
+            "title": {
+              "prefix": "Notre",
+              "highlight": "Parcours"
+            },
+            "subtitle": "De notre fondation à devenir le leader incontesté de la fabrication de semelles au Maroc",
+            "2018": {
+              "year": "Janvier 2018",
+              "title": "Fondation de Casa Semelle",
+              "description": "Établie le 16 janvier 2018 à Casablanca avec une mission claire : devenir la référence en fabrication de semelles au Maroc"
+            },
+            "2020": {
+              "year": "2020",
+              "title": "Leadership sur le Marché",
+              "description": "Atteinte de la position de numéro un marocain en fabrication de semelles, gagnant la confiance des grandes marques locales de chaussures et établissant une présence dominante sur le marché"
+            },
+            "2022": {
+              "year": "2022",
+              "title": "Reconnaissance Internationale",
+              "description": "Partenariat avec le groupe Inditex et autres clients internationaux, confirmant notre capacité à répondre aux standards mondiaux les plus exigeants"
+            },
+            "2024": {
+              "year": "2024",
+              "title": "Expansion Industrielle",
+              "description": "Augmentation de la capacité de production avec des machines modernes, maîtrisant tous les principaux matériaux de semelles de l'EVA au cuir, servant la chaussure de sécurité, casual et de designer"
+            },
+            "today": {
+              "year": "Aujourd'hui",
+              "title": "Pionnier de l'Industrie",
+              "description": "Leader historique au service des grandes marques marocaines, ateliers industriels, artisans et groupes internationaux. La référence incontestée dans la fabrication de semelles marocaine"
+            }
+          },
+          "values": {
+            "title": {
+              "prefix": "Nos Valeurs",
+              "highlight": "Fondamentales"
+            },
+            "subtitle": "Les principes qui ont fait de nous le leader de confiance en fabrication de semelles au Maroc",
+            "quality": {
+              "title": "Excellence & Qualité",
+              "description": "Notre réputation est bâtie sur une constance qualité exemplaire et des standards rigoureux. Chaque semelle répond aux exigences internationales tout en respectant les engagements de livraison."
+            },
+            "trust": {
+              "title": "Confiance & Expertise",
+              "description": "Expertise reconnue qui nous a valu des partenariats avec des groupes de classe mondiale. Nos clients nous font confiance pour notre maîtrise technique et notre fiabilité de production."
+            },
+            "innovation": {
+              "title": "Innovation & Technologie",
+              "description": "Machinerie industrielle moderne et développement constant de nouvelles solutions. Nous maîtrisons tous les matériaux : EVA, Caoutchouc, PU, TPU, TR, Cuir, PVC et semelles préfabriquées."
+            },
+            "customer": {
+              "title": "Solutions Sur Mesure",
+              "description": "Développement sur mesure pour les fabricants et marques : couleurs, densités, marquages et logos personnalisés. Du cordonnier aux grandes marques, nous nous adaptons à chaque besoin."
+            }
+          },
+          "team": {
+            "title": {
+              "prefix": "Notre",
+              "highlight": "Équipe"
+            },
+            "subtitle": "Des professionnels qualifiés qui portent l'excellence marocaine en fabrication de semelles",
+            "craftsmen": "Spécialistes Production",
+            "designers": "Designers Techniques",
+            "quality": "Experts Qualité",
+            "innovation": "Équipe R&D"
+          },
           "cta": {
-            "discover": "Découvrez Notre Parcours",
-            "contact": "Contactez-Nous"
+            "title": {
+              "prefix": "Partenairez avec",
+              "highlight": "le Leader Marocain"
+            },
+            "subtitle": "Rejoignez les grandes marques qui font confiance à Casa Semelle pour leurs besoins en fabrication de semelles. Découvrez l'expertise qui a fait de nous la référence dans l'industrie.",
+            "button": "Contactez-Nous Aujourd'hui"
           }
-        },
-        "stats": {
-          "years": "Années d'Expérience",
-          "clients": "Clients Satisfaits",
-          "countries": "Pays Desservis",
-          "products": "Produits Fabriqués"
-        },
-        "purpose": {
-          "title": {
-            "prefix": "Notre",
-            "highlight": "Mission"
-          },
-          "mission": {
-            "title": "Notre Mission",
-            "description": "Fournir des semelles de chaussures exceptionnelles qui allient artisanat traditionnel et innovation moderne, dépassant les attentes des clients grâce à la qualité, la flexibilité et un service personnalisé."
-          },
-          "vision": {
-            "title": "Notre Vision",
-            "description": "Être la référence mondiale de l'excellence en fabrication de semelles, reconnue pour notre engagement envers la durabilité, l'innovation et l'équilibre parfait entre efficacité industrielle et qualité artisanale."
-          },
-          "promise": {
-            "title": "Notre Promesse",
-            "description": "Chaque semelle raconte une histoire de dévouement, de précision et de soin. Nous promettons une qualité constante, des partenariats fiables et des solutions qui aident à concrétiser vos visions de chaussures."
-          }
-        },
-        "timeline": {
-          "title": {
-            "prefix": "Notre",
-            "highlight": "Parcours"
-          },
-          "subtitle": "Sept décennies d'évolution, d'innovation et d'engagement indéfectible envers l'excellence",
-          "2018": {
-            "year": "2018",
-            "title": "Fondation",
-            "description": "Début en tant qu'atelier artisanal produisant des semelles en bois faites à la main"
-          },
-          "2020": {
-            "year": "2020",
-            "title": "Innovation Liège",
-            "description": "Expansion dans la production de semelles en liège avec de nouvelles technologies"
-          },
-          "2022": {
-            "year": "2022",
-            "title": "Révolution Matériaux",
-            "description": "Introduction des matériaux EVA, composites microcellulaires et caoutchouc"
-          },
-          "2024": {
-            "year": "2024",
-            "title": "Expansion Mondiale",
-            "description": "Présence établie dans plus de 50 pays à travers le monde"
-          },
-          "today": {
-            "year": "Aujourd'hui",
-            "title": "Leader du Secteur",
-            "description": "Combinant échelle industrielle et qualité artisanale"
-          }
-        },
-        "values": {
-          "title": {
-            "prefix": "Nos Valeurs",
-            "highlight": "Fondamentales"
-          },
-          "subtitle": "Les principes qui guident tout ce que nous faisons",
-          "quality": {
-            "title": "Passion pour la Qualité",
-            "description": "Chaque semelle que nous produisons reflète notre engagement envers l'excellence et le savoir-faire qui nous définit depuis plus de 7 ans."
-          },
-          "trust": {
-            "title": "Confiance & Fiabilité",
-            "description": "Construire des relations durables avec nos clients grâce à une qualité constante et un service fiable à chaque fois."
-          },
-          "innovation": {
-            "title": "Esprit d'Innovation",
-            "description": "Évolution constante avec les technologies de pointe tout en honorant les techniques artisanales traditionnelles."
-          },
-          "customer": {
-            "title": "Orientation Client",
-            "description": "Votre succès est notre mission. Nous adaptons les solutions pour répondre à vos exigences uniques avec précision et soin."
-          }
-        },
-        "team": {
-          "title": {
-            "prefix": "Rencontrez Notre",
-            "highlight": "Équipe"
-          },
-          "subtitle": "Des professionnels talentueux dédiés à votre succès",
-          "craftsmen": "Maîtres Artisans",
-          "designers": "Experts en Design",
-          "quality": "Contrôleurs Qualité",
-          "innovation": "Équipe Innovation"
-        },
-        "cta": {
-          "title": {
-            "prefix": "Prêt à Travailler",
-            "highlight": "Ensemble ?"
-          },
-          "subtitle": "Créons quelque chose d'extraordinaire. Contactez-nous dès aujourd'hui et découvrez comment notre expertise peut élever votre marque de chaussures.",
-          "button": "Prendre Contact"
         }
-      }
   }

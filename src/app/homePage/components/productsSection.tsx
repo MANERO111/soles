@@ -168,13 +168,13 @@ function ProductsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <div id='ourProducts' className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full mb-4 animate-fade-in">
-            <span className="text-sm text-amber-800 font-medium uppercase tracking-wide">
+          <div id='ourProducts' className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-50 border border-[#000000] rounded-full mb-4 animate-fade-in">
+            <span className="text-sm text-[#f2413b] font-medium uppercase tracking-wide">
               {t('product.badge')}
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-            {t('product.title.line1')} <span className="text-amber-600">{t('product.title.line2')}</span>
+            {t('product.title.line1')} <span className="text-[#f2413b]">{t('product.title.line2')}</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             {t('product.description')}
@@ -208,7 +208,7 @@ function ProductsSection() {
                       {material.icon}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 mb-1 group-hover:text-amber-600 transition-colors">
+                      <h4 className="font-semibold text-slate-900 mb-1 group-hover:text-[#f2413b] transition-colors">
                         {material.name}
                       </h4>
                       <p className="text-sm text-slate-600">{material.description}</p>
@@ -270,7 +270,7 @@ function ProductsSection() {
                         <div className="space-y-3">
                           <h3 className="text-2xl font-bold text-slate-900">{product.title}</h3>
                           <p className="text-slate-600">{product.description}</p>
-                          <button className="group inline-flex items-center gap-2 text-amber-600 font-medium hover:gap-3 transition-all">
+                          <button className="group inline-flex items-center gap-2 text-[#f2413b] font-medium hover:gap-3 transition-all">
                             {t('product.cta.product')}
                             <ArrowRight className="w-4 h-4" />
                           </button>
@@ -294,7 +294,7 @@ function ProductsSection() {
               <div className="flex items-center justify-center gap-4 mt-6">
                 <button
                   onClick={prevSlide}
-                  className="w-10 h-10 rounded-full bg-slate-900 text-white hover:bg-amber-600 transition-all duration-300 flex items-center justify-center hover:scale-110 active:scale-95"
+                  className="w-10 h-10 rounded-full bg-slate-900 text-white hover:bg-[#f2413b] transition-all duration-300 flex items-center justify-center hover:scale-110 active:scale-95"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -307,7 +307,7 @@ function ProductsSection() {
                       onClick={() => setCurrentSlide(index)}
                       className={`h-2 rounded-full transition-all duration-300 ${
                         index === currentSlide 
-                          ? 'w-8 bg-amber-600' 
+                          ? 'w-8 bg-[#f2413b]' 
                           : 'w-2 bg-slate-300 hover:bg-slate-400'
                       }`}
                     />
@@ -316,7 +316,7 @@ function ProductsSection() {
 
                 <button
                   onClick={nextSlide}
-                  className="w-10 h-10 rounded-full bg-slate-900 text-white hover:bg-amber-600 transition-all duration-300 flex items-center justify-center hover:scale-110 active:scale-95"
+                  className="w-10 h-10 rounded-full bg-slate-900 text-white hover:bg-[#f2413b] transition-all duration-300 flex items-center justify-center hover:scale-110 active:scale-95"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -331,7 +331,7 @@ function ProductsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <button className="group px-8 py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-amber-600 transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105 active:scale-95">
+          <button className="group px-8 py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-[#f2413b] transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105 active:scale-95">
             {t('product.cta.allProducts')}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>

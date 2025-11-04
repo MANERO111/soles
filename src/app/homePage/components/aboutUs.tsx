@@ -47,13 +47,13 @@ function AboutSection() {
       setCountUpValues({
         years: Math.floor(7 * progress),
         clients: Math.floor(1000 * progress),
-        materials: Math.floor(4 * progress),
+        materials: Math.floor(8 * progress),
         exports: Math.floor(70 * progress)
       });
 
       if (currentStep >= steps) {
         clearInterval(interval);
-        setCountUpValues({ years: 7, clients: 1000, materials: 4, exports: 70 });
+        setCountUpValues({ years: 7, clients: 1000, materials: 8, exports: 70 });
       }
     }, stepDuration);
   };
@@ -76,14 +76,14 @@ function AboutSection() {
         {/* Top Section - Badge & Title */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-50 to-red-50 border-2 border-amber-200/50 rounded-full mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Sparkles className="w-5 h-5 text-amber-600 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-[#f2413b] animate-pulse" />
             <span className="text-sm text-slate-800 font-semibold uppercase tracking-wider">
               {t('aboutLegacy.badge')}
             </span>
           </div>
 
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
-            {t('aboutLegacy.title.line1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-red-600 animate-gradient">
+            {t('aboutLegacy.title.line1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-red-600 animate-gradient">
               {t('aboutLegacy.title.line2')}
             </span>
           </h2>
@@ -141,7 +141,7 @@ function AboutSection() {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-amber-500 to-red-500 text-white px-6 py-3 rounded-full shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 z-20">
+              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#f2413b] to-red-500 text-white px-6 py-3 rounded-full shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 z-20">
                 <div className="text-center">
                   <div className="text-2xl font-bold">7+</div>
                   <div className="text-xs uppercase tracking-wide">{t('aboutLegacy.years')}</div>
@@ -171,10 +171,10 @@ function AboutSection() {
               </div>
 
               {/* Timeline Item 2 */}
-              <div className="relative pl-8 border-l-4 border-amber-300 hover:border-amber-500 transition-colors duration-300 group">
-                <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
+              <div className="relative pl-8 border-l-4 border-[#f5a08b] hover:border-[#f2603b] transition-colors duration-300 group">
+                <div className="absolute -left-3 top-0 w-5 h-5 bg-[#f2603b] rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
+                  <div className="text-sm font-bold text-[#f2603b] uppercase tracking-wider">
                     {t('aboutLegacy.timeline.2020.year')}
                   </div>
                   <p className="text-slate-700 leading-relaxed">
@@ -184,10 +184,10 @@ function AboutSection() {
               </div>
 
               {/* Timeline Item 3 */}
-              <div className="relative pl-8 border-l-4 border-amber-300 hover:border-amber-500 transition-colors duration-300 group">
-                <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
+              <div className="relative pl-8 border-l-4 border-[#f89a97] hover:border-[#f2413b] transition-colors duration-300 group">
+                <div className="absolute -left-3 top-0 w-5 h-5 bg-[#f2413b] rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
-                  <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
+                  <div className="text-sm font-bold text-[#f2413b] uppercase tracking-wider">
                     {t('aboutLegacy.timeline.2022.year')}
                   </div>
                   <p className="text-slate-700 leading-relaxed">
@@ -211,12 +211,12 @@ function AboutSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-amber-600 text-white rounded-xl font-semibold overflow-hidden hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-[#f2603b] text-white rounded-xl font-semibold overflow-hidden hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95">
               <span className="relative z-10 flex items-center gap-2">
                 {t('aboutLegacy.cta')}
                 <Award className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f2563b] to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
           </div>
         </div>

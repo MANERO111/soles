@@ -79,45 +79,47 @@
         },
         "swipe": "Swipe"
     },
-    "aboutLegacy": {
-        "badge": "About Our Legacy",
+    
+      "aboutLegacy": {
+        "badge": "Our Legacy",
         "title": {
-          "line1": "A Continuous",
-          "line2": "Evolution"
+          "line1": "Morocco's #1",
+          "line2": "Since 2018"
         },
-        "subtitle": "Rooted in tradition, always looking toward the future",
+        "subtitle": "Historic leader in sole manufacturing - combining industrial excellence with unmatched expertise",
         "years": "Years",
         "images": {
-          "manufacturing": "Manufacturing excellence",
-          "craftsmanship": "Craftsmanship detail",
-          "quality": "Quality production"
+          "manufacturing": "Casa Semelle manufacturing facility",
+          "craftsmanship": "Precision sole craftsmanship",
+          "quality": "Quality control and production"
         },
         "timeline": {
           "2018": {
-            "year": "2018 Foundation",
-            "description": "PBS Soles Srl was founded 7 years ago, originally producing wooden soles with traditional craftsmanship methods."
+            "year": "January 2018 - Foundation",
+            "description": "Casa Semelle was founded on January 16, 2018, in Casablanca with a clear vision: to become Morocco's reference in sole manufacturing through quality and innovation."
           },
           "2020": {
-            "year": "2020 Innovation",
-            "description": "Growing demand for cork led the company to invest in revolutionary new technologies and expand production capabilities."
+            "year": "2020 - Market Leadership",
+            "description": "Achieved #1 position in the Moroccan market, earning the trust of major local brands and establishing ourselves as the go-to partner for quality soles."
           },
           "2022": {
-            "year": "2022 Advancement",
-            "description": "Advanced materials like EVA, microporous compounds, and rubber became essential. We upgraded all machinery for top-quality production."
+            "year": "2022 - International Recognition",
+            "description": "Partnership with Inditex Group validates our capacity to meet world-class standards. Expanded material expertise across EVA, Rubber, PU, TPU, TR, and Leather."
           },
           "today": {
-            "year": "Today's Excellence",
-            "description": "A market leader combining industrial production with artisanal quality, powered by innovation and skilled expertise."
+            "year": "Today - Industry Pioneer",
+            "description": "The historic leader serving major brands, industrial workshops, artisans, and international groups. Modern machinery combined with expert craftsmanship makes us the undisputed reference."
           }
         },
-        "cta": "Discover Our Journey",
+        "cta": "Discover Our Story",
         "stats": {
           "years": "Years of Excellence",
-          "clients": "Happy Clients",
+          "clients": "Major Clients",
           "materials": "Material Types",
-          "exports": "Export Worldwide"
+          "exports": "Export Markets"
         }
       },
+    
       "values": {
         "title": "our values",
         "cta": {
@@ -196,15 +198,15 @@
           "title": "Contact Information",
           "phone": {
             "title": "Phone",
-            "content": "+39 123 456 7890"
+            "content": "+212 522359446 / +212 661214798"
           },
           "email": {
             "title": "Email",
-            "content": "info@soletech.com"
+            "content": "casasemelle@gmail.com"
           },
           "address": {
             "title": "Address",
-            "content": "Via Example 123, 12345 City, Italy"
+            "content": "22 Rue Abou Bakr Ibnou Koutia Oukacha Casablanca, Maroc"
           },
           "hours": {
             "title": "Business Hours",
@@ -213,7 +215,7 @@
         },
         "map": {
           "title": "Our Location",
-          "address": "Via Example 123, City, Italy",
+          "address": "22 Rue Abou Bakr Ibnou Koutia Oukacha Casablanca, Maroc",
           "cta": "Click to view on map"
         },
         "features": {
@@ -237,12 +239,12 @@
         }
       },
       "footer": {
-        "logoAlt": "casaSemelle logo",
-        "description": "Crafting premium shoe soles with 10 years of expertise. Where tradition meets innovation in every step.",
+        "logoAlt": "Casa Semelle Logo",
+        "description": "Morocco's #1 sole manufacturer. Historic leader with 7+ years of expertise, serving major brands with quality, innovation, and reliability.",
         "contact": {
-          "phone": "+39 123 456 7890",
-          "email": "info@soletech.com",
-          "address": "Via Example 123, 12345 City, Italy"
+          "phone": "+212 522 359 446 / +212 661 214 798",
+          "email": "casasemelle@gmail.com",
+          "address": "22 Rue Abou Bakr Ibnou Koutia Oukacha, Casablanca, Morocco"
         },
         "sections": {
           "company": "Company",
@@ -255,7 +257,7 @@
             "home": "Home",
             "about": "About Us",
             "values": "Our Values",
-            "philosophy": "Our Philosophy",
+            "philosophy": "Our Expertise",
             "contact": "Contact"
           },
           "about": {
@@ -275,11 +277,11 @@
             "contact": "Contact Us"
           }
         },
-        "copyright": "© 2025 SoleTech. All rights reserved. Made with",
+        "copyright": "© 2025 Casa Semelle. All rights reserved. Made with",
         "madeIn": "in Morocco",
         "certifications": {
           "quality": "Quality Certified",
-          "iso": "ISO 9001"
+          "iso": "ISO Standards"
         }
       },
       "products": {
@@ -320,24 +322,25 @@
           "reset": "Reset Filters"
         }
       },
+      
       "about": {
         "hero": {
-          "badge": "About Our Company",
+          "badge": "Leader in Sole Manufacturing",
           "title": {
-            "line1": "Crafting Excellence",
-            "line2": "Since 2018"
+            "line1": "Morocco's #1",
+            "line2": "Sole Manufacturer"
           },
-          "subtitle": "A legacy of innovation, quality, and dedication to the art of sole manufacturing. From our humble beginnings to becoming a global leader, our story is one of passion and perseverance.",
+          "subtitle": "Casa Semelle is the historic leader and number one in the Moroccan market for shoe sole manufacturing. With decades of expertise, we are the reference in the footwear and sole industry in Morocco.",
           "cta": {
             "discover": "Discover Our Journey",
             "contact": "Contact Us"
           }
         },
         "stats": {
-          "years": "Years of Experience",
-          "clients": "Happy Clients",
-          "countries": "Countries Served",
-          "products": "Products Made"
+          "years": "Years of Excellence",
+          "clients": "Major Clients",
+          "countries": "Export Markets",
+          "products": "Sole Types"
         },
         "purpose": {
           "title": {
@@ -346,15 +349,15 @@
           },
           "mission": {
             "title": "Our Mission",
-            "description": "To deliver exceptional shoe soles that combine traditional craftsmanship with modern innovation, exceeding client expectations through quality, flexibility, and personalized service."
+            "description": "To provide footwear manufacturers with innovative, durable, and high-performance soles that meet international standards and the specificities of the Moroccan market. We combine industrial excellence with customized solutions."
           },
           "vision": {
             "title": "Our Vision",
-            "description": "To be the global benchmark for sole manufacturing excellence, recognized for our commitment to sustainability, innovation, and the perfect balance of industrial efficiency with artisanal quality."
+            "description": "To showcase Moroccan expertise in the footwear industry globally, serving performance, comfort, and durability. We aim to be the preferred partner for major brands and manufacturers across Morocco and internationally."
           },
           "promise": {
-            "title": "Our Promise",
-            "description": "Every sole tells a story of dedication, precision, and care. We promise consistent quality, reliable partnerships, and solutions that help bring your footwear visions to life."
+            "title": "Our Commitment",
+            "description": "Recognized expertise and dominant presence in the local market. Collaboration with world-renowned groups like Inditex. Modern industrial machinery and high production capacity. On-time delivery and exemplary quality consistency."
           }
         },
         "timeline": {
@@ -362,31 +365,31 @@
             "prefix": "Our",
             "highlight": "Journey"
           },
-          "subtitle": "Seven decades of evolution, innovation, and unwavering commitment to excellence",
+          "subtitle": "From our foundation to becoming Morocco's undisputed leader in sole manufacturing",
           "2018": {
-            "year": "2018",
-            "title": "Foundation",
-            "description": "Started as a small workshop producing handcrafted wooden soles"
+            "year": "January 2018",
+            "title": "Foundation of Casa Semelle",
+            "description": "Established on January 16, 2018, in Casablanca with a clear mission: to become the reference in sole manufacturing in Morocco"
           },
           "2020": {
             "year": "2020",
-            "title": "Cork Innovation",
-            "description": "Expanded into cork sole production with new technologies"
+            "title": "Market Leadership",
+            "description": "Achieved position as Morocco's #1 sole manufacturer, gaining trust of major local footwear brands and establishing dominant market presence"
           },
           "2022": {
             "year": "2022",
-            "title": "Material Revolution",
-            "description": "Introduced EVA, microporous compounds, and rubber materials"
+            "title": "International Recognition",
+            "description": "Partnership with Inditex Group and other international clients, confirming our ability to meet the highest global standards"
           },
           "2024": {
             "year": "2024",
-            "title": "Global Expansion",
-            "description": "Established presence in 50+ countries worldwide"
+            "title": "Industrial Expansion",
+            "description": "Expanded production capacity with modern machinery, mastering all major sole materials from EVA to leather, serving safety, casual, and designer footwear"
           },
           "today": {
             "year": "Today",
-            "title": "Industry Leader",
-            "description": "Combining industrial scale with artisanal quality"
+            "title": "Industry Pioneer",
+            "description": "Historic leader serving major Moroccan brands, industrial workshops, artisans, and international groups. The undisputed reference in Moroccan sole manufacturing"
           }
         },
         "values": {
@@ -394,42 +397,43 @@
             "prefix": "Our Core",
             "highlight": "Values"
           },
-          "subtitle": "The principles that guide everything we do",
+          "subtitle": "The principles that made us Morocco's trusted sole manufacturing leader",
           "quality": {
-            "title": "Passion for Quality",
-            "description": "Every sole we produce reflects our commitment to excellence and craftsmanship that has defined us for over 7 years."
+            "title": "Excellence & Quality",
+            "description": "Our reputation is built on exemplary quality consistency and rigorous standards. Every sole meets international requirements while respecting delivery commitments."
           },
           "trust": {
-            "title": "Trust & Reliability",
-            "description": "Building lasting relationships with our clients through consistent quality and dependable service every single time."
+            "title": "Trust & Expertise",
+            "description": "Recognized expertise that earned us partnerships with world-class groups. Our clients trust us for our technical mastery and production reliability."
           },
           "innovation": {
-            "title": "Innovation Drive",
-            "description": "Constantly evolving with cutting-edge technology while honoring traditional craftsmanship techniques."
+            "title": "Innovation & Technology",
+            "description": "Modern industrial machinery and constant development of new solutions. We master all materials: EVA, Rubber, PU, TPU, TR, Leather, PVC, and prefabricated soles."
           },
           "customer": {
-            "title": "Customer Focus",
-            "description": "Your success is our mission. We tailor solutions to meet your unique requirements with precision and care."
+            "title": "Custom Solutions",
+            "description": "Made-to-measure development for manufacturers and brands: custom colors, densities, branding, and logos. From cobblers to major brands, we adapt to every need."
           }
         },
         "team": {
           "title": {
-            "prefix": "Meet Our",
+            "prefix": "Our",
             "highlight": "Team"
           },
-          "subtitle": "Talented professionals dedicated to your success",
-          "craftsmen": "Master Craftsmen",
-          "designers": "Design Experts",
-          "quality": "Quality Controllers",
-          "innovation": "Innovation Team"
+          "subtitle": "Skilled professionals driving Moroccan excellence in sole manufacturing",
+          "craftsmen": "Production Specialists",
+          "designers": "Technical Designers",
+          "quality": "Quality Experts",
+          "innovation": "R&D Team"
         },
         "cta": {
           "title": {
-            "prefix": "Ready to Work",
-            "highlight": "Together?"
+            "prefix": "Partner with",
+            "highlight": "Morocco's Leader"
           },
-          "subtitle": "Let's create something extraordinary. Reach out today and discover how our expertise can elevate your footwear brand.",
-          "button": "Get In Touch"
+          "subtitle": "Join major brands who trust Casa Semelle for their sole manufacturing needs. Experience the expertise that made us the reference in the industry.",
+          "button": "Contact Us Today"
         }
       }
+      
   }

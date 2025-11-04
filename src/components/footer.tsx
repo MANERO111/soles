@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { 
   Facebook, 
@@ -9,9 +9,6 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  ArrowRight,
-  Heart,
-  ExternalLink
 } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
 import { useRouter, usePathname } from 'next/navigation';
@@ -21,9 +18,7 @@ export default function Footer() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Handle section navigation with timeout
   const handleSectionNavigation = (sectionId: string) => {
-    // If we're not on the home page, navigate to home page first
     if (pathname !== '/') {
       router.push(`/#${sectionId}`);
     } else {
@@ -42,9 +37,7 @@ export default function Footer() {
     }
   };
 
-  // Handle about page section navigation
   const handleAboutPageNavigation = (sectionId: string) => {
-    // If we're not on the about page, navigate to about page first
     if (pathname !== '/aboutUs') {
       router.push(`/aboutUs#${sectionId}`);
     } else {
@@ -63,21 +56,17 @@ export default function Footer() {
     }
   };
 
-  // Handle footer link click
   const handleFooterLinkClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     
-    // Check if it's a section link (starts with #)
     if (href.startsWith('#')) {
-      const sectionId = href.substring(1); // Remove the # symbol
+      const sectionId = href.substring(1);
       handleSectionNavigation(sectionId);
     } else {
-      // Regular page navigation
       router.push(href);
     }
   };
 
-  // Handle about page link click
   const handleAboutPageLinkClick = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
     handleAboutPageNavigation(sectionId);
@@ -99,10 +88,6 @@ export default function Footer() {
     ],
     products: [
       { name: t('footer.links.products.ourProducts'), href: '/products' },
-      // { name: t('footer.links.products.eva'), href: '/products?category=eva' },
-      // { name: t('footer.links.products.microporous'), href: '/products?category=microporous' },
-      // { name: t('footer.links.products.rubber'), href: '/products?category=rubber' },
-      // { name: t('footer.links.products.cork'), href: '/products?category=cork' },
     ],
     support: [
       { name: t('footer.links.support.contact'), href: '#contact' },
@@ -117,19 +102,16 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-500 via-slate-800 to-slate-900 text-white overflow-hidden">
-      {/* Animated Background */}
+    <footer className="relative bg-gradient-to-br from-slate-500 via-slate-800 to-slate-900 text-white overflow-hidden" style={{fontFamily: 'Inter, system-ui, -apple-system, sans-serif'}}>
+      {/* Animated Background - UPDATED TO BRAND COLOR */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#f2413b]/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-pulse delay-700"></div>
       </div>
 
-      {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
       <div className="relative">
-
-        {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
             
@@ -144,28 +126,28 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* Contact Info */}
+              {/* Contact Info - UPDATED HOVER COLORS */}
               <div className="space-y-3 mb-6">
                 <a 
-                  href="tel:+391234567890" 
-                  className="flex items-center gap-3 text-slate-400 hover:text-amber-500 transition-colors group"
+                  href="tel:+212522359446" 
+                  className="flex items-center gap-3 text-slate-400 hover:text-[#f2413b] transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#f2413b] group-hover:scale-110 transition-all duration-300">
                     <Phone className="w-5 h-5" />
                   </div>
                   <span className="text-sm">{t('footer.contact.phone')}</span>
                 </a>
                 <a 
-                  href="mailto:info@soletech.com" 
-                  className="flex items-center gap-3 text-slate-400 hover:text-amber-500 transition-colors group"
+                  href="mailto:casasemelle@gmail.com" 
+                  className="flex items-center gap-3 text-slate-400 hover:text-[#f2413b] transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#f2413b] group-hover:scale-110 transition-all duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
                   <span className="text-sm">{t('footer.contact.email')}</span>
                 </a>
                 <div className="flex items-start gap-3 text-slate-400 group">
-                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-amber-500 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#f2413b] group-hover:scale-110 transition-all duration-300">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <span className="text-sm">{t('footer.contact.address')}</span>
@@ -191,7 +173,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Links Columns */}
+            {/* Links Columns - UPDATED HOVER COLORS */}
             <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
               {/* Company Links */}
               <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
@@ -202,7 +184,7 @@ export default function Footer() {
                       {link.href.startsWith('/') ? (
                         <Link 
                           href={link.href}
-                          className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                          className="text-sm text-slate-400 hover:text-[#f2413b] hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                         >
                           {link.name}
                         </Link>
@@ -210,7 +192,7 @@ export default function Footer() {
                         <a 
                           href={link.href}
                           onClick={(e) => handleFooterLinkClick(e, link.href)}
-                          className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                          className="text-sm text-slate-400 hover:text-[#f2413b] hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                         >
                           {link.name}
                         </a>
@@ -229,7 +211,7 @@ export default function Footer() {
                       <a 
                         href={`#${link.href}`}
                         onClick={(e) => handleAboutPageLinkClick(e, link.href)}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                        className="text-sm text-slate-400 hover:text-[#f2413b] hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
                       </a>
@@ -246,7 +228,7 @@ export default function Footer() {
                     <li key={index}>
                       <Link 
                         href={link.href}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                        className="text-sm text-slate-400 hover:text-[#f2413b] hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
                       </Link>
@@ -264,37 +246,13 @@ export default function Footer() {
                       <a 
                         href={link.href}
                         onClick={(e) => handleFooterLinkClick(e, link.href)}
-                        className="text-sm text-slate-400 hover:text-amber-500 hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
+                        className="text-sm text-slate-400 hover:text-[#f2413b] hover:translate-x-1 inline-block transition-all duration-300 cursor-pointer"
                       >
                         {link.name}
                       </a>
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-700/50 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-sm text-slate-400 text-center md:text-left">
-                {t('footer.copyright')}{' '}
-                <Heart className="inline w-4 h-4 text-red-500 fill-current animate-pulse" />{' '}
-                {t('footer.madeIn')}
-              </p>
-              
-              <div className="flex items-center gap-6">
-                <a href="#" className="text-sm text-slate-400 hover:text-amber-500 transition-colors flex items-center gap-1">
-                  {t('footer.certifications.quality')}
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <a href="#" className="text-sm text-slate-400 hover:text-amber-500 transition-colors flex items-center gap-1">
-                  {t('footer.certifications.iso')}
-                  <ExternalLink className="w-3 h-3" />
-                </a>
               </div>
             </div>
           </div>
@@ -324,17 +282,6 @@ export default function Footer() {
           }
         }
 
-        @keyframes slide-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
         @keyframes fade-in-up {
           from {
             opacity: 0;
@@ -352,10 +299,6 @@ export default function Footer() {
 
         .animate-slide-in-left {
           animation: slide-in-left 0.8s ease-out;
-        }
-
-        .animate-slide-in-right {
-          animation: slide-in-right 0.8s ease-out;
         }
 
         .animate-fade-in-up {

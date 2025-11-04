@@ -65,15 +65,15 @@ export default function ContactSection() {
       icon: Phone,
       title: t('contact.info.phone.title'),
       content: t('contact.info.phone.content'),
-      link: 'tel:+391234567890',
+      link: 'tel:+212522359446',
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: Mail,
       title: t('contact.info.email.title'),
       content: t('contact.info.email.content'),
-      link: 'mailto:info@soletech.com',
-      color: 'from-amber-500 to-amber-600'
+      link: 'mailto:casasemelle@gmail.com',
+      color: 'from-[#f2413b] to-[#f2413b]'
     },
     {
       icon: MapPin,
@@ -130,8 +130,8 @@ export default function ContactSection() {
         
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-amber-200 rounded-full mb-6 shadow-sm">
-            <div className="w-2 h-2 bg-amber-600 rounded-full animate-pulse"></div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#f2413b] rounded-full mb-6 shadow-sm">
+            <div className="w-2 h-2 bg-[#f2413b] rounded-full animate-pulse"></div>
             <span className="text-sm text-amber-800 font-medium">{t('contact.badge')}</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
@@ -149,7 +149,7 @@ export default function ContactSection() {
           <div className="animate-slide-in-left">
             <div className="relative bg-white border border-slate-200 rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-shadow duration-500">
               {/* Decorative gradient border effect */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-500/10 via-transparent to-blue-500/10 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#ffd4d3] via-transparent to-blue-500/10 pointer-events-none"></div>
               
               <div className="relative">
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
@@ -172,8 +172,8 @@ export default function ContactSection() {
                       onBlur={() => setFocusedField('')}
                       className={`w-full px-4 py-3.5 bg-slate-50 border-2 rounded-xl transition-all duration-300 outline-none ${
                         focusedField === 'name' 
-                          ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
-                          : 'border-slate-200 hover:border-slate-300'
+                          ? 'border-[#f2413b] text-black bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
+                          : 'border-slate-200 text-black hover:border-slate-300'
                       }`}
                       placeholder={t('contact.form.name.placeholder')}
                     />
@@ -193,8 +193,8 @@ export default function ContactSection() {
                       onBlur={() => setFocusedField('')}
                       className={`w-full px-4 py-3.5 bg-slate-50 border-2 rounded-xl transition-all duration-300 outline-none ${
                         focusedField === 'email' 
-                          ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
-                          : 'border-slate-200 hover:border-slate-300'
+                          ? 'border-[#f2413b] text-black bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
+                          : 'border-slate-200 text-black hover:border-slate-300'
                       }`}
                       placeholder={t('contact.form.email.placeholder')}
                     />
@@ -214,8 +214,8 @@ export default function ContactSection() {
                       onBlur={() => setFocusedField('')}
                       className={`w-full px-4 py-3.5 bg-slate-50 border-2 rounded-xl transition-all duration-300 outline-none ${
                         focusedField === 'phone' 
-                          ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
-                          : 'border-slate-200 hover:border-slate-300'
+                          ? 'border-[#f2413b] text-black bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
+                          : 'border-slate-200 text-black hover:border-slate-300'
                       }`}
                       placeholder={t('contact.form.phone.placeholder')}
                     />
@@ -235,8 +235,8 @@ export default function ContactSection() {
                       rows={5}
                       className={`w-full px-4 py-3.5 bg-slate-50 border-2 rounded-xl transition-all duration-300 outline-none resize-none ${
                         focusedField === 'message' 
-                          ? 'border-amber-600 bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
-                          : 'border-slate-200 hover:border-slate-300'
+                          ? 'border-[#f2413b] text-black bg-white shadow-lg shadow-amber-500/10 scale-[1.02]' 
+                          : 'border-slate-200 text-black hover:border-slate-300'
                       }`}
                       placeholder={t('contact.form.message.placeholder')}
                     />
@@ -252,7 +252,7 @@ export default function ContactSection() {
                         : 'bg-gradient-to-r from-slate-900 to-slate-800 text-white hover:shadow-xl hover:shadow-slate-900/30 hover:scale-[1.02]'
                     }`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#f2413b] to-[#f2753b] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <span className="relative flex items-center gap-2">
                       {isSubmitting ? (
                         <>
@@ -291,13 +291,13 @@ export default function ContactSection() {
                       key={index}
                       href={info.link}
                       style={{ animationDelay: `${index * 100}ms` }}
-                      className="flex items-start gap-4 p-5 bg-white border-2 border-slate-200 rounded-2xl hover:border-amber-600 hover:shadow-xl transition-all duration-300 group animate-fade-in-up"
+                      className="flex items-start gap-4 p-5 bg-white border-2 border-slate-200 rounded-2xl hover:border-[#f2413b] hover:shadow-xl transition-all duration-300 group animate-fade-in-up"
                     >
                       <div className={`w-14 h-14 bg-gradient-to-br ${info.color} text-white rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                         <Icon className="w-7 h-7" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-900 mb-1 group-hover:text-amber-600 transition-colors">
+                        <h4 className="font-bold text-slate-900 mb-1 group-hover:text-[#f2413b] transition-colors">
                           {info.title}
                         </h4>
                         <p className="text-slate-600 text-sm">
@@ -311,22 +311,24 @@ export default function ContactSection() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="relative bg-gradient-to-br from-slate-100 to-slate-50 border-2 border-slate-200 rounded-2xl overflow-hidden h-72 group hover:border-amber-600 transition-all duration-300">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.1),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="w-full h-full flex items-center justify-center relative z-10">
-                <div className="text-center transform group-hover:scale-105 transition-transform duration-300">
-                  <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:rotate-3 transition-transform duration-300">
-                    <MapPin className="w-10 h-10" />
+            <a href="https://www.google.com/maps/place/CASA+Semelle/@33.6053976,-7.5622329,17z/data=!3m1!4b1!4m6!3m5!1s0xda7cd0048733697:0x6a555bf49d9c889c!8m2!3d33.6053976!4d-7.5596526!16s%2Fg%2F11yd87phc3?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D">
+              <div className="relative bg-gradient-to-br from-slate-100 to-slate-50 border-2 border-slate-200 rounded-2xl overflow-hidden h-72 group hover:border-[#f2413b] transition-all duration-300">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.1),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="w-full h-full flex items-center justify-center relative z-10">
+                  <div className="text-center transform group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#f2413b] to-[#f2413b] text-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:rotate-3 transition-transform duration-300">
+                      <MapPin className="w-10 h-10" />
+                    </div>
+                    <p className="text-slate-900 font-bold text-lg">{t('contact.map.title')}</p>
+                    <p className="text-sm text-slate-600 mt-1">{t('contact.map.address')}</p>
+                    <p className="text-xs text-[#f2413b] font-medium mt-2">{t('contact.map.cta')}</p>
                   </div>
-                  <p className="text-slate-900 font-bold text-lg">{t('contact.map.title')}</p>
-                  <p className="text-sm text-slate-600 mt-1">{t('contact.map.address')}</p>
-                  <p className="text-xs text-amber-600 font-medium mt-2">{t('contact.map.cta')}</p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
-
+        
         {/* Features Grid */}
         <div>
           <h3 className="text-3xl font-bold text-slate-900 text-center mb-12">
@@ -337,7 +339,7 @@ export default function ContactSection() {
               <div 
                 key={index}
                 style={{ animationDelay: `${feature.delay}ms` }}
-                className="relative bg-white border-2 border-slate-200 rounded-2xl p-6 text-center hover:border-amber-600 hover:shadow-xl transition-all duration-300 group animate-fade-in-up overflow-hidden"
+                className="relative bg-white border-2 border-slate-200 rounded-2xl p-6 text-center hover:border-[#f2413b] hover:shadow-xl transition-all duration-300 group animate-fade-in-up overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">

@@ -160,8 +160,8 @@ function AboutUsPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-amber-50 border-2 border-amber-200 rounded-full mb-8 shadow-lg">
-              <Factory className="w-5 h-5 text-amber-600 animate-pulse" />
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-amber-50 border-2 border-[#f2413b] rounded-full mb-8 shadow-lg">
+              <Factory className="w-5 h-5 text-[#f2413b] animate-pulse" />
               <span className="text-sm text-amber-800 font-semibold uppercase tracking-wider">
                 {t('about.hero.badge')}
               </span>
@@ -169,7 +169,7 @@ function AboutUsPage() {
 
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-slate-900 leading-tight mb-8">
               {t('about.hero.title.line1')}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 animate-gradient">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-red-500 animate-gradient">
                 {t('about.hero.title.line2')}
               </span>
             </h1>
@@ -179,7 +179,7 @@ function AboutUsPage() {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <button onClick={() => scrollToSection("our-journey")} className="group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
+              <button onClick={() => scrollToSection("our-journey")} className="group px-8 py-4 bg-gradient-to-r from-[#f2413b] to-red-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
                 {t('about.hero.cta.discover')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
@@ -204,7 +204,7 @@ function AboutUsPage() {
               return (
                 <div
                   key={index}
-                  className={`group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-amber-200 hover:-translate-y-2 ${
+                  className={`group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#f2413b] hover:-translate-y-2 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
@@ -212,7 +212,7 @@ function AboutUsPage() {
                   <div className={`absolute top-4 right-4 w-12 h-12 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-5xl font-black text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                  <div className="text-5xl font-black text-slate-900 mb-2 group-hover:text-[#f2413b] transition-colors">
                     {stat.value}{stat.suffix}
                   </div>
                   <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
@@ -228,7 +228,7 @@ function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6">
-              {t('about.purpose.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">{t('about.purpose.title.highlight')}</span>
+              {t('about.purpose.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-600">{t('about.purpose.title.highlight')}</span>
             </h2>
           </div>
 
@@ -238,7 +238,7 @@ function AboutUsPage() {
                 title: t('about.purpose.mission.title'),
                 content: t('about.purpose.mission.description'),
                 icon: Target,
-                color: 'from-amber-500 to-orange-500'
+                color: 'from-[#f2413b] to-orange-500'
               },
               { 
                 title: t('about.purpose.vision.title'),
@@ -257,15 +257,15 @@ function AboutUsPage() {
               return (
                 <div
                   key={index}
-                  className={`group relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-slate-200 hover:border-amber-300 hover:-translate-y-2 ${
+                  className={`group relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-slate-200 hover:border-[#f2413b] hover:-translate-y-2 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
-                  style={{ transitionDelay: `${(index + 4) * 100}ms` }}
+                  style={{ transitionDelay: `${(index + 4) * 10}ms` }}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-[#f2413b] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-slate-600 leading-relaxed">
@@ -283,7 +283,7 @@ function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-              {t('about.timeline.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">{t('about.timeline.title.highlight')}</span>
+              {t('about.timeline.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-400">{t('about.timeline.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               {t('about.timeline.subtitle')}
@@ -292,7 +292,7 @@ function AboutUsPage() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-500 via-orange-500 to-amber-500 transform -translate-x-1/2 hidden lg:block"></div>
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-500 via-orange-500 to-[#ff1a13] transform -translate-x-1/2 hidden lg:block"></div>
 
             <div className="space-y-16">
               {milestones.map((milestone, index) => (
@@ -304,12 +304,12 @@ function AboutUsPage() {
                 >
                   {/* Content Card */}
                   <div className="flex-1 w-full lg:w-auto">
-                    <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 hover:-translate-y-2 group">
+                    <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-amber-200 hover:border-[#f2413b] transition-all duration-300 hover:-translate-y-2 group">
                       <div className="flex items-start gap-4">
                         <div className="text-5xl">{milestone.icon}</div>
                         <div>
                           <div className="text-sm font-bold text-amber-600 mb-2">{milestone.year}</div>
-                          <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">
+                          <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#f2413b] transition-colors">
                             {milestone.title}
                           </h3>
                           <p className="text-slate-600 leading-relaxed">
@@ -321,7 +321,7 @@ function AboutUsPage() {
                   </div>
 
                   {/* Center Dot */}
-                  <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full border-4 border-slate-900 shadow-lg z-10"></div>
+                  <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-[#f2413b] to-orange-500 rounded-full border-4 border-slate-900 shadow-lg z-10"></div>
 
                   {/* Spacer */}
                   <div className="flex-1 hidden lg:block"></div>
@@ -333,11 +333,12 @@ function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section id='values' className="relative py-32">
+      <section id='values' className="relative py-32 bg-white border-b-2 border-slate-200 ">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6">
-              {t('about.values.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">{t('about.values.title.highlight')}</span>
+              {t('about.values.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-600">{t('about.values.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               {t('about.values.subtitle')}
@@ -350,14 +351,14 @@ function AboutUsPage() {
               return (
                 <div
                   key={index}
-                  className="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-slate-200 hover:border-amber-300 hover:-translate-y-2"
+                  className="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-slate-200 hover:border-[#f2413b] hover:-translate-y-2"
                 >
                   <div className="flex items-start gap-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#f2413b] to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#f2413b] transition-colors">
                         {value.title}
                       </h3>
                       <p className="text-slate-600 leading-relaxed">
@@ -373,11 +374,12 @@ function AboutUsPage() {
       </section>
 
       {/* Team Section */}
-      <section id='team' className="relative py-32 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section id='team' className="relative py-32 bg-gradient-to-br bg-white">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6">
-              {t('about.team.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">{t('about.team.title.highlight')}</span>
+              {t('about.team.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-600">{t('about.team.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               {t('about.team.subtitle')}
@@ -388,12 +390,12 @@ function AboutUsPage() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-amber-300 hover:-translate-y-2 text-center"
+                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#f2413b] hover:-translate-y-2 text-center"
               >
                 <div className="text-6xl mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   {member.icon}
                 </div>
-                <div className="text-4xl font-black text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                <div className="text-4xl font-black text-slate-900 mb-2 group-hover:text-[#f2413b] transition-colors">
                   {member.count}
                 </div>
                 <div className="text-lg font-semibold text-slate-600">
@@ -409,7 +411,7 @@ function AboutUsPage() {
       <section className="relative py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-bold text-white mb-8">
-            {t('about.cta.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">{t('about.cta.title.highlight')}</span>
+            {t('about.cta.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-700">{t('about.cta.title.highlight')}</span>
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t('about.cta.subtitle')}
@@ -418,7 +420,7 @@ function AboutUsPage() {
             <a               
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')} 
-              className="group px-10 py-5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
+              className="group px-10 py-5 bg-gradient-to-r from-[#f2413b] to-red-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
             >
               {t('about.cta.button')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

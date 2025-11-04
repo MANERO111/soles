@@ -71,29 +71,29 @@ function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8" style={{fontFamily: 'Inter, system-ui, -apple-system, sans-serif'}}>
             <Link 
               href="/" 
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
+              className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold"
             >
               {t('nav.home')}
             </Link>
             <Link 
               href="/aboutUs" 
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
+              className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold"
             >
               {t('nav.about')}
             </Link>
             <Link 
               href="/products" 
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium"
+              className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold"
             >
               {t('nav.products')}
             </Link>
             <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
-              className="text-slate-700 hover:text-amber-600 transition-colors duration-200 text-sm font-medium cursor-pointer"
+              className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold cursor-pointer"
             >
               {t('nav.contact')}
             </a>
@@ -101,7 +101,7 @@ function Navbar() {
             {/* Language Switcher */}
             <div className="relative">
               <button 
-                className="flex items-center gap-2 text-slate-700 hover:text-amber-600 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-slate-50"
+                className="flex items-center gap-2 text-slate-700 hover:text-[#f2413b] transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-slate-50"
                 onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
               >
                 <Globe className="w-4 h-4" />
@@ -115,7 +115,7 @@ function Navbar() {
                   <button
                     onClick={() => handleLanguageSwitch('en')}
                     className={`block w-full px-4 py-2 text-sm text-left hover:bg-slate-50 transition-colors ${
-                      locale === 'en' ? 'text-amber-600 font-medium bg-amber-50' : 'text-slate-700'
+                      locale === 'en' ? 'text-[#f2413b] font-medium bg-slate-50' : 'text-slate-700'
                     }`}
                   >
                     English
@@ -123,7 +123,7 @@ function Navbar() {
                   <button
                     onClick={() => handleLanguageSwitch('fr')}
                     className={`block w-full px-4 py-2 text-sm text-left hover:bg-slate-50 transition-colors ${
-                      locale === 'fr' ? 'text-amber-600 font-medium bg-amber-50' : 'text-slate-700'
+                      locale === 'fr' ? 'text-[#f2413b] font-medium bg-slate-50' : 'text-slate-700'
                     }`}
                   >
                     Français
@@ -137,7 +137,7 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <button 
               onClick={(e) => handleNavClick(e, 'contact')}
-              className="px-6 py-2.5 bg-slate-900 text-white rounded-md font-medium text-sm hover:bg-amber-600 transition-all duration-300 cursor-pointer"
+              className="px-6 py-2.5 bg-slate-900 text-white rounded-md font-medium text-sm hover:bg-[#f2413b] transition-all duration-300 cursor-pointer"
             >
               {t('nav.getQuote')}
             </button>
@@ -157,25 +157,25 @@ function Navbar() {
       <div className={`md:hidden transition-all duration-300 ${
         mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
       }`}>
-        <div className="px-4 pt-2 pb-6 space-y-3 bg-white border-t border-slate-200">
+        <div className="px-4 pt-2 pb-6 space-y-3 bg-white border-t border-slate-200" style={{fontFamily: 'Inter, system-ui, -apple-system, sans-serif'}}>
           <Link 
             href="/" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
+            className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors font-semibold"
           >
             {t('nav.home')}
           </Link>
           <Link 
             href="/aboutUs" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
+            className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors font-semibold"
           >
             {t('nav.about')}
           </Link>
           <Link 
             href="/products" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors"
+            className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors font-semibold"
           >
             {t('nav.products')}
           </Link>
@@ -185,7 +185,7 @@ function Navbar() {
               handleNavClick(e, 'news');
               setMobileMenuOpen(false);
             }}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors cursor-pointer"
+            className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors cursor-pointer font-semibold"
           >
             {t('nav.news')}
           </a>
@@ -195,7 +195,7 @@ function Navbar() {
               handleNavClick(e, 'contact');
               setMobileMenuOpen(false);
             }}
-            className="block py-2 text-slate-700 hover:text-amber-600 transition-colors cursor-pointer"
+            className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors cursor-pointer font-semibold"
           >
             {t('nav.contact')}
           </a>
@@ -207,7 +207,7 @@ function Navbar() {
               <button
                 onClick={() => handleLanguageSwitch('en')}
                 className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${
-                  locale === 'en' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  locale === 'en' ? 'bg-[#f2413b] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 English
@@ -215,7 +215,7 @@ function Navbar() {
               <button
                 onClick={() => handleLanguageSwitch('fr')}
                 className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${
-                  locale === 'fr' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  locale === 'fr' ? 'bg-[#f2413b] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 Français

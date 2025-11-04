@@ -192,12 +192,12 @@ function ValuesSection() {
         {/* Bottom CTA Section */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-amber-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-[#f2603b] text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
                 {t('values.cta.exploreProcess')}
                 <Target className="w-5 h-5 group-hover:rotate-90 transition-transform duration-500" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f2563b] to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
             
             <button className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">

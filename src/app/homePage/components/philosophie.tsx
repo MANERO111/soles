@@ -123,18 +123,18 @@ function PhilosophySection() {
                 <div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
-                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(251, 191, 36, 0.3) 0%, transparent 50%)`
+                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(251, 57, 36, 0.3) 0%, transparent 50%)`
                   }}
                 ></div>
               </div>
 
               {/* Floating Decorative Circles */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full opacity-80 group-hover:scale-125 group-hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-amber-500/50 flex items-center justify-center">
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-[#f2413b] to-[#f23b3b] rounded-full opacity-80 group-hover:scale-125 group-hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-amber-500/50 flex items-center justify-center">
                 <Heart className="w-10 h-10 text-white animate-pulse" />
               </div>
               
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-900 rounded-full opacity-90 group-hover:scale-125 group-hover:translate-y-2 transition-all duration-500 shadow-2xl shadow-slate-900/50 flex items-center justify-center">
-                <Wrench className="w-12 h-12 text-amber-400 animate-spin-slow" />
+                <Wrench className="w-12 h-12 text-[#f2413b] animate-spin-slow" />
               </div>
 
               <div className="absolute top-1/2 -right-4 w-20 h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-full opacity-70 group-hover:scale-125 group-hover:translate-x-2 transition-all duration-500 shadow-2xl shadow-red-500/50 animate-bounce-slow flex items-center justify-center">
@@ -155,7 +155,7 @@ function PhilosophySection() {
             <div>
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
                 {t('philosophy.title.line1')}
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 animate-shimmer">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] via-[#f2663b] to-[#f2413b] animate-shimmer">
                   {t('philosophy.title.line2')}
                 </span>
               </h2>
@@ -193,7 +193,7 @@ function PhilosophySection() {
 
             {/* CTA Button */}
             <div className="pt-6">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-[#f2413b] to-[#f2753b] text-white rounded-xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
                 <span className="relative z-10 flex items-center gap-3">
                   {t('philosophy.cta')}
                   <Users className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
