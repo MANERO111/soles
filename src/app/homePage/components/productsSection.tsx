@@ -19,7 +19,7 @@ function ProductsSection() {
       title: t('product.items.lightSole.title'),
       description: t('product.items.lightSole.description'),
       image: "/img/17.png",
-      color: "from-orange-50 to-amber-50"
+      color: "from-red-50 to-orange-50"
     },
     {
       title: t('product.items.orthopedicSoles.title'),
@@ -46,13 +46,7 @@ function ProductsSection() {
       icon: "👞",
       name: t('product.materials.eva.name'),
       description: t('product.materials.eva.description'),
-      color: "bg-red-50 border-red-200"
-    },
-    {
-      icon: "👟",
-      name: t('product.materials.microporous.name'),
-      description: t('product.materials.microporous.description'),
-      color: "bg-orange-50 border-orange-200"
+      color: "bg-red-50 border-[#f2413b]/30"
     },
     {
       icon: "🥾",
@@ -61,10 +55,16 @@ function ProductsSection() {
       color: "bg-red-50 border-red-200"
     },
     {
-      icon: "🌱",
-      name: t('product.materials.cork.name'),
-      description: t('product.materials.cork.description'),
+      icon: "👟",
+      name: t('product.materials.pu.name'),
+      description: t('product.materials.pu.description'),
       color: "bg-orange-50 border-orange-200"
+    },
+    {
+      icon: "🌱",
+      name: t('product.materials.leather.name'),
+      description: t('product.materials.leather.description'),
+      color: "bg-red-50 border-[#f2413b]/30"
     }
   ];
 
@@ -111,7 +111,6 @@ function ProductsSection() {
     if (!isDragging) return;
     setIsDragging(false);
 
-    // Threshold for slide change (30% of container width)
     const threshold = containerRef.current ? containerRef.current.offsetWidth * 0.3 : 100;
 
     if (dragOffset > threshold) {
@@ -124,7 +123,6 @@ function ProductsSection() {
     setTranslateX(0);
   };
 
-  // Mouse events
   const handleMouseDown = (e: React.MouseEvent) => {
     handleDragStart(e.clientX);
   };
@@ -143,7 +141,6 @@ function ProductsSection() {
     }
   };
 
-  // Touch events
   const handleTouchStart = (e: React.TouchEvent) => {
     handleDragStart(e.touches[0].clientX);
   };
@@ -162,7 +159,7 @@ function ProductsSection() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
       
       {/* Decorative Blobs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-amber-100 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-red-100 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-40 right-10 w-96 h-96 bg-slate-200 rounded-full blur-3xl opacity-20"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,7 +211,7 @@ function ProductsSection() {
                       <p className="text-sm text-slate-600">{material.description}</p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#f2413b]/0 via-[#f2413b]/5 to-[#f2413b]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>
@@ -253,7 +250,7 @@ function ProductsSection() {
                       <div className="space-y-6 h-full flex flex-col">
                         {/* Product Image */}
                         <div className={`flex-1 bg-gradient-to-br ${product.color} rounded-xl flex items-center justify-center relative overflow-hidden group border border-slate-200`}>
-                          <div className="absolute inset-0 bg-gradient-to-br from-transparent to-amber-100/30 group-hover:from-amber-50/20 group-hover:to-amber-100/40 transition-all duration-500"></div>
+                          <div className="absolute inset-0 bg-gradient-to-br from-transparent to-red-100/30 group-hover:from-red-50/20 group-hover:to-red-100/40 transition-all duration-500"></div>
                           <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
                             <div className={`text-8xl transform transition-transform duration-500 ${isActive && !isDragging ? 'scale-100' : 'scale-90'}`}>
                               <Image src={product.image} alt={product.title} width={400} height={400} />
@@ -323,7 +320,7 @@ function ProductsSection() {
               </div>
 
               {/* Decorative Corner Accents */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-amber-200 rounded-full blur-2xl opacity-40"></div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-red-200 rounded-full blur-2xl opacity-40"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-slate-300 rounded-full blur-2xl opacity-30"></div>
             </div>
           </div>

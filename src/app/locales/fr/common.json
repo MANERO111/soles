@@ -27,56 +27,56 @@
       "clients": "Clients Satisfaits",
       "materials": "Types de Matériaux"
     },
-    "product": {
+      "product": {
         "badge": "Nos Produits",
         "title": {
-          "line1": "Technologie et",
-          "line2": "Savoir-Faire"
+          "line1": "Qualité et",
+          "line2": "Innovation"
         },
-        "description": "Des semelles sur mesure pour chaque besoin, conçues pour allier fonctionnalité, confort et style, adaptables à tous types de chaussures, du technique à la mode.",
+        "description": "Semelles sur mesure pour chaque besoin, conçues pour allier fonctionnalité, confort et style. Adaptables à tous les types de chaussures - de la sécurité à la mode.",
         "materials": {
-          "title": "Semelles pour chaque style, fonction et matériau",
-          "description": "PBS Soles Srl offre une large gamme de semelles pour chaussures, garantissant l'équilibre parfait entre innovation et tradition. Grâce à une production flexible, nous fabriquons également des semelles personnalisées en petites quantités.",
+          "title": "Matériaux & Technologies Maîtrisés",
+          "description": "Casa Semelle maîtrise tous les principaux matériaux de semelles, garantissant l'équilibre parfait entre innovation, durabilité et confort. Nous fabriquons des semelles sur mesure pour les marques, fabricants et artisans.",
           "eva": {
-            "name": "EVA (Acétate de Vinyle Éthylène)",
-            "description": "Léger, polyvalent et très résistant."
-          },
-          "microporous": {
-            "name": "Microporous",
-            "description": "Grand confort et adaptabilité."
+            "name": "EVA (Haute Densité)",
+            "description": "Léger, polyvalent et très résistant. Parfait pour le confort et la performance."
           },
           "rubber": {
             "name": "Caoutchouc",
-            "description": "Durable et résistant."
+            "description": "Durabilité maximale et excellente adhérence. Idéal pour les chaussures de sécurité et industrielles."
           },
-          "cork": {
-            "name": "Liège aggloméré",
-            "description": "Un matériau naturel pour des solutions écologiques."
+          "pu": {
+            "name": "PU / TPU / TR",
+            "description": "Matériaux en polyuréthane avancé. Flexibilité supérieure et performance durable."
+          },
+          "leather": {
+            "name": "Cuir & PVC",
+            "description": "Matériaux naturels et synthétiques. L'élégance classique rencontre la fonctionnalité moderne."
           }
         },
         "items": {
           "lightSole": {
-            "title": "Semelle Légère",
-            "description": "Style exclusif et confort léger."
+            "title": "Semelles Sécurité & Industrielles",
+            "description": "Protection robuste avec confort. Conçues pour les environnements de travail exigeants."
           },
           "orthopedicSoles": {
-            "title": "Semelles Orthopédiques",
-            "description": "Support anatomique et confort postural."
+            "title": "Semelles Casual & Ville",
+            "description": "Confort et style au quotidien. Équilibre parfait entre fonctionnalité et esthétique."
           },
           "flatHeelSoles": {
-            "title": "Semelles à talon plat",
-            "description": "Confort postural, talon plat et durabilité."
+            "title": "Sandales & Tongues",
+            "description": "Confort estival et durabilité. Designs légers pour les chaussures de temps chaud."
           },
           "fashionSole": {
-            "title": "Semelle de Mode",
-            "description": "Design exclusif et finitions personnalisées."
+            "title": "Semelles Designer Sur Mesure",
+            "description": "Designs exclusifs avec couleurs, densités, marquages et logos personnalisés pour votre marque."
           }
         },
         "cta": {
-          "product": "Voir le produit",
+          "product": "En Savoir Plus",
           "allProducts": "Voir Tous les Produits"
         },
-        "swipe": "Glisser"
+        "swipe": "Glissez"
       },
       "aboutLegacy": {
         "badge": "Notre Héritage",
@@ -118,49 +118,49 @@
         }
       },
       "values": {
-        "title": "nos valeurs",
-        "cta": {
-          "learnMore": "En Savoir Plus",
-          "exploreProcess": "Explorer Notre Processus",
-          "contactTeam": "Contacter Notre Équipe"
-        },
-        "items": {
-          "expertise": {
-            "title": "5+ Ans d'Expertise",
-            "description": "Notre entreprise s'enorgueillit d'une équipe de professionnels hautement qualifiés dédiés à l'excellence dans la fabrication de semelles. Avec des décennies d'expertise acquise, nous maîtrisons l'art de mélanger les matériaux et les technologies pour créer des solutions diversifiées et personnalisées adaptées aux exigences uniques de chaque client.",
-            "badge": "⭐ Expérimenté"
+          "title": "Pourquoi Choisir Casa Semelle",
+          "cta": {
+            "learnMore": "En Savoir Plus",
+            "exploreProcess": "Découvrir Notre Processus",
+            "contactTeam": "Contacter Notre Équipe"
           },
-          "innovation": {
-            "title": "Technologie Innovante",
-            "description": "Grâce à une recherche et un développement approfondis, nous avons été les pionniers de systèmes avancés qui réduisent considérablement le poids des semelles TR, TPU et PU. Notre technologie de pointe offre des avantages distinctifs, créant des solutions de chaussures qui privilégient la conception légère, les performances supérieures et le confort exceptionnel.",
-            "badge": "💡 Innovant"
-          },
-          "flexibility": {
-            "title": "Solutions de Commande Flexibles",
-            "description": "Chez PBS Soles, nous comprenons les besoins diversifiés des clients et accueillons les commandes de toutes tailles. Avec plus de 20 ans d'expertise dans la production de semelles, nous nous engageons à fournir des produits premium quel que soit le volume de commande. Des petits lots de 100 paires à la production à grande échelle, attendez-vous à un service efficace, une livraison ponctuelle et une qualité inébranlable.",
-            "badge": "🚀 Flexible"
+          "items": {
+            "expertise": {
+              "title": "7+ Ans d'Excellence",
+              "description": "Fondée en 2018, Casa Semelle est rapidement devenue le numéro un marocain de la fabrication de semelles. Notre équipe de professionnels hautement qualifiés maîtrise l'art de combiner matériaux et technologies, créant des solutions diversifiées et sur mesure adaptées aux exigences uniques de chaque client - des grandes marques internationales aux artisans locaux.",
+              "badge": "⭐ Leader du Marché"
+            },
+            "innovation": {
+              "title": "Maîtrise Complète des Matériaux",
+              "description": "Nous maîtrisons tous les principaux matériaux de semelles : EVA haute densité, Caoutchouc, PU, TPU, TR, Cuir, PVC et semelles préfabriquées. Notre machinerie industrielle moderne et notre expertise nous permettent de livrer une qualité exceptionnelle pour les chaussures de sécurité, les chaussures casual, les sandales et les solutions designer sur mesure avec performance et confort supérieurs.",
+              "badge": "💡 Multi-Matériaux"
+            },
+            "flexibility": {
+              "title": "Partenariat avec des Marques Mondiales",
+              "description": "Casa Semelle est approuvée par des groupes de renommée mondiale dont Inditex, confirmant notre capacité à répondre aux standards internationaux les plus exigeants. Nous servons les grandes marques marocaines, les ateliers industriels et les artisans - offrant une qualité premium, des livraisons ponctuelles et une constance exemplaire quelle que soit l'ampleur du projet.",
+              "badge": "🌍 International"
+            }
           }
-        }
       },
       "philosophy": {
-        "badge": "Notre Philosophie",
+        "badge": "Notre Approche",
         "title": {
-          "line1": "Savoir-faire rencontre",
-          "line2": "Innovation"
+          "line1": "L'Excellence rencontre",
+          "line2": "l'Expertise"
         },
         "description": {
-          "paragraph1": "En tant qu'entreprise en croissance, nous croyons en l'équilibre parfait entre la technologie moderne et les techniques artisanales traditionnelles. Notre approche garantit que chaque semelle est fabriquée avec précision et passion.",
-          "paragraph2": "50% de notre production reste artisanale - un avantage unique qui nous permet de traiter les commandes personnalisées, de créer des prototypes et de produire des collections en édition limitée avec une flexibilité et une qualité inégalées.",
-          "paragraph3": "Chaque semelle est conçue en collaboration avec des designers et des fabricants, combinant fonctionnalité, style et matériaux supérieurs. Notre souci du détail garantit une efficacité industrielle avec une excellence artisanale."
+          "paragraph1": "Numéro un marocain de la fabrication de semelles, alliant machinerie moderne et savoir-faire expert. Partenaire de confiance des grandes marques internationales.",
+          "paragraph2": "Installations de pointe pour tout volume - commandes sur mesure à production massive. Maîtrise de 8+ matériaux avec flexibilité inégalée.",
+          "paragraph3": "Solutions sur mesure avec designers et marques : couleurs, densités, marquages, logos. Constance qualité ayant valu des partenariats comme Inditex."
         },
         "features": {
-          "custom": "✨ Solutions Personnalisées",
-          "quality": "🎯 Focus Qualité",
-          "delivery": "🚀 Livraison Rapide"
+          "custom": "✨ Développement Sur Mesure",
+          "quality": "🎯 Standards Internationaux",
+          "delivery": "🚀 Livraison Fiable"
         },
-        "cta": "Entrer en Contact",
+        "cta": "Devenez Partenaire",
         "images": {
-          "craftsmanship": "Savoir-faire"
+          "craftsmanship": "Excellence Manufacturière"
         }
       },
       "contact": {

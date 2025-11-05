@@ -229,7 +229,7 @@ function HeroSection() {
                 <div className="text-sm text-slate-600 mt-1">{t('hero.stats.clients')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-slate-900">4 {t('common.materials')}</div>
+                <div className="text-3xl font-bold text-slate-900">8 {t('common.materials')}</div>
                 <div className="text-sm text-slate-600 mt-1">{t('hero.stats.materials')}</div>
               </div>
             </div>

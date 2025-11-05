@@ -27,59 +27,57 @@
       "clients": "Happy Clients",
       "materials": "Sole Materials"
     },
-    
-    "product": {
+      "product": {
         "badge": "Our Products",
         "title": {
-        "line1": "Technology and",
-        "line2": "Craftsmanship"
+          "line1": "Quality and",
+          "line2": "Innovation"
         },
-        "description": "Tailor-made soles for every need, designed to combine functionality, comfort, and style, adaptable to all types of footwear, from technical to fashion.",
+        "description": "Custom soles for every need, designed to combine functionality, comfort, and style. Adaptable to all types of footwear - from safety shoes to fashion.",
         "materials": {
-        "title": "Soles for every style, function, and material",
-        "description": "PBS Soles Srl offers a wide range of soles for footwear, ensuring the perfect balance between innovation and tradition. Thanks to flexible production, we also manufacture custom soles in small quantities.",
-        "eva": {
-            "name": "EVA (Ethylene Vinyl Acetate)",
-            "description": "Lightweight, versatile, and highly resistant."
-        },
-        "microporous": {
-            "name": "Microporous",
-            "description": "Great comfort and adaptability."
-        },
-        "rubber": {
-            "name": "Rubber",
-            "description": "Durable and resistant."
-        },
-        "cork": {
-            "name": "Agglomerated cork",
-            "description": "A natural material for eco-friendly solutions."
-        }
+          "title": "Mastered Materials & Technologies",
+          "description": "Casa Semelle masters all major sole materials, ensuring the perfect balance between innovation, durability, and comfort. We manufacture custom soles for brands, manufacturers, and artisans.",
+          "eva": {
+            "name": "EVA (High Density)",
+            "description": "Lightweight, versatile, and highly resistant. Perfect for comfort and performance."
+          },
+          "rubber": {
+            "name": "Rubber / Caoutchouc",
+            "description": "Maximum durability and excellent grip. Ideal for safety and industrial footwear."
+          },
+          "pu": {
+            "name": "PU / TPU / TR",
+            "description": "Advanced polyurethane materials. Superior flexibility and long-lasting performance."
+          },
+          "leather": {
+            "name": "Leather & PVC",
+            "description": "Natural and synthetic materials. Classic elegance meets modern functionality."
+          }
         },
         "items": {
-        "lightSole": {
-            "title": "Light Sole",
-            "description": "Exclusive style and lightweight comfort."
-        },
-        "orthopedicSoles": {
-            "title": "Orthopedic Soles",
-            "description": "Anatomical support and postural comfort."
-        },
-        "flatHeelSoles": {
-            "title": "Soles Flat heel",
-            "description": "Postural comfort, flat heel and durability."
-        },
-        "fashionSole": {
-            "title": "Fashion Sole",
-            "description": "Exclusive design and custom finishes."
-        }
+          "lightSole": {
+            "title": "Safety & Industrial Soles",
+            "description": "Robust protection with comfort. Designed for demanding work environments."
+          },
+          "orthopedicSoles": {
+            "title": "Casual & City Soles",
+            "description": "Everyday comfort and style. Perfect balance of functionality and aesthetics."
+          },
+          "flatHeelSoles": {
+            "title": "Sandals & Slides",
+            "description": "Summer comfort and durability. Lightweight designs for warm weather footwear."
+          },
+          "fashionSole": {
+            "title": "Custom Designer Soles",
+            "description": "Exclusive designs with custom colors, densities, branding, and logos for your brand."
+          }
         },
         "cta": {
-        "product": "Go to product",
-        "allProducts": "View All Products"
+          "product": "Learn More",
+          "allProducts": "View All Products"
         },
         "swipe": "Swipe"
-    },
-    
+      },
       "aboutLegacy": {
         "badge": "Our Legacy",
         "title": {
@@ -119,51 +117,50 @@
           "exports": "Export Markets"
         }
       },
-    
       "values": {
-        "title": "our values",
-        "cta": {
-          "learnMore": "Learn More",
-          "exploreProcess": "Explore Our Process",
-          "contactTeam": "Contact Our Team"
-        },
-        "items": {
-          "expertise": {
-            "title": "5+ Years of Expertise",
-            "description": "Our company takes pride in a team of highly skilled professionals dedicated to excellence in sole manufacturing. With decades of acquired expertise, we master the art of blending materials and technologies to create diverse, customized solutions tailored to each customer's unique requirements.",
-            "badge": "⭐ Experienced"
+          "title": "Why Choose Casa Semelle",
+          "cta": {
+            "learnMore": "Learn More",
+            "exploreProcess": "Explore Our Process",
+            "contactTeam": "Contact Our Team"
           },
-          "innovation": {
-            "title": "Innovative Technology",
-            "description": "Through extensive research and development, we've pioneered advanced systems that significantly reduce the weight of TR, TPU, and PU soles. Our cutting-edge technology delivers distinctive benefits, creating footwear solutions that prioritize lightweight design, superior performance, and exceptional comfort.",
-            "badge": "💡 Innovative"
-          },
-          "flexibility": {
-            "title": "Flexible Order Solutions",
-            "description": "At PBS Soles, we understand diverse client needs and welcome orders of all sizes. With over 20 years of expertise in sole production, we're committed to delivering premium products regardless of order volume. From small batches of 100 pairs to large-scale production, expect efficient service, timely delivery, and unwavering quality.",
-            "badge": "🚀 Flexible"
+          "items": {
+            "expertise": {
+              "title": "7+ Years of Excellence",
+              "description": "Founded in 2018, Casa Semelle has rapidly become Morocco's #1 sole manufacturer. Our team of highly skilled professionals masters the art of blending materials and technologies, creating diverse, customized solutions tailored to each customer's unique requirements - from major international brands to local artisans.",
+              "badge": "⭐ Market Leader"
+            },
+            "innovation": {
+              "title": "Complete Material Mastery",
+              "description": "We master all major sole materials: EVA high density, Rubber, PU, TPU, TR, Leather, PVC, and prefabricated soles. Our modern industrial machinery and expertise allow us to deliver exceptional quality across safety footwear, casual shoes, sandals, and custom designer solutions with superior performance and comfort.",
+              "badge": "💡 Multi-Material"
+            },
+            "flexibility": {
+              "title": "Partnership with Global Brands",
+              "description": "Casa Semelle is trusted by world-renowned groups including Inditex, confirming our ability to meet the highest international standards. We serve major Moroccan brands, industrial workshops, and artisans alike - delivering premium quality, on-time delivery, and exemplary consistency regardless of project scale.",
+              "badge": "🌍 International"
+            }
           }
-        }
       },
       "philosophy": {
-        "badge": "Our Philosophy",
+        "badge": "Our Approach",
         "title": {
-          "line1": "Craftsmanship meets",
-          "line2": "Innovation"
+          "line1": "Excellence meets",
+          "line2": "Expertise"
         },
         "description": {
-          "paragraph1": "As a growing company, we believe in the perfect balance between modern technology and traditional handcrafted techniques. Our approach ensures each sole is crafted with precision and passion.",
-          "paragraph2": "50% of our production remains handcrafted - a unique advantage that allows us to handle custom orders, create prototypes, and produce limited-edition collections with unmatched flexibility and quality.",
-          "paragraph3": "Every sole is designed in collaboration with designers and manufacturers, combining functionality, style, and superior materials. Our attention to detail ensures industrial efficiency with artisanal excellence."
+          "paragraph1": "Morocco's #1 sole manufacturer, combining modern machinery with expert craftsmanship. Trusted partner of major international brands.",
+          "paragraph2": "Cutting-edge facilities handling any scale - custom orders to large production. Mastering 8+ materials with unmatched flexibility.",
+          "paragraph3": "Custom solutions with designers and brands: colors, densities, branding, logos. Quality consistency that earned partnerships like Inditex."
         },
         "features": {
-          "custom": "✨ Custom Solutions",
-          "quality": "🎯 Quality Focus",
-          "delivery": "🚀 Fast Delivery"
+          "custom": "✨ Custom Development",
+          "quality": "🎯 International Standards",
+          "delivery": "🚀 Reliable Delivery"
         },
-        "cta": "Get in Touch",
+        "cta": "Partner With Us",
         "images": {
-          "craftsmanship": "Craftsmanship"
+          "craftsmanship": "Manufacturing Excellence"
         }
       },
       "contact": {
@@ -322,7 +319,6 @@
           "reset": "Reset Filters"
         }
       },
-      
       "about": {
         "hero": {
           "badge": "Leader in Sole Manufacturing",
