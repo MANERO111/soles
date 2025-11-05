@@ -26,14 +26,24 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState('en');
+  const [isInitialized, setIsInitialized] = useState(false);
 
   // Load saved language from localStorage on mount
   useEffect(() => {
+    // Always default to English on first load, ignore browser language
     const savedLocale = localStorage.getItem('language');
+    
     if (savedLocale && (savedLocale === 'en' || savedLocale === 'fr')) {
       setLocale(savedLocale);
       document.documentElement.lang = savedLocale;
+    } else {
+      // Explicitly set to English and save it
+      setLocale('en');
+      document.documentElement.lang = 'en';
+      localStorage.setItem('language', 'en');
     }
+    
+    setIsInitialized(true);
   }, []);
 
   const switchLanguage = (newLocale: string) => {
@@ -62,6 +72,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       return key;
     }
   };
+
+  // Don't render children until language is initialized to prevent flash
+  if (!isInitialized) {
+    return null;
+  }
 
   return (
     <LanguageContext.Provider value={{ locale, switchLanguage, t }}>
