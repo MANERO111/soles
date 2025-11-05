@@ -56,15 +56,16 @@ function PhilosophySection() {
   return (
     <div 
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-32 overflow-hidden"
+      className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 sm:py-24 lg:py-32 overflow-hidden"
+      id='philosophie'
     >
       {/* Animated Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:100px_100px] animate-grid-scroll"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:50px_50px] sm:bg-[size:75px_75px] lg:bg-[size:100px_100px] animate-grid-scroll"></div>
       
-      {/* Glowing Orbs */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-amber-500 rounded-full blur-3xl opacity-10 animate-pulse-slow"></div>
-      <div className="absolute bottom-20 right-20 w-80 h-80 bg-red-500 rounded-full blur-3xl opacity-10 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-slate-500 rounded-full blur-3xl opacity-5 animate-float"></div>
+      {/* Glowing Orbs - Responsive sizing and positioning */}
+      <div className="absolute top-10 left-10 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-amber-500 rounded-full blur-3xl opacity-10 animate-pulse-slow"></div>
+      <div className="absolute bottom-10 right-10 sm:bottom-20 sm:right-20 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-red-500 rounded-full blur-3xl opacity-10 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/2 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-slate-500 rounded-full blur-3xl opacity-5 animate-float"></div>
 
       {/* Floating Particles - Fixed hydration issue */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -84,17 +85,17 @@ function PhilosophySection() {
 
       <div id='philosophy' className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Badge */}
-        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500/20 to-red-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full mb-6">
-            <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
-            <span className="text-sm text-amber-200 font-semibold uppercase tracking-widest">
+        <div className={`text-center mb-8 sm:mb-12 lg:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-amber-500/20 to-red-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full mb-6">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 animate-pulse" />
+            <span className="text-xs sm:text-sm text-amber-200 font-semibold uppercase tracking-widest">
               {t('philosophy.badge')}
             </span>
           </div>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Side - Image with Interactive Elements */}
           <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <div 
@@ -103,7 +104,7 @@ function PhilosophySection() {
               className="relative group cursor-pointer"
             >
               {/* Main Image Container with Morph Effect */}
-              <div className="relative aspect-square overflow-hidden rounded-[60px] rotate-6 group-hover:rotate-0 transition-all duration-700">
+              <div className="relative aspect-square overflow-hidden rounded-[40px] sm:rounded-[50px] lg:rounded-[60px] rotate-3 sm:rotate-6 group-hover:rotate-0 transition-all duration-700">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-200 via-white to-slate-200 animate-morph">
                   {/* Placeholder for actual image */}
                   <div className="w-full h-full flex items-center justify-center text-slate-400">
@@ -128,32 +129,32 @@ function PhilosophySection() {
                 ></div>
               </div>
 
-              {/* Floating Decorative Circles */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-[#f2413b] to-[#f23b3b] rounded-full opacity-80 group-hover:scale-125 group-hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-amber-500/50 flex items-center justify-center">
-                <Heart className="w-10 h-10 text-white animate-pulse" />
+              {/* Floating Decorative Circles - Responsive sizing */}
+              <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-[#f2413b] to-[#f23b3b] rounded-full opacity-80 group-hover:scale-125 group-hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-amber-500/50 flex items-center justify-center">
+                <Heart className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white animate-pulse" />
               </div>
               
-              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-900 rounded-full opacity-90 group-hover:scale-125 group-hover:translate-y-2 transition-all duration-500 shadow-2xl shadow-slate-900/50 flex items-center justify-center">
-                <Wrench className="w-12 h-12 text-[#f2413b] animate-spin-slow" />
+              <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-slate-700 to-slate-900 rounded-full opacity-90 group-hover:scale-125 group-hover:translate-y-2 transition-all duration-500 shadow-2xl shadow-slate-900/50 flex items-center justify-center">
+                <Wrench className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-[#f2413b] animate-spin-slow" />
               </div>
 
-              <div className="absolute top-1/2 -right-4 w-20 h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-full opacity-70 group-hover:scale-125 group-hover:translate-x-2 transition-all duration-500 shadow-2xl shadow-red-500/50 animate-bounce-slow flex items-center justify-center">
-                <Sparkles className="w-8 h-8 text-white" />
+              <div className="absolute top-1/2 -right-3 sm:-right-4 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-full opacity-70 group-hover:scale-125 group-hover:translate-x-2 transition-all duration-500 shadow-2xl shadow-red-500/50 animate-bounce-slow flex items-center justify-center">
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
               </div>
 
               {/* Ambient Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-[60px] blur-2xl transform scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-[40px] sm:rounded-[50px] lg:rounded-[60px] blur-2xl transform scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             </div>
 
             {/* Background decoration */}
-            <div className="absolute -z-10 inset-0 bg-gradient-to-br from-amber-500/10 to-red-500/10 rounded-[60px] blur-3xl transform scale-110 animate-pulse-slow"></div>
+            <div className="absolute -z-10 inset-0 bg-gradient-to-br from-amber-500/10 to-red-500/10 rounded-[40px] sm:rounded-[50px] lg:rounded-[60px] blur-3xl transform scale-110 animate-pulse-slow"></div>
           </div>
 
           {/* Right Side - Content */}
-          <div className={`space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
+          <div className={`space-y-6 sm:space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
             {/* Title */}
             <div>
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight mb-4 sm:mb-6">
                 {t('philosophy.title.line1')}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] via-[#f2663b] to-[#f2413b] animate-shimmer">
                   {t('philosophy.title.line2')}
@@ -162,12 +163,12 @@ function PhilosophySection() {
             </div>
 
             {/* Description Paragraphs */}
-            <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p className="group hover:text-white transition-colors duration-300">
                 {t('philosophy.description.paragraph1')}
               </p>
               
-              <div className="relative pl-6 border-l-4 border-amber-500/50 hover:border-amber-500 transition-colors duration-300">
+              <div className="relative pl-4 sm:pl-6 border-l-2 sm:border-l-4 border-amber-500/50 hover:border-amber-500 transition-colors duration-300">
                 <p>
                   {t('philosophy.description.paragraph2')}
                 </p>
@@ -179,24 +180,24 @@ function PhilosophySection() {
             </div>
 
             {/* Feature Pills */}
-            <div className="flex flex-wrap gap-3 pt-4">
-              <div className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 rounded-full text-amber-300 text-sm font-medium hover:bg-amber-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="flex flex-wrap gap-2 sm:gap-3 pt-2 sm:pt-4">
+              <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-amber-500/20 border border-amber-500/40 rounded-full text-amber-300 text-xs sm:text-sm font-medium hover:bg-amber-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
                 {t('philosophy.features.custom')}
               </div>
-              <div className="px-4 py-2 bg-red-500/20 border border-red-500/40 rounded-full text-red-300 text-sm font-medium hover:bg-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-red-500/20 border border-red-500/40 rounded-full text-red-300 text-xs sm:text-sm font-medium hover:bg-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
                 {t('philosophy.features.quality')}
               </div>
-              <div className="px-4 py-2 bg-slate-500/20 border border-slate-500/40 rounded-full text-slate-300 text-sm font-medium hover:bg-slate-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-slate-500/20 border border-slate-500/40 rounded-full text-slate-300 text-xs sm:text-sm font-medium hover:bg-slate-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
                 {t('philosophy.features.delivery')}
               </div>
             </div>
 
             {/* CTA Button */}
-            <div className="pt-6">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-[#f2413b] to-[#f2753b] text-white rounded-xl font-bold text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
-                <span className="relative z-10 flex items-center gap-3">
+            <div className="pt-4 sm:pt-6">
+              <button className="group relative w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#f2413b] to-[#f2753b] text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
+                <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                   {t('philosophy.cta')}
-                  <Users className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-amber-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               </button>
