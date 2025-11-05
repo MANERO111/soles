@@ -168,7 +168,7 @@ function HeroSection() {
             onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnd}
           >
-            <source src="vedio/Casa Seumelle.mp4" type="video/mp4" />
+            <source src="vedio/Casa-Seumelle-compressed.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </motion.video>
         )}
