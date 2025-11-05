@@ -2,28 +2,30 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '@/app/contexts/languageContext'; // Change this import
+import { useLanguage } from '@/app/contexts/languageContext';
 
 function HeroSection() {
   const [isClient, setIsClient] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [logoInCenter, setLogoInCenter] = useState(true);
+  const [contentVisible, setContentVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const sectionRef = useRef(null);
   const videoContainerRef = useRef(null);
-  const { t, locale } = useLanguage(); // Change this line
+  const { t, locale } = useLanguage();
 
   // Client-side rendering check
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Remove the HTML lang update effect since it's handled in the context
-  // Video dimensions and opacity
-  const videoWidth = fadeOut ? '80%' : '100%';
+  // Video dimensions and opacity with smoother transitions
+  const videoWidth = fadeOut ? '85%' : '100%';
+  const videoHeight = fadeOut ? '85%' : '100%';
   const videoOpacity = fadeOut ? 0 : 1;
-  const videoBorderRadius = fadeOut ? '20px' : '0px';
+  const videoBorderRadius = fadeOut ? '24px' : '0px';
+  const videoScale = fadeOut ? 0.95 : 1;
 
   // Time update handler
   const handleTimeUpdate = () => {
@@ -34,10 +36,13 @@ function HeroSection() {
       if (!isNaN(duration) && !isNaN(currentTime)) {
         const timeLeft = duration - currentTime;
 
-        if (timeLeft < 1.5 && !videoEnded) {
+        if (timeLeft < 1.8 && !videoEnded) {
           videoRef.current.pause();
           setVideoEnded(true);
-          setFadeOut(true);
+          
+          // Staggered animations for smooth transition
+          setTimeout(() => setFadeOut(true), 100);
+          setTimeout(() => setContentVisible(true), 800);
         }
       }
     }
@@ -50,7 +55,8 @@ function HeroSection() {
       videoRef.current.pause();
     }
     setVideoEnded(true);
-    setFadeOut(true);
+    setTimeout(() => setFadeOut(true), 100);
+    setTimeout(() => setContentVisible(true), 800);
   };
 
   // Video autoplay with increased speed
@@ -59,7 +65,6 @@ function HeroSection() {
       const timer = setTimeout(() => {
         try {
           if (videoRef.current) {
-            // Increase video playback speed to 1.5x
             videoRef.current.playbackRate = 1.5;
             const playPromise = videoRef.current.play();
             if (playPromise !== undefined) {
@@ -67,6 +72,7 @@ function HeroSection() {
                 console.error("Autoplay prevented:", error);
                 setVideoEnded(true);
                 setFadeOut(true);
+                setContentVisible(true);
               });
             }
           }
@@ -74,6 +80,7 @@ function HeroSection() {
           console.error("Video play error:", error);
           setVideoEnded(true);
           setFadeOut(true);
+          setContentVisible(true);
         }
       }, 100);
 
@@ -123,44 +130,52 @@ function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden bg-black"
     >
-      {/* Background - appears after video ends */}
+      {/* Background - appears after video ends with smooth fade */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100"
+        className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100 transition-opacity duration-[2000ms] ease-in-out"
         style={{
           opacity: fadeOut ? 1 : 0,
-          transitionProperty: 'opacity',
-          transitionDuration: '2s',
-          transitionTimingFunction: 'ease-in-out',
         }}
       >
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
         
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-10 w-72 h-72 bg-amber-100 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-slate-200 rounded-full blur-3xl opacity-20"></div>
+        {/* Decorative Elements with delayed appearance */}
+        <div 
+          className="absolute top-20 right-10 w-72 h-72 bg-amber-100 rounded-full blur-3xl opacity-0 transition-opacity duration-[1500ms] ease-out"
+          style={{
+            opacity: contentVisible ? 0.3 : 0,
+            transitionDelay: '400ms'
+          }}
+        ></div>
+        <div 
+          className="absolute bottom-20 left-10 w-96 h-96 bg-slate-200 rounded-full blur-3xl opacity-0 transition-opacity duration-[1500ms] ease-out"
+          style={{
+            opacity: contentVisible ? 0.2 : 0,
+            transitionDelay: '600ms'
+          }}
+        ></div>
       </div>
 
-      {/* Video Background Container */}
+      {/* Video Background Container with perfect centering */}
       <motion.div
         ref={videoContainerRef}
-        className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-0"
+        className="absolute inset-0 flex justify-center items-center z-0"
       >
         {isClient && (
           <motion.video
             ref={videoRef}
-            className="object-cover object-center z-0"
+            className="object-cover object-center"
             style={{
               width: videoWidth,
-              height: "100%",
+              height: videoHeight,
               opacity: videoOpacity,
               borderRadius: videoBorderRadius,
-              transitionProperty: 'opacity, border-radius',
-              transitionDuration: '2s',
-              transitionTimingFunction: 'ease-in-out',
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)"
+              transform: `scale(${videoScale})`,
+              transition: 'all 2s cubic-bezier(0.4, 0, 0.2, 1)',
+              boxShadow: fadeOut ? "0 25px 50px -12px rgba(0, 0, 0, 0.25)" : "none"
             }}
             autoPlay
             muted
@@ -174,63 +189,60 @@ function HeroSection() {
         )}
       </motion.div>
 
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      {/* Content with staggered animations */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-40 z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div 
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
             style={{
-              opacity: fadeOut ? 1 : 0,
-              transform: fadeOut ? 'translateY(0)' : 'translateY(20px)',
-              transitionProperty: 'opacity, transform',
-              transitionDuration: '1s',
-              transitionDelay: '0.5s',
-              transitionTimingFunction: 'ease-out',
+              opacity: contentVisible ? 1 : 0,
+              transform: contentVisible ? 'translateY(0)' : 'translateY(30px)',
+              transition: 'all 1000ms cubic-bezier(0.4, 0, 0.2, 1) 200ms',
             }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#f2413b] rounded-full">
-              <span className="w-2 h-2 bg-[#f2413b] rounded-full"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#f2413b] rounded-full shadow-sm">
+              <span className="w-2 h-2 bg-[#f2413b] rounded-full animate-pulse"></span>
               <span className="text-sm text-[#f2413b] font-medium">{t('hero.badge')}</span>
             </div>
 
             {/* Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-slate-900">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-slate-900">
                 {t('hero.titleLine1')}
-                <span className="block text-[#f2413b]">{t('hero.titleLine2')}</span>
+                <span className="block text-[#f2413b] mt-2">{t('hero.titleLine2')}</span>
                 {t('hero.titleLine3')}
               </h1>
-              <p className="text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-xl leading-relaxed">
                 {t('hero.description')}
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <button className="group px-8 py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-amber-600 transition-all duration-300 flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+              <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-amber-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                 {t('hero.ctaPrimary')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-md font-medium hover:bg-slate-900 hover:text-white transition-all duration-300">
+              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-md font-medium hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
                 {t('hero.ctaSecondary')}
               </button>
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-slate-200">
+            <div className="flex flex-wrap gap-6 sm:gap-8 pt-6 sm:pt-8 border-t border-slate-200">
               <div>
-                <div className="text-3xl font-bold text-slate-900">70%</div>
-                <div className="text-sm text-slate-600 mt-1">{t('hero.stats.export')}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-slate-900">70%</div>
+                <div className="text-xs sm:text-sm text-slate-600 mt-1">{t('hero.stats.export')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-slate-900">1000+</div>
-                <div className="text-sm text-slate-600 mt-1">{t('hero.stats.clients')}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-slate-900">1000+</div>
+                <div className="text-xs sm:text-sm text-slate-600 mt-1">{t('hero.stats.clients')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-slate-900">8 {t('common.materials')}</div>
-                <div className="text-sm text-slate-600 mt-1">{t('hero.stats.materials')}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-slate-900">8 {t('common.materials')}</div>
+                <div className="text-xs sm:text-sm text-slate-600 mt-1">{t('hero.stats.materials')}</div>
               </div>
             </div>
           </div>
@@ -239,16 +251,13 @@ function HeroSection() {
           <div 
             className="relative"
             style={{
-              opacity: fadeOut ? 1 : 0,
-              transform: fadeOut ? 'translateY(0)' : 'translateY(20px)',
-              transitionProperty: 'opacity, transform',
-              transitionDuration: '1s',
-              transitionDelay: '0.7s',
-              transitionTimingFunction: 'ease-out',
+              opacity: contentVisible ? 1 : 0,
+              transform: contentVisible ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
+              transition: 'all 1000ms cubic-bezier(0.4, 0, 0.2, 1) 400ms',
             }}
           >
             {/* Main Card */}
-            <div className="relative z-10 bg-white border border-slate-200 rounded-2xl p-8 shadow-xl">
+            <div className="relative z-10 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500">
               <div className="space-y-6">
                 {/* Product Preview */}
                 <div className="aspect-square bg-gradient-to-br from-slate-50 to-amber-50 rounded-xl flex items-center justify-center relative overflow-hidden group border border-slate-200">
@@ -260,20 +269,31 @@ function HeroSection() {
               </div>
             </div>
 
-            {/* Decorative Corner Accent */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-amber-200 rounded-full blur-2xl opacity-40"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-slate-300 rounded-full blur-2xl opacity-30"></div>
+            {/* Decorative Corner Accent with delayed animation */}
+            <div 
+              className="absolute -top-4 -right-4 w-24 h-24 bg-amber-200 rounded-full blur-2xl opacity-0 transition-opacity duration-1000"
+              style={{
+                opacity: contentVisible ? 0.4 : 0,
+                transitionDelay: '600ms'
+              }}
+            ></div>
+            <div 
+              className="absolute -bottom-4 -left-4 w-32 h-32 bg-slate-300 rounded-full blur-2xl opacity-0 transition-opacity duration-1000"
+              style={{
+                opacity: contentVisible ? 0.3 : 0,
+                transitionDelay: '800ms'
+              }}
+            ></div>
           </div>
         </div>
       </div>
 
-      {/* Animated Logo */}
+      {/* Animated Logo with smooth transitions */}
       <motion.div
         className="absolute z-20 left-1/2"
         style={{
           opacity: fadeOut ? 0 : 1,
-          transitionProperty: 'opacity',
-          transitionDuration: '1s',
+          transition: 'opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1)',
         }}
         initial={false}
         animate={{
@@ -283,25 +303,24 @@ function HeroSection() {
           translateX: '-50%'
         }}
         transition={{
-          duration: 1,
-          ease: "easeInOut"
+          duration: 1.2,
+          ease: [0.4, 0, 0.2, 1]
         }}
       >
-        <img src="img/casaSemelle.png" alt="casaSemelle logo" className="h-44" />
+        <img src="img/casaSemelle.png" alt="casaSemelle logo" className="h-32 sm:h-44" />
       </motion.div>
 
-      {/* Scroll Indicator - only show after video ends */}
+      {/* Scroll Indicator - only show after content visible */}
       <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         style={{
-          opacity: fadeOut ? 1 : 0,
-          transitionProperty: 'opacity',
-          transitionDuration: '1s',
-          transitionDelay: '1s',
+          opacity: contentVisible ? 1 : 0,
+          transform: contentVisible ? 'translate(-50%, 0)' : 'translate(-50%, 20px)',
+          transition: 'all 800ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms',
         }}
       >
-        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-[#f2413b] rounded-full mt-2"></div>
+        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center animate-bounce">
+          <div className="w-1.5 h-3 bg-[#f2413b] rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
