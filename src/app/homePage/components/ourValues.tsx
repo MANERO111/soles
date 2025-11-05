@@ -2,11 +2,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { Briefcase, Lightbulb, Rocket, Shield, Target, Zap } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
+import { useRouter, usePathname } from 'next/navigation';
 
 function ValuesSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null)
   const sectionRef = useRef(null);
+  const router = useRouter();
+  const pathname = usePathname();
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -31,6 +34,24 @@ function ValuesSection() {
       }
     };
   }, []);
+  const handleSectionNavigation = (sectionId: string) => {
+    if (pathname !== '/') {
+      router.push(`/#${sectionId}`);
+    } else {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const offset = 100;
+          window.scrollTo({
+            top: absoluteElementTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  };
 
   const values = [
     {
@@ -192,7 +213,7 @@ function ValuesSection() {
         {/* Bottom CTA Section */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-[#f2603b] text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
+            <button onClick={() => handleSectionNavigation('about')} className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-[#f2603b] text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
                 {t('values.cta.exploreProcess')}
                 <Target className="w-5 h-5 group-hover:rotate-90 transition-transform duration-500" />
@@ -200,7 +221,7 @@ function ValuesSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#f2563b] to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
             
-            <button className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
+            <button onClick={() => handleSectionNavigation('contact')} className="px-8 py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
               {t('values.cta.contactTeam')}
             </button>
           </div>

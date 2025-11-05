@@ -2,12 +2,15 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { Sparkles, Heart, Wrench, Users } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
+import { useRouter, usePathname } from 'next/navigation';
 
 function PhilosophySection() {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const sectionRef = useRef(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
   const { t } = useLanguage();
 
   // Generate particles once with useMemo to prevent hydration mismatch
@@ -50,6 +53,24 @@ function PhilosophySection() {
       const x = (e.clientX - rect.left) / rect.width;
       const y = (e.clientY - rect.top) / rect.height;
       setMousePosition({ x, y });
+    }
+  };
+  const handleSectionNavigation = (sectionId: string) => {
+    if (pathname !== '/') {
+      router.push(`/#${sectionId}`);
+    } else {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const offset = 100;
+          window.scrollTo({
+            top: absoluteElementTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
     }
   };
 
@@ -194,7 +215,7 @@ function PhilosophySection() {
 
             {/* CTA Button */}
             <div className="pt-4 sm:pt-6">
-              <button className="group relative w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#f2413b] to-[#f2753b] text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
+              <button onClick={() => handleSectionNavigation('contact')}  className="group relative w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#f2413b] to-[#f2753b] text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
                 <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                   {t('philosophy.cta')}
                   <Users className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />

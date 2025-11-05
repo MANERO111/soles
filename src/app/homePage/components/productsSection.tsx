@@ -3,6 +3,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/app/contexts/languageContext';
+import Link from 'next/link';
 
 function ProductsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -328,10 +329,13 @@ function ProductsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <button className="group px-8 py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-[#f2413b] transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105 active:scale-95">
-            {t('product.cta.allProducts')}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <Link href="/products">
+            <button className="group px-8 py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-[#f2413b] transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105 active:scale-95">
+              {t('product.cta.allProducts')}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>          
+          </Link>
+
         </div>
       </div>
 

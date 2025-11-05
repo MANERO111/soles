@@ -2,12 +2,15 @@
 import { useState, useEffect, useRef } from 'react';
 import { Sparkles, Award, Users, Globe } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
+import { useRouter, usePathname } from 'next/navigation';
 
 function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [countUpValues, setCountUpValues] = useState({ years: 0, clients: 0, materials: 0, exports: 0 });
   const sectionRef = useRef(null);
   const { t } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,6 +59,24 @@ function AboutSection() {
         setCountUpValues({ years: 7, clients: 1000, materials: 8, exports: 70 });
       }
     }, stepDuration);
+  };
+  const handleSectionNavigation = (sectionId: string) => {
+
+      router.push(`aboutUs/#${sectionId}`);
+
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const offset = 100;
+          window.scrollTo({
+            top: absoluteElementTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    
   };
 
   return (
@@ -212,7 +233,7 @@ function AboutSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-[#f2603b] text-white rounded-xl font-semibold overflow-hidden hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95">
+            <button onClick={() => handleSectionNavigation('our-journey')}  className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-[#f2603b] text-white rounded-xl font-semibold overflow-hidden hover:shadow-2xl hover:shadow-red-300/50 transition-all duration-300 hover:scale-105 active:scale-95">
               <span className="relative z-10 flex items-center gap-2">
                 {t('aboutLegacy.cta')}
                 <Award className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
