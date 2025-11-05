@@ -302,7 +302,7 @@ const ProductsShowcase: React.FC = () => {
   return (
     <div 
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-slate-50 via-white to-amber-50/30 py-16 sm:py-24 md:py-32 overflow-hidden"
+      className="relative bg-gradient-to-br from-slate-50 via-white to-amber-50/30 py-16 sm:py-24 mt-10 md:py-32 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
