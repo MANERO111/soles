@@ -3,6 +3,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { Award, Users, Factory, Globe, TrendingUp, Heart, Shield, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
+import PresidentMessageSection from './components/president';
 
 function AboutUsPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -223,6 +224,11 @@ function AboutUsPage() {
         </div>
       </section>
 
+
+<PresidentMessageSection />
+
+
+
       {/* Mission/Vision Section */}
       <section id='mission' className="relative py-16 sm:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -374,14 +380,14 @@ function AboutUsPage() {
       </section>
 
       {/* Team Section */}
-      <section id='team' className="relative py-16 sm:py-24 lg:py-32 bg-white">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+      <section id='team' className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 px-2">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-2">
               {t('about.team.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-600">{t('about.team.title.highlight')}</span>
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto px-4">
               {t('about.team.subtitle')}
             </p>
           </div>
@@ -408,19 +414,21 @@ function AboutUsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="relative py-16 sm:py-24 lg:py-32 bg-white ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 px-2">
+          <div className="absolute z-0 inset-0 bg-[linear-gradient(rgba(0,0,0,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-700 mb-6 sm:mb-8 px-2">
             {t('about.cta.title.prefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2413b] to-orange-700">{t('about.cta.title.highlight')}</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4">
             {t('about.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center px-4">
             <a               
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')} 
-              className="group px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#f2413b] to-red-500 text-white rounded-2xl font-bold text-base sm:text-lg shadow-2xl shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto"
+              className="group px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#f2413b] to-red-500 text-white rounded-2xl font-bold text-base sm:text-lg shadow-2xl z-10 shadow-amber-500/50 hover:shadow-amber-500/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center  gap-2 w-full sm:w-auto"
             >
               {t('about.cta.button')}
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
