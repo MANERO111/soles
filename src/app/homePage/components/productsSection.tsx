@@ -51,14 +51,14 @@ function ProductsSection() {
     },
     {
       icon: "🥾",
-      name: t('product.materials.rubber.name'),
-      description: t('product.materials.rubber.description'),
+      name: t('product.materials.pu.name'),
+      description: t('product.materials.pu.description'),
       color: "bg-red-50 border-red-200"
     },
     {
       icon: "👟",
-      name: t('product.materials.pu.name'),
-      description: t('product.materials.pu.description'),
+      name: t('product.materials.tpu.name'),
+      description: t('product.materials.tpu.description'),
       color: "bg-orange-50 border-orange-200"
     },
     {

@@ -41,12 +41,12 @@
         "name": "EVA (Haute Densité)",
         "description": "Léger, polyvalent et très résistant. Parfait pour le confort et la performance."
       },
-      "rubber": {
-        "name": "Caoutchouc",
+      "pu": {
+        "name": "PU (polyuréthane) ",
         "description": "Durabilité maximale et excellente adhérence. Idéal pour les chaussures de sécurité et industrielles."
       },
-      "pu": {
-        "name": "PU / TPU / TR",
+      "tpu": {
+        "name": "TPU / TR",
         "description": "Matériaux en polyuréthane avancé. Flexibilité supérieure et performance durable."
       },
       "leather": {
@@ -132,7 +132,7 @@
       },
       "innovation": {
         "title": "Maîtrise Complète des Matériaux",
-        "description": "Nous maîtrisons tous les principaux matériaux de semelles : EVA haute densité, Caoutchouc, PU, TPU, TR, Cuir, PVC et semelles préfabriquées. Notre machinerie industrielle moderne et notre expertise nous permettent de livrer une qualité exceptionnelle pour les chaussures de sécurité, les chaussures casual, les sandales et les solutions designer sur mesure avec performance et confort supérieurs.",
+        "description": "Nous maîtrisons tous les principaux matériaux de semelles : EVA haute densité, PU, TPU, TR, Cuir, PVC et semelles préfabriquées. Notre machinerie industrielle moderne et notre expertise nous permettent de livrer une qualité exceptionnelle pour les chaussures de sécurité, les chaussures casual, les sandales et les solutions designer sur mesure avec performance et confort supérieurs.",
         "badge": "💡 Multi-Matériaux"
       },
       "flexibility": {
@@ -404,7 +404,7 @@
       },
       "innovation": {
         "title": "Innovation & Technologie",
-        "description": "Machinerie industrielle moderne et développement constant de nouvelles solutions. Nous maîtrisons tous les matériaux : EVA, Caoutchouc, PU, TPU, TR, Cuir, PVC et semelles préfabriquées."
+        "description": "Machinerie industrielle moderne et développement constant de nouvelles solutions. Nous maîtrisons tous les matériaux : EVA, PU, TPU, TR, Cuir, PVC et semelles préfabriquées."
       },
       "customer": {
         "title": "Solutions Sur Mesure",

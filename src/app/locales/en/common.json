@@ -41,12 +41,12 @@
         "name": "EVA (High Density)",
         "description": "Lightweight, versatile, and highly resistant. Perfect for comfort and performance."
       },
-      "rubber": {
-        "name": "Rubber / Caoutchouc",
+      "pu": {
+        "name": "PU (polyuréthane) ",
         "description": "Maximum durability and excellent grip. Ideal for safety and industrial footwear."
       },
-      "pu": {
-        "name": "PU / TPU / TR",
+      "tpu": {
+        "name": "TPU / TR",
         "description": "Advanced polyurethane materials. Superior flexibility and long-lasting performance."
       },
       "leather": {
@@ -132,7 +132,7 @@
       },
       "innovation": {
         "title": "Complete Material Mastery",
-        "description": "We master all major sole materials: EVA high density, Rubber, PU, TPU, TR, Leather, PVC, and prefabricated soles. Our modern industrial machinery and expertise allow us to deliver exceptional quality across safety footwear, casual shoes, sandals, and custom designer solutions with superior performance and comfort.",
+        "description": "We master all major sole materials: EVA high density, PU, TPU, TR, Leather, PVC, and prefabricated soles. Our modern industrial machinery and expertise allow us to deliver exceptional quality across safety footwear, casual shoes, sandals, and custom designer solutions with superior performance and comfort.",
         "badge": "💡 Multi-Material"
       },
       "flexibility": {
@@ -404,7 +404,7 @@
       },
       "innovation": {
         "title": "Innovation & Technology",
-        "description": "Modern industrial machinery and constant development of new solutions. We master all materials: EVA, Rubber, PU, TPU, TR, Leather, PVC, and prefabricated soles."
+        "description": "Modern industrial machinery and constant development of new solutions. We master all materials: EVA, PU, TPU, TR, Leather, PVC, and prefabricated soles."
       },
       "customer": {
         "title": "Custom Solutions",

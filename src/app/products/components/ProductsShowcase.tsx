@@ -25,10 +25,11 @@ interface Category {
 
 const ProductsShowcase: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([
-    {id : 1, name: 'sole 1', price: 70, originalPrice: 0, description: 'shoes sole ', image_url: '2.png', category_id: '1', rating: 5, stock_quantity: 50},
-    {id : 2, name: 'sole 2', price: 80, originalPrice: 0, description: 'shoes sole ', image_url: '3.png', category_id: '2', rating: 5, stock_quantity: 50},
-    {id : 3, name: 'sole 3', price: 65, originalPrice: 0, description: 'shoes sole ', image_url: '7.png', category_id: '3', rating: 5, stock_quantity: 50},
-    {id : 4, name: 'sole 4', price: 85, originalPrice: 0, description: 'shoes sole ', image_url: '15.png', category_id: '4', rating: 5, stock_quantity: 50}
+    {id : 1, name: 'échantillon 1', price: 70, originalPrice: 0, description: 'échantillon sole ', image_url: '2.png', category_id: '1', rating: 5, stock_quantity: 50},
+    {id : 2, name: 'échantillon 2', price: 80, originalPrice: 0, description: 'échantillon sole ', image_url: '3.png', category_id: '2', rating: 5, stock_quantity: 50},
+    {id : 3, name: 'échantillon 3', price: 65, originalPrice: 0, description: 'échantillon sole ', image_url: '7.png', category_id: '3', rating: 5, stock_quantity: 50},
+    {id : 4, name: 'échantillon 4', price: 85, originalPrice: 0, description: 'échantillon sole ', image_url: '15.png', category_id: '4', rating: 5, stock_quantity: 50},
+    {id : 5, name: 'échantillon 5', price: 85, originalPrice: 0, description: 'échantillon sole ', image_url: '17.png', category_id: '5', rating: 5, stock_quantity: 50}
   ]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
