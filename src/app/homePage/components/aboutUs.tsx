@@ -48,7 +48,7 @@ function AboutSection() {
       const progress = currentStep / steps;
       
       setCountUpValues({
-        years: Math.floor(7 * progress),
+        years: Math.floor(30 * progress),
         clients: Math.floor(1000 * progress),
         materials: Math.floor(8 * progress),
         exports: Math.floor(70 * progress)
@@ -56,7 +56,7 @@ function AboutSection() {
 
       if (currentStep >= steps) {
         clearInterval(interval);
-        setCountUpValues({ years: 7, clients: 1000, materials: 8, exports: 70 });
+        setCountUpValues({ years: 30, clients: 1000, materials: 8, exports: 70 });
       }
     }, stepDuration);
   };
@@ -165,7 +165,7 @@ function AboutSection() {
               {/* Floating Badge */}
               <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#f2413b] to-red-500 text-white px-6 py-3 rounded-full shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 z-20">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">7+</div>
+                  <div className="text-2xl font-bold">30+</div>
                   <div className="text-xs uppercase tracking-wide">{t('aboutLegacy.years')}</div>
                 </div>
               </div>
@@ -184,10 +184,10 @@ function AboutSection() {
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
                   <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
-                    {t('aboutLegacy.timeline.2018.year')}
+                    {t('aboutLegacy.timeline.1995.year')}
                   </div>
                   <p className="text-slate-700 leading-relaxed">
-                    {t('aboutLegacy.timeline.2018.description')}
+                    {t('aboutLegacy.timeline.1995.description')}
                   </p>
                 </div>
               </div>

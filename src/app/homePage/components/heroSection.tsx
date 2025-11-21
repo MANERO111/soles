@@ -27,6 +27,21 @@ function HeroSection() {
   const videoBorderRadius = fadeOut ? '24px' : '0px';
   const videoScale = fadeOut ? 0.95 : 1;
 
+  const handleSectionNavigation = (sectionId: string) => {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const offset = 100;
+          window.scrollTo({
+            top: absoluteElementTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    };
+
   // Time update handler
   const handleTimeUpdate = () => {
     if (videoRef.current) {
@@ -221,11 +236,13 @@ function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+              <a href="/products">
               <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-slate-900 text-white rounded-md font-medium hover:bg-amber-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                 {t('hero.ctaPrimary')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-md font-medium hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
+              </a>
+              <button onClick={() => handleSectionNavigation('contact')} className="px-6 sm:px-8 py-3 sm:py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-md font-medium hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
                 {t('hero.ctaSecondary')}
               </button>
             </div>

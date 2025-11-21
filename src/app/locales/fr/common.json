@@ -8,7 +8,7 @@
     "getQuote": "Obtenir un Devis"
   },
   "hero": {
-    "badge": "7 Ans d'Excellence",
+    "badge": "30 Ans d'Excellence",
     "titleLine1": "Semelles de",
     "titleLine2": "Chaussures Premium",
     "titleLine3": "Fabrication",
@@ -82,7 +82,7 @@
     "badge": "Notre Héritage",
     "title": {
       "line1": "Le N°1 Marocain",
-      "line2": "Depuis 2018"
+      "line2": "Depuis 1995"
     },
     "subtitle": "Leader historique dans la fabrication de semelles - alliant excellence industrielle et expertise inégalée",
     "years": "Années",
@@ -92,9 +92,9 @@
       "quality": "Contrôle qualité et production"
     },
     "timeline": {
-      "2018": {
-        "year": "Janvier 2018 - Fondation",
-        "description": "Casa Semelle a été fondée le 16 janvier 2018 à Casablanca avec une vision claire : devenir la référence marocaine en fabrication de semelles grâce à la qualité et l'innovation."
+      "1995": {
+        "year": "Janvier 1995 - Fondation",
+        "description": "Casa Semelle a été fondée le 16 janvier 1995 à Casablanca avec une vision claire : devenir la référence marocaine en fabrication de semelles grâce à la qualité et l'innovation."
       },
       "2020": {
         "year": "2020 - Leadership sur le Marché",
@@ -126,8 +126,8 @@
     },
     "items": {
       "expertise": {
-        "title": "7+ Ans d'Excellence",
-        "description": "Fondée en 2018, Casa Semelle est rapidement devenue le numéro un marocain de la fabrication de semelles. Notre équipe de professionnels hautement qualifiés maîtrise l'art de combiner matériaux et technologies, créant des solutions diversifiées et sur mesure adaptées aux exigences uniques de chaque client - des grandes marques internationales aux artisans locaux.",
+        "title": "30+ Ans d'Excellence",
+        "description": "Fondée en 1995, Casa Semelle est rapidement devenue le numéro un marocain de la fabrication de semelles. Notre équipe de professionnels hautement qualifiés maîtrise l'art de combiner matériaux et technologies, créant des solutions diversifiées et sur mesure adaptées aux exigences uniques de chaque client - des grandes marques internationales aux artisans locaux.",
         "badge": "⭐ Leader du Marché"
       },
       "innovation": {
@@ -237,7 +237,7 @@
   },
   "footer": {
     "logoAlt": "Logo Casa Semelle",
-    "description": "Numéro un marocain de la fabrication de semelles. Leader historique avec 7+ ans d'expertise, au service des grandes marques avec qualité, innovation et fiabilité.",
+    "description": "Numéro un marocain de la fabrication de semelles. Leader historique avec 30+ ans d'expertise, au service des grandes marques avec qualité, innovation et fiabilité.",
     "contact": {
       "phone": "+212 522 359 446 / +212 661 214 798",
       "email": "casasemelle@gmail.com",
@@ -362,10 +362,10 @@
         "highlight": "Parcours"
       },
       "subtitle": "De notre fondation à devenir le leader incontesté de la fabrication de semelles au Maroc",
-      "2018": {
-        "year": "Janvier 2018",
+      "1995": {
+        "year": "Janvier 1995",
         "title": "Fondation de Casa Semelle",
-        "description": "Établie le 16 janvier 2018 à Casablanca avec une mission claire : devenir la référence en fabrication de semelles au Maroc"
+        "description": "Établie le 16 janvier 1995 à Casablanca avec une mission claire : devenir la référence en fabrication de semelles au Maroc"
       },
       "2020": {
         "year": "2020",

@@ -90,7 +90,7 @@ function AboutUsPage() {
       const progress = currentStep / steps;
       
       setCountUpValues({
-        years: Math.floor(7 * progress),
+        years: Math.floor(30 * progress),
         clients: Math.floor(1000 * progress),
         countries: Math.floor(50 * progress),
         products: Math.floor(100 * progress)
@@ -98,7 +98,7 @@ function AboutUsPage() {
 
       if (currentStep >= steps) {
         clearInterval(interval);
-        setCountUpValues({ years: 7, clients: 1000, countries: 50, products: 100 });
+        setCountUpValues({ years: 30, clients: 1000, countries: 50, products: 100 });
       }
     }, stepDuration);
   };
@@ -134,7 +134,7 @@ function AboutUsPage() {
   ];
 
   const milestones = [
-    { year: t('about.timeline.2018.year'), title: t('about.timeline.2018.title'), description: t('about.timeline.2018.description'), icon: '🏭' },
+    { year: t('about.timeline.1995.year'), title: t('about.timeline.1995.title'), description: t('about.timeline.1995.description'), icon: '🏭' },
     { year: t('about.timeline.2020.year'), title: t('about.timeline.2020.title'), description: t('about.timeline.2020.description'), icon: '🌱' },
     { year: t('about.timeline.2022.year'), title: t('about.timeline.2022.title'), description: t('about.timeline.2022.description'), icon: '⚡' },
     { year: t('about.timeline.2024.year'), title: t('about.timeline.2024.title'), description: t('about.timeline.2024.description'), icon: '🌍' },

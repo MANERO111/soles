@@ -8,7 +8,7 @@
     "getQuote": "Get Quote"
   },
   "hero": {
-    "badge": "7 Years of Excellence",
+    "badge": "30 Years of Excellence",
     "titleLine1": "Premium",
     "titleLine2": "Shoe Soles",
     "titleLine3": "Manufacturing",
@@ -82,7 +82,7 @@
     "badge": "Our Legacy",
     "title": {
       "line1": "Morocco's #1",
-      "line2": "Since 2018"
+      "line2": "Since 1995"
     },
     "subtitle": "Historic leader in sole manufacturing - combining industrial excellence with unmatched expertise",
     "years": "Years",
@@ -92,9 +92,9 @@
       "quality": "Quality control and production"
     },
     "timeline": {
-      "2018": {
-        "year": "January 2018 - Foundation",
-        "description": "Casa Semelle was founded on January 16, 2018, in Casablanca with a clear vision: to become Morocco's reference in sole manufacturing through quality and innovation."
+      "1995": {
+        "year": "January 1995 - Foundation",
+        "description": "Casa Semelle was founded on January 16, 1995, in Casablanca with a clear vision: to become Morocco's reference in sole manufacturing through quality and innovation."
       },
       "2020": {
         "year": "2020 - Market Leadership",
@@ -126,8 +126,8 @@
     },
     "items": {
       "expertise": {
-        "title": "7+ Years of Excellence",
-        "description": "Founded in 2018, Casa Semelle has rapidly become Morocco's #1 sole manufacturer. Our team of highly skilled professionals masters the art of blending materials and technologies, creating diverse, customized solutions tailored to each customer's unique requirements - from major international brands to local artisans.",
+        "title": "30+ Years of Excellence",
+        "description": "Founded in 1995, Casa Semelle has rapidly become Morocco's #1 sole manufacturer. Our team of highly skilled professionals masters the art of blending materials and technologies, creating diverse, customized solutions tailored to each customer's unique requirements - from major international brands to local artisans.",
         "badge": "⭐ Market Leader"
       },
       "innovation": {
@@ -237,7 +237,7 @@
   },
   "footer": {
     "logoAlt": "Casa Semelle Logo",
-    "description": "Morocco's #1 sole manufacturer. Historic leader with 7+ years of expertise, serving major brands with quality, innovation, and reliability.",
+    "description": "Morocco's #1 sole manufacturer. Historic leader with 30+ years of expertise, serving major brands with quality, innovation, and reliability.",
     "contact": {
       "phone": "+212 522 359 446 / +212 661 214 798",
       "email": "casasemelle@gmail.com",
@@ -362,10 +362,10 @@
         "highlight": "Journey"
       },
       "subtitle": "From our foundation to becoming Morocco's undisputed leader in sole manufacturing",
-      "2018": {
-        "year": "January 2018",
+      "1995": {
+        "year": "January 1995",
         "title": "Foundation of Casa Semelle",
-        "description": "Established on January 16, 2018, in Casablanca with a clear mission: to become the reference in sole manufacturing in Morocco"
+        "description": "Established on January 16, 1995, in Casablanca with a clear mission: to become the reference in sole manufacturing in Morocco"
       },
       "2020": {
         "year": "2020",
