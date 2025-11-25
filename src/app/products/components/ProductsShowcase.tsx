@@ -25,13 +25,30 @@ interface Category {
 
 const ProductsShowcase: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([
-    {id : 1, name: 'échantillon 1', price: 70, originalPrice: 0, description: 'échantillon sole ', image_url: '2.png', category_id: '1', rating: 5, stock_quantity: 50},
-    {id : 2, name: 'échantillon 2', price: 80, originalPrice: 0, description: 'échantillon sole ', image_url: '3.png', category_id: '2', rating: 5, stock_quantity: 50},
-    {id : 3, name: 'échantillon 3', price: 65, originalPrice: 0, description: 'échantillon sole ', image_url: '7.png', category_id: '3', rating: 5, stock_quantity: 50},
-    {id : 4, name: 'échantillon 4', price: 85, originalPrice: 0, description: 'échantillon sole ', image_url: '15.png', category_id: '4', rating: 5, stock_quantity: 50},
-    {id : 5, name: 'échantillon 5', price: 85, originalPrice: 0, description: 'échantillon sole ', image_url: '17.png', category_id: '5', rating: 5, stock_quantity: 50}
+    {id : 1, name: 'échantillon ', price: 70, originalPrice: 0, description: 'EVA échantillon', image_url: '25.jpg', category_id: '1', rating: 5, stock_quantity: 50},
+    {id : 2, name: 'échantillon ', price: 80, originalPrice: 0, description: 'EVA échantillon  ', image_url: '24.jpg', category_id: '1', rating: 5, stock_quantity: 50},
+    {id : 3, name: 'échantillon ', price: 80, originalPrice: 0, description: 'EVA échantillon  ', image_url: '23.jpg', category_id: '1', rating: 5, stock_quantity: 50},
+    {id : 4, name: 'échantillon ', price: 80, originalPrice: 0, description: 'EVA échantillon  ', image_url: '19.jpg', category_id: '1', rating: 5, stock_quantity: 50},
+    {id : 5, name: 'échantillon ', price: 80, originalPrice: 0, description: 'EVA échantillon  ', image_url: '21.jpg', category_id: '1', rating: 5, stock_quantity: 50},
+    {id : 6, name: 'échantillon ', price: 65, originalPrice: 0, description: 'TR échantillon ', image_url: '18.jpg', category_id: '2', rating: 5, stock_quantity: 50},
+    {id : 7, name: 'échantillon ', price: 65, originalPrice: 0, description: 'TR échantillon ', image_url: '17.jpg', category_id: '2', rating: 5, stock_quantity: 50},
+    {id : 8, name: 'échantillon ', price: 65, originalPrice: 0, description: 'TR échantillon ', image_url: '15.jpg', category_id: '2', rating: 5, stock_quantity: 50},
+    {id : 9, name: 'échantillon ', price: 65, originalPrice: 0, description: 'TR échantillon ', image_url: '14.jpg', category_id: '2', rating: 5, stock_quantity: 50},
+    {id : 10, name: 'échantillon ', price: 65, originalPrice: 0, description: 'TR échantillon ', image_url: '10.jpg', category_id: '2', rating: 5, stock_quantity: 50},
+    {id : 11, name: 'échantillon ', price: 85, originalPrice: 0, description: 'TPU échantillon ', image_url: '13.jpg', category_id: '3', rating: 5, stock_quantity: 50},
+    {id : 12, name: 'échantillon ', price: 85, originalPrice: 0, description: 'TPU échantillon ', image_url: '12.jpg', category_id: '3', rating: 5, stock_quantity: 50},
+    {id : 13, name: 'échantillon ', price: 85, originalPrice: 0, description: 'TPU échantillon ', image_url: '6.jpg', category_id: '3', rating: 5, stock_quantity: 50},
+    {id : 14, name: 'échantillon ', price: 85, originalPrice: 0, description: 'PU échantillon ', image_url: '7.jpg', category_id: '4', rating: 5, stock_quantity: 50},
+    {id : 15, name: 'échantillon ', price: 85, originalPrice: 0, description: 'PU échantillon ', image_url: '4.jpg', category_id: '4', rating: 5, stock_quantity: 50},
+    {id : 16, name: 'échantillon ', price: 85, originalPrice: 0, description: 'PU échantillon ', image_url: '3.jpg', category_id: '4', rating: 5, stock_quantity: 50},
   ]);
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [categories, setCategories] = useState<Category[]>([
+    { id: 'all', name: 'All' },
+    { id: '1', name: 'EVA' },
+    { id: '2', name: 'TR' },
+    { id: '3', name: 'TPU' },
+    { id: '4', name: 'PU' }
+  ]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -63,35 +80,35 @@ const ProductsShowcase: React.FC = () => {
   };
 
 //   Fetch data from API
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       setLoading(true);
-//       try {
-//         const productsResponse = await axios.get('http://localhost:8000/api/products');
-//         const categoriesResponse = await axios.get('http://localhost:8000/api/categories');
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setLoading(true);
+  //     try {
+  //       const productsResponse = await axios.get('http://localhost:8000/api/products');
+  //       const categoriesResponse = await axios.get('http://localhost:8000/api/categories');
         
-//         const productsData = productsResponse.data.data || productsResponse.data;
-//         const categoriesData = categoriesResponse.data.data || categoriesResponse.data;
+  //       const productsData = productsResponse.data.data || productsResponse.data;
+  //       const categoriesData = categoriesResponse.data.data || categoriesResponse.data;
         
-//         const safeProductsData = Array.isArray(productsData) ? productsData : [];
-//         const safeCategoriesData = Array.isArray(categoriesData) ? categoriesData : [];
+  //       const safeProductsData = Array.isArray(productsData) ? productsData : [];
+  //       const safeCategoriesData = Array.isArray(categoriesData) ? categoriesData : [];
         
-//         setProducts(safeProductsData);
-//         setFilteredProducts(safeProductsData);
-//         setCategories([{ id: 'all', name: t('products.categories.all') }, ...safeCategoriesData]);
+  //       setProducts(safeProductsData);
+  //       setFilteredProducts(safeProductsData);
+  //       setCategories([{ id: 'all', name: t('products.categories.all') }, ...safeCategoriesData]);
         
-//       } catch (error) {
-//         console.error('Error fetching data:', error);
-//         setProducts([]);
-//         setFilteredProducts([]);
-//         setCategories([{ id: 'all', name: t('products.categories.all') }]);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //       setProducts([]);
+  //       setFilteredProducts([]);
+  //       setCategories([{ id: 'all', name: t('products.categories.all') }]);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-//     fetchData();
-//   }, [t]);
+  //   fetchData();
+  // }, [t]);
 
   // Intersection Observer
   useEffect(() => {
