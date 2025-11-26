@@ -461,7 +461,7 @@
         "description": "Dédié à l'excellence, la fiabilité et la construction de partenariats durables basés sur la confiance."
       }
     }
-  },
+  },  
   "materials": {
     "badge": "Notre Expertise",
     "title": {
@@ -472,78 +472,78 @@
     "eva": {
       "name": "EVA Haute Densité",
       "description": "Acétate de vinyle d'éthylène - l'équilibre parfait entre légèreté et durabilité.",
-      "features": [
-        "Confort ultra-léger",
-        "Excellente absorption des chocs",
-        "Applications polyvalentes"
-      ]
+      "features": {
+        "feature1": "Confort ultra-léger",
+        "feature2": "Excellente absorption des chocs", 
+        "feature3": "Applications polyvalentes"
+      }
     },
     "rubber": {
       "name": "Caoutchouc",
       "description": "Caoutchouc naturel et synthétique pour une durabilité et une adhérence maximales.",
-      "features": [
-        "Traction supérieure",
-        "Durabilité extrême",
-        "Résistant aux intempéries"
-      ]
+      "features": {
+        "feature1": "Traction supérieure",
+        "feature2": "Durabilité extrême",
+        "feature3": "Résistant aux intempéries"
+      }
     },
     "pu": {
       "name": "PU (Polyuréthane)",
       "description": "Polyuréthane avancé pour une flexibilité et une performance durable.",
-      "features": [
-        "Excellente flexibilité",
-        "Résistant à l'abrasion",
-        "Amortissement confortable"
-      ]
+      "features": {
+        "feature1": "Excellente flexibilité",
+        "feature2": "Résistant à l'abrasion", 
+        "feature3": "Amortissement confortable"
+      }
     },
     "tpu": {
       "name": "TPU",
       "description": "Polyuréthane thermoplastique - combinant le meilleur du plastique et du caoutchouc.",
-      "features": [
-        "Haute élasticité",
-        "Résistant à la température",
-        "Solidité supérieure"
-      ]
+      "features": {
+        "feature1": "Haute élasticité",
+        "feature2": "Résistant à la température",
+        "feature3": "Solidité supérieure"
+      }
     },
     "tr": {
       "name": "TR (Caoutchouc Thermoplastique)",
       "description": "Caoutchouc thermoplastique innovant pour des solutions de semelles polyvalentes.",
-      "features": [
-        "Design léger",
-        "Excellente résilience",
-        "Facile à traiter"
-      ]
+      "features": {
+        "feature1": "Design léger",
+        "feature2": "Excellente résilience",
+        "feature3": "Facile à traiter"
+      }
     },
     "leather": {
-      "name": "Cuir",
+      "name": "Cuir", 
       "description": "Cuir naturel pour une élégance classique et une respirabilité.",
-      "features": [
-        "Respirabilité naturelle",
-        "Esthétique premium",
-        "Qualité intemporelle"
-      ]
+      "features": {
+        "feature1": "Respirabilité naturelle",
+        "feature2": "Esthétique premium",
+        "feature3": "Qualité intemporelle"
+      }
     },
     "pvc": {
       "name": "PVC",
       "description": "Polychlorure de vinyle - matériau économique et polyvalent.",
-      "features": [
-        "Résistant à l'eau",
-        "Solution économique",
-        "Entretien facile"
-      ]
+      "features": {
+        "feature1": "Résistant à l'eau",
+        "feature2": "Solution économique",
+        "feature3": "Entretien facile"
+      }
     },
     "prefabricated": {
       "name": "Semelles Préfabriquées",
       "description": "Solutions de semelles prêtes à l'emploi pour une production rapide et une qualité constante.",
-      "features": [
-        "Livraison rapide",
-        "Qualité constante",
-        "Diversité de designs"
-      ]
+      "features": {
+        "feature1": "Livraison rapide",
+        "feature2": "Qualité constante", 
+        "feature3": "Diversité de designs"
+      }
     },
     "stats": {
       "materials": "Types de Matériaux Maîtrisés",
-      "quality": "Qualité Garantie",
+      "quality": "Qualité Garantie", 
       "market": "Au Maroc"
     },
     "cta": {
@@ -551,4 +551,5 @@
       "button": "Contactez Nos Experts"
     }
   }
+  
 }

@@ -472,74 +472,74 @@
     "eva": {
       "name": "EVA High Density",
       "description": "Ethylene Vinyl Acetate - the perfect balance of lightness and durability.",
-      "features": [
-        "Ultra-lightweight comfort",
-        "Excellent shock absorption",
-        "Versatile applications"
-      ]
+      "features": {
+        "feature1": "Ultra-lightweight comfort",
+        "feature2": "Excellent shock absorption",
+        "feature3": "Versatile applications"
+      }
     },
     "rubber": {
       "name": "Rubber / Caoutchouc",
       "description": "Natural and synthetic rubber for maximum durability and grip.",
-      "features": [
-        "Superior traction",
-        "Extreme durability",
-        "Weather resistant"
-      ]
+      "features": {
+        "feature1": "Superior traction",
+        "feature2": "Extreme durability",
+        "feature3": "Weather resistant"
+      }
     },
     "pu": {
       "name": "PU (Polyurethane)",
       "description": "Advanced polyurethane for flexibility and long-lasting performance.",
-      "features": [
-        "Excellent flexibility",
-        "Abrasion resistant",
-        "Comfortable cushioning"
-      ]
+      "features": {
+        "feature1": "Excellent flexibility",
+        "feature2": "Abrasion resistant",
+        "feature3": "Comfortable cushioning"
+      }
     },
     "tpu": {
       "name": "TPU",
       "description": "Thermoplastic Polyurethane - combining the best of plastic and rubber.",
-      "features": [
-        "High elasticity",
-        "Temperature resistant",
-        "Superior strength"
-      ]
+      "features": {
+        "feature1": "High elasticity",
+        "feature2": "Temperature resistant",
+        "feature3": "Superior strength"
+      }
     },
     "tr": {
       "name": "TR (Thermoplastic Rubber)",
       "description": "Innovative thermoplastic rubber for versatile sole solutions.",
-      "features": [
-        "Lightweight design",
-        "Excellent resilience",
-        "Easy processing"
-      ]
+      "features": {
+        "feature1": "Lightweight design",
+        "feature2": "Excellent resilience",
+        "feature3": "Easy processing"
+      }
     },
     "leather": {
       "name": "Leather / Cuir",
       "description": "Natural leather for classic elegance and breathability.",
-      "features": [
-        "Natural breathability",
-        "Premium aesthetics",
-        "Timeless quality"
-      ]
+      "features": {
+        "feature1": "Natural breathability",
+        "feature2": "Premium aesthetics",
+        "feature3": "Timeless quality"
+      }
     },
     "pvc": {
       "name": "PVC",
       "description": "Polyvinyl Chloride - cost-effective and versatile material.",
-      "features": [
-        "Water resistant",
-        "Economical solution",
-        "Easy maintenance"
-      ]
+      "features": {
+        "feature1": "Water resistant",
+        "feature2": "Economical solution",
+        "feature3": "Easy maintenance"
+      }
     },
     "prefabricated": {
       "name": "Prefabricated Soles",
       "description": "Ready-to-use sole solutions for fast production and consistency.",
-      "features": [
-        "Quick delivery",
-        "Consistent quality",
-        "Various designs"
-      ]
+      "features": {
+        "feature1": "Quick delivery",
+        "feature2": "Consistent quality",
+        "feature3": "Various designs"
+      }
     },
     "stats": {
       "materials": "Material Types Mastered",

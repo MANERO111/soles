@@ -37,9 +37,9 @@ function MaterialsTechnologySection() {
       name: t('materials.eva.name'),
       description: t('materials.eva.description'),
       features: [
-        t('materials.eva.features.0'),
-        t('materials.eva.features.1'),
-        t('materials.eva.features.2')
+        t('materials.eva.features.feature1'),
+        t('materials.eva.features.feature2'),
+        t('materials.eva.features.feature3')
       ],
       icon: '⚡',
       color: 'from-[#f2413b] to-red-600',
@@ -50,9 +50,9 @@ function MaterialsTechnologySection() {
       name: t('materials.rubber.name'),
       description: t('materials.rubber.description'),
       features: [
-        t('materials.rubber.features.0'),
-        t('materials.rubber.features.1'),
-        t('materials.rubber.features.2')
+        t('materials.rubber.features.feature1'),
+        t('materials.rubber.features.feature2'),
+        t('materials.rubber.features.feature3')
       ],
       icon: '🛡️',
       color: 'from-slate-600 to-slate-800',
@@ -63,9 +63,9 @@ function MaterialsTechnologySection() {
       name: t('materials.pu.name'),
       description: t('materials.pu.description'),
       features: [
-        t('materials.pu.features.0'),
-        t('materials.pu.features.1'),
-        t('materials.pu.features.2')
+        t('materials.pu.features.feature1'),
+        t('materials.pu.features.feature2'),
+        t('materials.pu.features.feature3')
       ],
       icon: '💎',
       color: 'from-blue-500 to-cyan-600',
@@ -76,9 +76,9 @@ function MaterialsTechnologySection() {
       name: t('materials.tpu.name'),
       description: t('materials.tpu.description'),
       features: [
-        t('materials.tpu.features.0'),
-        t('materials.tpu.features.1'),
-        t('materials.tpu.features.2')
+        t('materials.tpu.features.feature1'),
+        t('materials.tpu.features.feature2'),
+        t('materials.tpu.features.feature3')
       ],
       icon: '⚙️',
       color: 'from-purple-500 to-pink-600',
@@ -89,9 +89,9 @@ function MaterialsTechnologySection() {
       name: t('materials.tr.name'),
       description: t('materials.tr.description'),
       features: [
-        t('materials.tr.features.0'),
-        t('materials.tr.features.1'),
-        t('materials.tr.features.2')
+        t('materials.tr.features.feature1'),
+        t('materials.tr.features.feature2'),
+        t('materials.tr.features.feature3')
       ],
       icon: '🔥',
       color: 'from-orange-500 to-red-600',
@@ -102,9 +102,9 @@ function MaterialsTechnologySection() {
       name: t('materials.leather.name'),
       description: t('materials.leather.description'),
       features: [
-        t('materials.leather.features.0'),
-        t('materials.leather.features.1'),
-        t('materials.leather.features.2')
+        t('materials.leather.features.feature1'),
+        t('materials.leather.features.feature2'),
+        t('materials.leather.features.feature3')
       ],
       icon: '🌿',
       color: 'from-amber-600 to-amber-800',
@@ -115,9 +115,9 @@ function MaterialsTechnologySection() {
       name: t('materials.pvc.name'),
       description: t('materials.pvc.description'),
       features: [
-        t('materials.pvc.features.0'),
-        t('materials.pvc.features.1'),
-        t('materials.pvc.features.2')
+        t('materials.pvc.features.feature1'),
+        t('materials.pvc.features.feature2'),
+        t('materials.pvc.features.feature3')
       ],
       icon: '🔧',
       color: 'from-teal-500 to-emerald-600',
@@ -128,9 +128,9 @@ function MaterialsTechnologySection() {
       name: t('materials.prefabricated.name'),
       description: t('materials.prefabricated.description'),
       features: [
-        t('materials.prefabricated.features.0'),
-        t('materials.prefabricated.features.1'),
-        t('materials.prefabricated.features.2')
+        t('materials.prefabricated.features.feature1'),
+        t('materials.prefabricated.features.feature2'),
+        t('materials.prefabricated.features.feature3')
       ],
       icon: '✨',
       color: 'from-indigo-500 to-purple-600',
