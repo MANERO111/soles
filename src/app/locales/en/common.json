@@ -5,6 +5,7 @@
     "products": "Products",
     "news": "News",
     "contact": "Contact",
+    "materials": "Materials",
     "getQuote": "Get Quote"
   },
   "hero": {
@@ -459,6 +460,95 @@
         "title": "Customer First",
         "description": "Dedicated to excellence, reliability, and building lasting partnerships based on trust."
       }
+    }
+  },
+  "materials": {
+    "badge": "Our Expertise",
+    "title": {
+      "line1": "Mastered",
+      "line2": "Materials"
+    },
+    "subtitle": "Casa Semelle masters all major sole materials, combining cutting-edge technology with expert craftsmanship to deliver superior quality across every category.",
+    "eva": {
+      "name": "EVA High Density",
+      "description": "Ethylene Vinyl Acetate - the perfect balance of lightness and durability.",
+      "features": [
+        "Ultra-lightweight comfort",
+        "Excellent shock absorption",
+        "Versatile applications"
+      ]
+    },
+    "rubber": {
+      "name": "Rubber / Caoutchouc",
+      "description": "Natural and synthetic rubber for maximum durability and grip.",
+      "features": [
+        "Superior traction",
+        "Extreme durability",
+        "Weather resistant"
+      ]
+    },
+    "pu": {
+      "name": "PU (Polyurethane)",
+      "description": "Advanced polyurethane for flexibility and long-lasting performance.",
+      "features": [
+        "Excellent flexibility",
+        "Abrasion resistant",
+        "Comfortable cushioning"
+      ]
+    },
+    "tpu": {
+      "name": "TPU",
+      "description": "Thermoplastic Polyurethane - combining the best of plastic and rubber.",
+      "features": [
+        "High elasticity",
+        "Temperature resistant",
+        "Superior strength"
+      ]
+    },
+    "tr": {
+      "name": "TR (Thermoplastic Rubber)",
+      "description": "Innovative thermoplastic rubber for versatile sole solutions.",
+      "features": [
+        "Lightweight design",
+        "Excellent resilience",
+        "Easy processing"
+      ]
+    },
+    "leather": {
+      "name": "Leather / Cuir",
+      "description": "Natural leather for classic elegance and breathability.",
+      "features": [
+        "Natural breathability",
+        "Premium aesthetics",
+        "Timeless quality"
+      ]
+    },
+    "pvc": {
+      "name": "PVC",
+      "description": "Polyvinyl Chloride - cost-effective and versatile material.",
+      "features": [
+        "Water resistant",
+        "Economical solution",
+        "Easy maintenance"
+      ]
+    },
+    "prefabricated": {
+      "name": "Prefabricated Soles",
+      "description": "Ready-to-use sole solutions for fast production and consistency.",
+      "features": [
+        "Quick delivery",
+        "Consistent quality",
+        "Various designs"
+      ]
+    },
+    "stats": {
+      "materials": "Material Types Mastered",
+      "quality": "Quality Guaranteed",
+      "market": "In Morocco"
+    },
+    "cta": {
+      "text": "Need custom soles with specific materials? Let's discuss your project.",
+      "button": "Contact Our Experts"
     }
   }
 }

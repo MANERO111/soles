@@ -5,6 +5,7 @@ import AboutSection from './components/aboutUs'
 import OurValues from './components/ourValues'
 import PhilosophySection from './components/philosophie'
 import ContactSection from './components/contact'
+import MaterialsTechnologySection from './components/material'
 function Home() {
   return (
     <div>
@@ -12,6 +13,7 @@ function Home() {
       <HeroSection />
       <ProductsSection />
       <AboutSection />
+      <MaterialsTechnologySection />
       <OurValues />
       <PhilosophySection />
       <ContactSection />

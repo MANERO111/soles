@@ -91,6 +91,13 @@ function Navbar() {
               {t('nav.products')}
             </Link>
             <a 
+              href="#materials" 
+              onClick={(e) => handleNavClick(e, 'materials')}
+              className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold cursor-pointer"
+            >
+              {t('nav.materials')}
+            </a>
+            <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
               className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold cursor-pointer"

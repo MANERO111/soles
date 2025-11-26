@@ -5,6 +5,7 @@
     "products": "Produits",
     "news": "Actualités",
     "contact": "Contact",
+    "materials": "Matériaux",
     "getQuote": "Obtenir un Devis"
   },
   "hero": {
@@ -459,6 +460,95 @@
         "title": "Client d'Abord",
         "description": "Dédié à l'excellence, la fiabilité et la construction de partenariats durables basés sur la confiance."
       }
+    }
+  },
+  "materials": {
+    "badge": "Notre Expertise",
+    "title": {
+      "line1": "Matériaux",
+      "line2": "Maîtrisés"
+    },
+    "subtitle": "Casa Semelle maîtrise tous les principaux matériaux de semelles, alliant technologie de pointe et savoir-faire artisanal pour offrir une qualité supérieure dans chaque catégorie.",
+    "eva": {
+      "name": "EVA Haute Densité",
+      "description": "Acétate de vinyle d'éthylène - l'équilibre parfait entre légèreté et durabilité.",
+      "features": [
+        "Confort ultra-léger",
+        "Excellente absorption des chocs",
+        "Applications polyvalentes"
+      ]
+    },
+    "rubber": {
+      "name": "Caoutchouc",
+      "description": "Caoutchouc naturel et synthétique pour une durabilité et une adhérence maximales.",
+      "features": [
+        "Traction supérieure",
+        "Durabilité extrême",
+        "Résistant aux intempéries"
+      ]
+    },
+    "pu": {
+      "name": "PU (Polyuréthane)",
+      "description": "Polyuréthane avancé pour une flexibilité et une performance durable.",
+      "features": [
+        "Excellente flexibilité",
+        "Résistant à l'abrasion",
+        "Amortissement confortable"
+      ]
+    },
+    "tpu": {
+      "name": "TPU",
+      "description": "Polyuréthane thermoplastique - combinant le meilleur du plastique et du caoutchouc.",
+      "features": [
+        "Haute élasticité",
+        "Résistant à la température",
+        "Solidité supérieure"
+      ]
+    },
+    "tr": {
+      "name": "TR (Caoutchouc Thermoplastique)",
+      "description": "Caoutchouc thermoplastique innovant pour des solutions de semelles polyvalentes.",
+      "features": [
+        "Design léger",
+        "Excellente résilience",
+        "Facile à traiter"
+      ]
+    },
+    "leather": {
+      "name": "Cuir",
+      "description": "Cuir naturel pour une élégance classique et une respirabilité.",
+      "features": [
+        "Respirabilité naturelle",
+        "Esthétique premium",
+        "Qualité intemporelle"
+      ]
+    },
+    "pvc": {
+      "name": "PVC",
+      "description": "Polychlorure de vinyle - matériau économique et polyvalent.",
+      "features": [
+        "Résistant à l'eau",
+        "Solution économique",
+        "Entretien facile"
+      ]
+    },
+    "prefabricated": {
+      "name": "Semelles Préfabriquées",
+      "description": "Solutions de semelles prêtes à l'emploi pour une production rapide et une qualité constante.",
+      "features": [
+        "Livraison rapide",
+        "Qualité constante",
+        "Diversité de designs"
+      ]
+    },
+    "stats": {
+      "materials": "Types de Matériaux Maîtrisés",
+      "quality": "Qualité Garantie",
+      "market": "Au Maroc"
+    },
+    "cta": {
+      "text": "Besoin de semelles sur mesure avec des matériaux spécifiques ? Discutons de votre projet.",
+      "button": "Contactez Nos Experts"
     }
   }
 }
