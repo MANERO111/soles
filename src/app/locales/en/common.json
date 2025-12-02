@@ -463,92 +463,105 @@
     }
   },
   "materials": {
-    "badge": "Our Expertise",
-    "title": {
-      "line1": "Mastered",
-      "line2": "Materials"
-    },
-    "subtitle": "Casa Semelle masters all major sole materials, combining cutting-edge technology with expert craftsmanship to deliver superior quality across every category.",
-    "eva": {
-      "name": "EVA High Density",
-      "description": "Ethylene Vinyl Acetate - the perfect balance of lightness and durability.",
-      "features": {
-        "feature1": "Ultra-lightweight comfort",
-        "feature2": "Excellent shock absorption",
-        "feature3": "Versatile applications"
+      "badge": "Our Expertise",
+      "title": {
+        "line1": "Mastered",
+        "line2": "Materials"
+      },
+      "subtitle": "Casa Semelle masters all major sole materials, combining cutting-edge technology with expert craftsmanship to deliver superior quality across every category.",
+      "tr": {
+        "name": "TR (Thermoplastic Rubber)",
+        "description": "Thermoplastic Rubber combines the elasticity of rubber with the processability of plastic. It offers excellent flexibility, durability, and slip resistance.",
+        "features": {
+          "feature1": "High flexibility and comfort",
+          "feature2": "Good abrasion and slip resistance",
+          "feature3": "Excellent appearance and mold detail",
+          "feature4": "Recyclable and cost-effective"
+        },
+        "applications": "Fashion shoes, kids' shoes, casual and comfort footwear"
+      },
+      "tpu": {
+        "name": "TPU (Thermoplastic Polyurethane)",
+        "description": "TPU is a high-performance material known for its superior elasticity, toughness, and resistance to wear and tear. It provides a premium feel and long-lasting durability.",
+        "features": {
+          "feature1": "Exceptional abrasion and tear resistance",
+          "feature2": "Great elasticity and transparency",
+          "feature3": "Resistant to oils, greases, and chemicals",
+          "feature4": "Ideal for high-performance and transparent soles"
+        },
+        "applications": "Sports shoes, safety boots, performance footwear"
+      },
+      "eva": {
+        "name": "EVA (Ethylene Vinyl Acetate)",
+        "description": "EVA is lightweight, shock-absorbent, and flexible, making it perfect for midsoles and lightweight outsole applications. It ensures superior comfort, cushioning, and energy return.",
+        "features": {
+          "feature1": "Ultra-lightweight",
+          "feature2": "Excellent cushioning and flexibility",
+          "feature3": "Good low-temperature performance",
+          "feature4": "Can be combined with rubber for better grip"
+        },
+        "applications": "Running shoes, sandals, slippers, and lightweight footwear"
+      },
+      "pu": {
+        "name": "PU (Polyurethane)",
+        "description": "PU is widely used for durable, lightweight, and comfortable soles. It combines flexibility, abrasion resistance, and excellent shock absorption.",
+        "features": {
+          "feature1": "High elasticity and cushioning",
+          "feature2": "Long lifespan and excellent grip",
+          "feature3": "Resistant to abrasion and oil",
+          "feature4": "Comfortable and durable for long wear"
+        },
+        "applications": "Safety footwear, work shoes, dress shoes, and comfort shoes"
+      },
+      "pvc": {
+        "name": "PVC (Polyvinyl Chloride)",
+        "description": "PVC is a versatile and economical material used for waterproof and durable soles. It offers a good balance of flexibility, toughness, and resistance to chemicals and water.",
+        "features": {
+          "feature1": "Cost-effective",
+          "feature2": "Good durability and weather resistance",
+          "feature3": "Waterproof and easy to clean",
+          "feature4": "Suitable for various colors and textures"
+        },
+        "applications": "Rain boots, fashion footwear, and economy shoes"
+      },
+      "rubber": {
+        "name": "Rubber / Caoutchouc",
+        "description": "Natural and synthetic rubber for maximum durability and grip.",
+        "features": {
+          "feature1": "Superior traction",
+          "feature2": "Extreme durability",
+          "feature3": "Weather resistant"
+        },
+        "applications": "Work boots, outdoor footwear, heavy-duty shoes"
+      },
+      "leather": {
+        "name": "Leather / Cuir",
+        "description": "Natural leather for classic elegance and breathability.",
+        "features": {
+          "feature1": "Natural breathability",
+          "feature2": "Premium aesthetics",
+          "feature3": "Timeless quality"
+        },
+        "applications": "Dress shoes, formal footwear, luxury footwear"
+      },
+      "prefabricated": {
+        "name": "Prefabricated Soles",
+        "description": "Ready-to-use sole solutions for fast production and consistency.",
+        "features": {
+          "feature1": "Quick delivery",
+          "feature2": "Consistent quality",
+          "feature3": "Various designs"
+        },
+        "applications": "Mass production, quick turnaround projects, standard footwear"
+      },
+      "stats": {
+        "materials": "Material Types Mastered",
+        "quality": "Quality Guaranteed",
+        "market": "In Morocco"
+      },
+      "cta": {
+        "text": "Need custom soles with specific materials? Let's discuss your project.",
+        "button": "Contact Our Experts"
       }
-    },
-    "rubber": {
-      "name": "Rubber / Caoutchouc",
-      "description": "Natural and synthetic rubber for maximum durability and grip.",
-      "features": {
-        "feature1": "Superior traction",
-        "feature2": "Extreme durability",
-        "feature3": "Weather resistant"
-      }
-    },
-    "pu": {
-      "name": "PU (Polyurethane)",
-      "description": "Advanced polyurethane for flexibility and long-lasting performance.",
-      "features": {
-        "feature1": "Excellent flexibility",
-        "feature2": "Abrasion resistant",
-        "feature3": "Comfortable cushioning"
-      }
-    },
-    "tpu": {
-      "name": "TPU",
-      "description": "Thermoplastic Polyurethane - combining the best of plastic and rubber.",
-      "features": {
-        "feature1": "High elasticity",
-        "feature2": "Temperature resistant",
-        "feature3": "Superior strength"
-      }
-    },
-    "tr": {
-      "name": "TR (Thermoplastic Rubber)",
-      "description": "Innovative thermoplastic rubber for versatile sole solutions.",
-      "features": {
-        "feature1": "Lightweight design",
-        "feature2": "Excellent resilience",
-        "feature3": "Easy processing"
-      }
-    },
-    "leather": {
-      "name": "Leather / Cuir",
-      "description": "Natural leather for classic elegance and breathability.",
-      "features": {
-        "feature1": "Natural breathability",
-        "feature2": "Premium aesthetics",
-        "feature3": "Timeless quality"
-      }
-    },
-    "pvc": {
-      "name": "PVC",
-      "description": "Polyvinyl Chloride - cost-effective and versatile material.",
-      "features": {
-        "feature1": "Water resistant",
-        "feature2": "Economical solution",
-        "feature3": "Easy maintenance"
-      }
-    },
-    "prefabricated": {
-      "name": "Prefabricated Soles",
-      "description": "Ready-to-use sole solutions for fast production and consistency.",
-      "features": {
-        "feature1": "Quick delivery",
-        "feature2": "Consistent quality",
-        "feature3": "Various designs"
-      }
-    },
-    "stats": {
-      "materials": "Material Types Mastered",
-      "quality": "Quality Guaranteed",
-      "market": "In Morocco"
-    },
-    "cta": {
-      "text": "Need custom soles with specific materials? Let's discuss your project.",
-      "button": "Contact Our Experts"
-    }
   }
 }

@@ -469,14 +469,60 @@
       "line2": "Maîtrisés"
     },
     "subtitle": "Casa Semelle maîtrise tous les principaux matériaux de semelles, alliant technologie de pointe et savoir-faire artisanal pour offrir une qualité supérieure dans chaque catégorie.",
-    "eva": {
-      "name": "EVA Haute Densité",
-      "description": "Acétate de vinyle d'éthylène - l'équilibre parfait entre légèreté et durabilité.",
+    "tr": {
+      "name": "TR (Caoutchouc Thermoplastique)",
+      "description": "Le Caoutchouc Thermoplastique combine l'élasticité du caoutchouc avec la facilité de traitement du plastique. Il offre une excellente flexibilité, durabilité et résistance au glissement.",
       "features": {
-        "feature1": "Confort ultra-léger",
-        "feature2": "Excellente absorption des chocs", 
-        "feature3": "Applications polyvalentes"
-      }
+        "feature1": "Haute flexibilité et confort",
+        "feature2": "Bonne résistance à l'abrasion et au glissement",
+        "feature3": "Excellente apparence et détails de moulage",
+        "feature4": "Recyclable et économique"
+      },
+      "applications": "Chaussures de mode, chaussures pour enfants, chaussures casual et confort"
+    },
+    "tpu": {
+      "name": "TPU (Polyuréthane Thermoplastique)",
+      "description": "Le TPU est un matériau haute performance connu pour son élasticité supérieure, sa robustesse et sa résistance à l'usure. Il offre une sensation premium et une durabilité exceptionnelle.",
+      "features": {
+        "feature1": "Résistance exceptionnelle à l'abrasion et à la déchirure",
+        "feature2": "Grande élasticité et transparence",
+        "feature3": "Résistant aux huiles, graisses et produits chimiques",
+        "feature4": "Idéal pour les semelles haute performance et transparentes"
+      },
+      "applications": "Chaussures de sport, bottes de sécurité, chaussures de performance"
+    },
+    "eva": {
+      "name": "EVA (Acétate de Vinyle d'Éthylène)",
+      "description": "L'EVA est léger, absorbant les chocs et flexible, ce qui le rend parfait pour les semelles intermédiaires et les applications de semelles extérieures légères. Il garantit un confort supérieur, un amorti et un retour d'énergie optimaux.",
+      "features": {
+        "feature1": "Ultra-léger",
+        "feature2": "Excellente absorption des chocs et flexibilité",
+        "feature3": "Bonne performance à basse température",
+        "feature4": "Peut être combiné avec du caoutchouc pour une meilleure adhérence"
+      },
+      "applications": "Chaussures de course, sandales, tongs et chaussures légères"
+    },
+    "pu": {
+      "name": "PU (Polyuréthane)",
+      "description": "Le PU est largement utilisé pour des semelles durables, légères et confortables. Il combine flexibilité, résistance à l'abrasion et excellent amortissement.",
+      "features": {
+        "feature1": "Haute élasticité et amortissement",
+        "feature2": "Longue durée de vie et excellente adhérence",
+        "feature3": "Résistant à l'abrasion et aux huiles",
+        "feature4": "Confortable et durable pour un port prolongé"
+      },
+      "applications": "Chaussures de sécurité, chaussures de travail, chaussures habillées et chaussures confort"
+    },
+    "pvc": {
+      "name": "PVC (Polychlorure de Vinyle)",
+      "description": "Le PVC est un matériau polyvalent et économique utilisé pour des semelles imperméables et durables. Il offre un bon équilibre entre flexibilité, robustesse et résistance aux produits chimiques et à l'eau.",
+      "features": {
+        "feature1": "Économique",
+        "feature2": "Bonne durabilité et résistance aux intempéries",
+        "feature3": "Imperméable et facile à nettoyer",
+        "feature4": "Adapté à diverses couleurs et textures"
+      },
+      "applications": "Bottes de pluie, chaussures de mode et chaussures économiques"
     },
     "rubber": {
       "name": "Caoutchouc",
@@ -485,65 +531,32 @@
         "feature1": "Traction supérieure",
         "feature2": "Durabilité extrême",
         "feature3": "Résistant aux intempéries"
-      }
-    },
-    "pu": {
-      "name": "PU (Polyuréthane)",
-      "description": "Polyuréthane avancé pour une flexibilité et une performance durable.",
-      "features": {
-        "feature1": "Excellente flexibilité",
-        "feature2": "Résistant à l'abrasion", 
-        "feature3": "Amortissement confortable"
-      }
-    },
-    "tpu": {
-      "name": "TPU",
-      "description": "Polyuréthane thermoplastique - combinant le meilleur du plastique et du caoutchouc.",
-      "features": {
-        "feature1": "Haute élasticité",
-        "feature2": "Résistant à la température",
-        "feature3": "Solidité supérieure"
-      }
-    },
-    "tr": {
-      "name": "TR (Caoutchouc Thermoplastique)",
-      "description": "Caoutchouc thermoplastique innovant pour des solutions de semelles polyvalentes.",
-      "features": {
-        "feature1": "Design léger",
-        "feature2": "Excellente résilience",
-        "feature3": "Facile à traiter"
-      }
+      },
+      "applications": "Bottes de travail, chaussures de plein air, chaussures robustes"
     },
     "leather": {
-      "name": "Cuir", 
+      "name": "Cuir",
       "description": "Cuir naturel pour une élégance classique et une respirabilité.",
       "features": {
         "feature1": "Respirabilité naturelle",
         "feature2": "Esthétique premium",
         "feature3": "Qualité intemporelle"
-      }
-    },
-    "pvc": {
-      "name": "PVC",
-      "description": "Polychlorure de vinyle - matériau économique et polyvalent.",
-      "features": {
-        "feature1": "Résistant à l'eau",
-        "feature2": "Solution économique",
-        "feature3": "Entretien facile"
-      }
+      },
+      "applications": "Chaussures habillées, chaussures formelles, chaussures de luxe"
     },
     "prefabricated": {
       "name": "Semelles Préfabriquées",
       "description": "Solutions de semelles prêtes à l'emploi pour une production rapide et une qualité constante.",
       "features": {
         "feature1": "Livraison rapide",
-        "feature2": "Qualité constante", 
+        "feature2": "Qualité constante",
         "feature3": "Diversité de designs"
-      }
+      },
+      "applications": "Production de masse, projets à délais courts, chaussures standard"
     },
     "stats": {
       "materials": "Types de Matériaux Maîtrisés",
-      "quality": "Qualité Garantie", 
+      "quality": "Qualité Garantie",
       "market": "Au Maroc"
     },
     "cta": {
