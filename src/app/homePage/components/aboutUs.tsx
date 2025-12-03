@@ -184,10 +184,10 @@ function AboutSection() {
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-amber-500 rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
                   <div className="text-sm font-bold text-amber-600 uppercase tracking-wider">
-                    {t('aboutLegacy.timeline.1995.year')}
+                    {t('aboutLegacy.timeline.2000.year')}
                   </div>
                   <p className="text-slate-700 leading-relaxed">
-                    {t('aboutLegacy.timeline.1995.description')}
+                    {t('aboutLegacy.timeline.2000.description')}
                   </p>
                 </div>
               </div>
@@ -197,10 +197,10 @@ function AboutSection() {
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-[#f2603b] rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
                   <div className="text-sm font-bold text-[#f2603b] uppercase tracking-wider">
-                    {t('aboutLegacy.timeline.2020.year')}
+                    {t('aboutLegacy.timeline.2010.year')}
                   </div>
                   <p className="text-slate-700 leading-relaxed">
-                    {t('aboutLegacy.timeline.2020.description')}
+                    {t('aboutLegacy.timeline.2010.description')}
                   </p>
                 </div>
               </div>
@@ -210,10 +210,10 @@ function AboutSection() {
                 <div className="absolute -left-3 top-0 w-5 h-5 bg-[#f2413b] rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                 <div className="space-y-2">
                   <div className="text-sm font-bold text-[#f2413b] uppercase tracking-wider">
-                    {t('aboutLegacy.timeline.2022.year')}
+                    {t('aboutLegacy.timeline.2013.year')}
                   </div>
                   <p className="text-slate-700 leading-relaxed">
-                    {t('aboutLegacy.timeline.2022.description')}
+                    {t('aboutLegacy.timeline.2013.description')}
                   </p>
                 </div>
               </div>

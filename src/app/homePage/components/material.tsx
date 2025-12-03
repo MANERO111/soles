@@ -127,34 +127,34 @@ function MaterialsTechnologySection() {
       bgGradient: 'from-teal-50 to-emerald-50',
       borderColor: 'border-teal-300 hover:border-teal-500'
     },
-    {
-      name: t('materials.rubber.name'),
-      description: t('materials.rubber.description'),
-      features: [
-        t('materials.rubber.features.feature1'),
-        t('materials.rubber.features.feature2'),
-        t('materials.rubber.features.feature3')
-      ],
-      applications: t('materials.rubber.applications'),
-      icon: '🛡️',
-      color: 'from-slate-600 to-slate-800',
-      bgGradient: 'from-slate-50 to-gray-50',
-      borderColor: 'border-slate-300 hover:border-slate-600'
-    },
-    {
-      name: t('materials.leather.name'),
-      description: t('materials.leather.description'),
-      features: [
-        t('materials.leather.features.feature1'),
-        t('materials.leather.features.feature2'),
-        t('materials.leather.features.feature3')
-      ],
-      applications: t('materials.leather.applications'),
-      icon: '🌿',
-      color: 'from-amber-600 to-amber-800',
-      bgGradient: 'from-amber-50 to-yellow-50',
-      borderColor: 'border-amber-300 hover:border-amber-600'
-    },
+    // {
+    //   name: t('materials.rubber.name'),
+    //   description: t('materials.rubber.description'),
+    //   features: [
+    //     t('materials.rubber.features.feature1'),
+    //     t('materials.rubber.features.feature2'),
+    //     t('materials.rubber.features.feature3')
+    //   ],
+    //   applications: t('materials.rubber.applications'),
+    //   icon: '🛡️',
+    //   color: 'from-slate-600 to-slate-800',
+    //   bgGradient: 'from-slate-50 to-gray-50',
+    //   borderColor: 'border-slate-300 hover:border-slate-600'
+    // },
+    // {
+    //   name: t('materials.leather.name'),
+    //   description: t('materials.leather.description'),
+    //   features: [
+    //     t('materials.leather.features.feature1'),
+    //     t('materials.leather.features.feature2'),
+    //     t('materials.leather.features.feature3')
+    //   ],
+    //   applications: t('materials.leather.applications'),
+    //   icon: '🌿',
+    //   color: 'from-amber-600 to-amber-800',
+    //   bgGradient: 'from-amber-50 to-yellow-50',
+    //   borderColor: 'border-amber-300 hover:border-amber-600'
+    // },
     {
       name: t('materials.prefabricated.name'),
       description: t('materials.prefabricated.description'),
@@ -291,7 +291,7 @@ function MaterialsTechnologySection() {
         </div>
 
         {/* Materials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {materials.map((material, index) => (
                 <div
                 key={index}

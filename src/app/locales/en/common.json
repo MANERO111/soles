@@ -6,6 +6,7 @@
     "news": "News",
     "contact": "Contact",
     "materials": "Materials",
+    "prefabricated": "Prefabricated outsoles",
     "getQuote": "Get Quote"
   },
   "hero": {
@@ -79,45 +80,53 @@
     },
     "swipe": "Swipe"
   },
-  "aboutLegacy": {
-    "badge": "Our Legacy",
-    "title": {
-      "line1": "Morocco's #1",
-      "line2": "Since 1995"
+"aboutLegacy": {
+  "badge": "Our Legacy",
+  "title": {
+    "line1": "Morocco's #1",
+    "line2": "Since 2000"
+  },
+  "subtitle": "Historic leader in sole manufacturing - combining industrial excellence with unmatched expertise",
+  "years": "Years",
+  "images": {
+    "manufacturing": "Casa Semelle manufacturing facility",
+    "craftsmanship": "Precision sole craftsmanship",
+    "quality": "Quality control and production"
+  },
+  "timeline": {
+    "2000": {
+      "year": "2000 - Foundation",
+      "description": "Casa Semelle was founded in 2000 in Casablanca by owner Aziz Benkhouili, starting from scratch with a clear vision: to become Morocco's reference in sole manufacturing through quality, innovation, and integrity."
     },
-    "subtitle": "Historic leader in sole manufacturing - combining industrial excellence with unmatched expertise",
-    "years": "Years",
-    "images": {
-      "manufacturing": "Casa Semelle manufacturing facility",
-      "craftsmanship": "Precision sole craftsmanship",
-      "quality": "Quality control and production"
+    "2010": {
+      "year": "2010 - Industrial Transition",
+      "description": "Transitioned from outsole trading to full-scale manufacturing with the opening of our first production facility in Tit Mellil, marking our evolution into an industrial-grade operation."
     },
-    "timeline": {
-      "1995": {
-        "year": "January 1995 - Foundation",
-        "description": "Casa Semelle was founded on January 16, 1995, in Casablanca with a clear vision: to become Morocco's reference in sole manufacturing through quality and innovation."
-      },
-      "2020": {
-        "year": "2020 - Market Leadership",
-        "description": "Achieved #1 position in the Moroccan market, earning the trust of major local brands and establishing ourselves as the go-to partner for quality soles."
-      },
-      "2022": {
-        "year": "2022 - International Recognition",
-        "description": "Partnership with Inditex Group validates our capacity to meet world-class standards. Expanded material expertise across EVA, Rubber, PU, TPU, TR, and Leather."
-      },
-      "today": {
-        "year": "Today - Industry Pioneer",
-        "description": "The historic leader serving major brands, industrial workshops, artisans, and international groups. Modern machinery combined with expert craftsmanship makes us the undisputed reference."
-      }
+    "2013": {
+      "year": "2013 - Capacity Expansion",
+      "description": "Moved to larger facilities in Mediouna to meet growing demand, increasing production capacity and introducing advanced machinery for a wider range of outsole models."
     },
-    "cta": "Discover Our Story",
-    "stats": {
-      "years": "Years of Excellence",
-      "clients": "Major Clients",
-      "materials": "Material Types",
-      "exports": "Export Markets"
+    "2015": {
+      "year": "2015 - Strategic Relocation",
+      "description": "Established in Ain Sebaâ industrial zone, positioning ourselves at the heart of Casablanca's manufacturing ecosystem and solidifying our presence as a major industrial player."
+    },
+    "2022": {
+      "year": "2022 - International Recognition",
+      "description": "Partnership with Inditex Group validates our capacity to meet world-class standards. Expanded material expertise across EVA, Rubber, PU, TPU, TR, and Leather."
+    },
+    "today": {
+      "year": "Today - Industry Pioneer",
+      "description": "The historic leader serving major brands, industrial workshops, artisans, and international groups. Modern machinery combined with expert craftsmanship makes us the undisputed reference in Moroccan sole manufacturing."
     }
   },
+  "cta": "Discover Our Story",
+  "stats": {
+    "years": "Years of Excellence",
+    "clients": "Major Clients",
+    "materials": "Material Types",
+    "exports": "Export Markets"
+  }
+},
   "values": {
     "title": "Why Choose Casa Semelle",
     "cta": {

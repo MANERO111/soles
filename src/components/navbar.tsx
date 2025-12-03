@@ -98,6 +98,13 @@ function Navbar() {
               {t('nav.materials')}
             </a>
             <a 
+              href="#prefabricated" 
+              onClick={(e) => handleNavClick(e, 'prefabricated')}
+              className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold cursor-pointer"
+            >
+              {t('nav.prefabricated')}
+            </a>
+            <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
               className="text-slate-700 hover:text-[#f2413b] transition-colors duration-200 text-sm font-semibold cursor-pointer"
@@ -187,14 +194,24 @@ function Navbar() {
             {t('nav.products')}
           </Link>
           <a 
-            href="#news" 
+            href="#materials" 
             onClick={(e) => {
-              handleNavClick(e, 'news');
+              handleNavClick(e, 'materials');
               setMobileMenuOpen(false);
             }}
             className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors cursor-pointer font-semibold"
           >
-            {t('nav.news')}
+            {t('nav.materials')}
+          </a>
+          <a 
+            href="#prefabricated" 
+            onClick={(e) => {
+              handleNavClick(e, 'prefabricated');
+              setMobileMenuOpen(false);
+            }}
+            className="block py-2 text-slate-700 hover:text-[#f2413b] transition-colors cursor-pointer font-semibold"
+          >
+            {t('nav.prefabricated')}
           </a>
           <a 
             href="#contact" 

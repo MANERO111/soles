@@ -48,9 +48,10 @@ function PrefabricatedOutsolesSection() {
         t('prefabricated.models.mens.feature1'),
         t('prefabricated.models.mens.feature2'),
         t('prefabricated.models.mens.feature3'),
-        t('prefabricated.models.mens.feature4')
+        // t('prefabricated.models.mens.feature4')
       ],
       icon: '👞',
+      image: '/img/DSC03627 copie.jpg',
       color: 'from-slate-700 to-slate-900',
       accentColor: 'border-slate-600'
     },
@@ -62,6 +63,7 @@ function PrefabricatedOutsolesSection() {
         t('prefabricated.models.womens.feature3')
       ],
       icon: '👠',
+      image: '/img/DSC03650 copie.jpg',
       color: 'from-pink-500 to-rose-600',
       accentColor: 'border-pink-500'
     },
@@ -73,6 +75,7 @@ function PrefabricatedOutsolesSection() {
         t('prefabricated.models.pointed.feature3')
       ],
       icon: '✨',
+      image: '/img/DSC03630 copie.jpg',
       color: 'from-purple-500 to-indigo-600',
       accentColor: 'border-purple-500'
     }
@@ -111,9 +114,9 @@ function PrefabricatedOutsolesSection() {
       className="relative bg-gradient-to-br from-slate-50 via-white to-slate-50 py-32 overflow-hidden"
       id="prefabricated"
     >
-        {/* Fallback animated pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white/95 z-10"></div>
+  
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -155,17 +158,45 @@ function PrefabricatedOutsolesSection() {
                   transitionDelay: `${index * 150}ms`
                 }}
               >
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${model.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                {/* Image Section */}
+                <div className="relative h-64 overflow-hidden bg-slate-100">
+                  <img 
+                    src={model.image} 
+                    alt={model.title}
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                  />
+                  
+                  {/* Gradient Overlay on Image */}
+                  <div className={`absolute inset-0 bg-gradient-to-t ${model.color} opacity-40 group-hover:opacity-60 transition-opacity duration-500`}></div>
+                  
+                  {/* Shine Effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
 
-                <div className="relative p-8">
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${model.color} rounded-2xl flex items-center justify-center text-4xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  {/* Icon Badge on Image */}
+                  <div className="absolute top-4 left-4">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${model.color} rounded-2xl flex items-center justify-center text-3xl shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 border-2 border-white`}>
                       {model.icon}
                     </div>
                   </div>
 
+                  {/* Active Indicator */}
+                  {activeModel === index && (
+                    <div className="absolute top-4 right-4">
+                      <div className="relative">
+                        <div className="w-4 h-4 bg-[#f2413b] rounded-full"></div>
+                        <div className="absolute inset-0 w-4 h-4 bg-[#f2413b] rounded-full animate-ping"></div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Bottom Fade */}
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+                </div>
+
+                {/* Content Section */}
+                <div className="relative p-8 bg-white">
                   {/* Title */}
                   <h4 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-[#f2413b] transition-colors duration-300">
                     {model.title}
@@ -174,20 +205,22 @@ function PrefabricatedOutsolesSection() {
                   {/* Features */}
                   <ul className="space-y-3">
                     {model.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-slate-700">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
+                      <li 
+                        key={idx} 
+                        className="flex items-start gap-3 text-sm text-slate-700 transform transition-all duration-300"
+                        style={{
+                          transitionDelay: `${idx * 50}ms`
+                        }}
+                      >
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
+                        <span className="group-hover:translate-x-1 transition-transform duration-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
 
-                {/* Active Indicator */}
-                {activeModel === index && (
-                  <div className="absolute top-4 right-4">
-                    <div className="w-3 h-3 bg-[#f2413b] rounded-full animate-ping"></div>
-                  </div>
-                )}
+                  {/* Hover Accent Line */}
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${model.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+                </div>
               </div>
             ))}
           </div>
@@ -290,7 +323,7 @@ function PrefabricatedOutsolesSection() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/video/Casa Seumelle_2_compressed.mp4" type="video/mp4" />
+                <source src="/video/Casa-Seumelle-compressed.mp4" type="video/mp4" />
               </video>
               
               {/* Overlay */}
