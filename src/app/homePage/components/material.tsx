@@ -253,7 +253,7 @@ function MaterialsTechnologySection() {
             <div className="aspect-video relative overflow-hidden bg-blue-900">
               {/* Image */}
               <img 
-                src="/img/DSC03639 copie.jpg" 
+                src="/img/DSC03646 copie.jpg" 
                 alt="Premium Material Selection" 
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
               />

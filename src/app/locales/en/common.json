@@ -362,31 +362,31 @@
         "prefix": "Our",
         "highlight": "Journey"
       },
-      "subtitle": "From our foundation to becoming Morocco's undisputed leader in sole manufacturing",
-      "1995": {
-        "year": "January 1995",
+      "subtitle": "From humble beginnings to becoming Morocco's undisputed leader in sole manufacturing",
+      "2000": {
+        "year": "2000 – A Vision Begins",
         "title": "Foundation of Casa Semelle",
-        "description": "Established on January 16, 1995, in Casablanca with a clear mission: to become the reference in sole manufacturing in Morocco"
+        "description": "The company was founded in 2000 by owner Aziz Benkhouili, starting completely from scratch. With a clear vision and strong determination, the business began as a small operation focused on buying and reselling outsoles to local footwear manufacturers. A strong reputation was built through consistency, hard work, and integrity."
       },
-      "2020": {
-        "year": "2020",
-        "title": "Market Leadership",
-        "description": "Achieved position as Morocco's #1 sole manufacturer, gaining trust of major local footwear brands and establishing dominant market presence"
+      "2010": {
+        "year": "2010 – Moving Toward Manufacturing",
+        "title": "Industrial Transition",
+        "description": "After a decade of market experience and growth, the company made a decisive strategic shift: transitioning from outsole trading to full-scale manufacturing. The first production facility opened in Tit Mellil, marking the beginning of the evolution into a production-driven, industrial-grade operation."
       },
-      "2022": {
-        "year": "2022",
-        "title": "International Recognition",
-        "description": "Partnership with Inditex Group and other international clients, confirming our ability to meet the highest global standards"
+      "2013": {
+        "year": "2013 – Expansion to Mediouna",
+        "title": "Capacity Growth",
+        "description": "Facing increasing demand, the company moved its manufacturing facility to Mediouna in 2013. This allowed for higher production capacity, advanced machinery, a wider range of outsole models, and a stronger presence in the national market."
       },
-      "2024": {
-        "year": "2024",
-        "title": "Industrial Expansion",
-        "description": "Expanded production capacity with modern machinery, mastering all major sole materials from EVA to leather, serving safety, casual, and designer footwear"
+      "2015": {
+        "year": "2015 – Establishment in Ain Sebaâ",
+        "title": "Strategic Milestone",
+        "description": "In 2015, CASA SEMELLE relocated to the industrial zone of Ain Sebaâ, one of Casablanca's most important industrial hubs. This move positioned the company at the center of the city's manufacturing ecosystem, where it continues to operate with precision, consistency, and a strong commitment to quality."
       },
       "today": {
         "year": "Today",
-        "title": "Industry Pioneer",
-        "description": "Historic leader serving major Moroccan brands, industrial workshops, artisans, and international groups. The undisputed reference in Moroccan sole manufacturing"
+        "title": "Trusted Manufacturer",
+        "description": "Now established as a leading manufacturer, CASA SEMELLE continues to expand its capabilities, innovate its products, and serve factories, brands, and designers across Morocco and beyond. From a small trading business to a major industrial manufacturer, this journey is proof of what determination and commitment can achieve."
       }
     },
     "values": {
@@ -463,105 +463,173 @@
     }
   },
   "materials": {
-      "badge": "Our Expertise",
-      "title": {
-        "line1": "Mastered",
-        "line2": "Materials"
+    "badge": "Our Expertise",
+    "title": {
+      "line1": "Mastered",
+      "line2": "Materials"
+    },
+    "subtitle": "Casa Semelle masters all major sole materials, combining cutting-edge technology with expert craftsmanship to deliver superior quality across every category.",
+    "tr": {
+      "name": "TR (Thermoplastic Rubber)",
+      "description": "Thermoplastic Rubber combines the elasticity of rubber with the processability of plastic. It offers excellent flexibility, durability, and slip resistance.",
+      "features": {
+        "feature1": "High flexibility and comfort",
+        "feature2": "Good abrasion and slip resistance",
+        "feature3": "Excellent appearance and mold detail",
+        "feature4": "Recyclable and cost-effective"
       },
-      "subtitle": "Casa Semelle masters all major sole materials, combining cutting-edge technology with expert craftsmanship to deliver superior quality across every category.",
-      "tr": {
-        "name": "TR (Thermoplastic Rubber)",
-        "description": "Thermoplastic Rubber combines the elasticity of rubber with the processability of plastic. It offers excellent flexibility, durability, and slip resistance.",
-        "features": {
-          "feature1": "High flexibility and comfort",
-          "feature2": "Good abrasion and slip resistance",
-          "feature3": "Excellent appearance and mold detail",
-          "feature4": "Recyclable and cost-effective"
-        },
-        "applications": "Fashion shoes, kids' shoes, casual and comfort footwear"
+      "applications": "Fashion shoes, kids' shoes, casual and comfort footwear"
+    },
+    "tpu": {
+      "name": "TPU (Thermoplastic Polyurethane)",
+      "description": "TPU is a high-performance material known for its superior elasticity, toughness, and resistance to wear and tear. It provides a premium feel and long-lasting durability.",
+      "features": {
+        "feature1": "Exceptional abrasion and tear resistance",
+        "feature2": "Great elasticity and transparency",
+        "feature3": "Resistant to oils, greases, and chemicals",
+        "feature4": "Ideal for high-performance and transparent soles"
       },
-      "tpu": {
-        "name": "TPU (Thermoplastic Polyurethane)",
-        "description": "TPU is a high-performance material known for its superior elasticity, toughness, and resistance to wear and tear. It provides a premium feel and long-lasting durability.",
-        "features": {
-          "feature1": "Exceptional abrasion and tear resistance",
-          "feature2": "Great elasticity and transparency",
-          "feature3": "Resistant to oils, greases, and chemicals",
-          "feature4": "Ideal for high-performance and transparent soles"
-        },
-        "applications": "Sports shoes, safety boots, performance footwear"
+      "applications": "Sports shoes, safety boots, performance footwear"
+    },
+    "eva": {
+      "name": "EVA (Ethylene Vinyl Acetate)",
+      "description": "EVA is lightweight, shock-absorbent, and flexible, making it perfect for midsoles and lightweight outsole applications. It ensures superior comfort, cushioning, and energy return.",
+      "features": {
+        "feature1": "Ultra-lightweight",
+        "feature2": "Excellent cushioning and flexibility",
+        "feature3": "Good low-temperature performance",
+        "feature4": "Can be combined with rubber for better grip"
       },
-      "eva": {
-        "name": "EVA (Ethylene Vinyl Acetate)",
-        "description": "EVA is lightweight, shock-absorbent, and flexible, making it perfect for midsoles and lightweight outsole applications. It ensures superior comfort, cushioning, and energy return.",
-        "features": {
-          "feature1": "Ultra-lightweight",
-          "feature2": "Excellent cushioning and flexibility",
-          "feature3": "Good low-temperature performance",
-          "feature4": "Can be combined with rubber for better grip"
-        },
-        "applications": "Running shoes, sandals, slippers, and lightweight footwear"
+      "applications": "Running shoes, sandals, slippers, and lightweight footwear"
+    },
+    "pu": {
+      "name": "PU (Polyurethane)",
+      "description": "PU is widely used for durable, lightweight, and comfortable soles. It combines flexibility, abrasion resistance, and excellent shock absorption.",
+      "features": {
+        "feature1": "High elasticity and cushioning",
+        "feature2": "Long lifespan and excellent grip",
+        "feature3": "Resistant to abrasion and oil",
+        "feature4": "Comfortable and durable for long wear"
       },
-      "pu": {
-        "name": "PU (Polyurethane)",
-        "description": "PU is widely used for durable, lightweight, and comfortable soles. It combines flexibility, abrasion resistance, and excellent shock absorption.",
-        "features": {
-          "feature1": "High elasticity and cushioning",
-          "feature2": "Long lifespan and excellent grip",
-          "feature3": "Resistant to abrasion and oil",
-          "feature4": "Comfortable and durable for long wear"
-        },
-        "applications": "Safety footwear, work shoes, dress shoes, and comfort shoes"
+      "applications": "Safety footwear, work shoes, dress shoes, and comfort shoes"
+    },
+    "pvc": {
+      "name": "PVC (Polyvinyl Chloride)",
+      "description": "PVC is a versatile and economical material used for waterproof and durable soles. It offers a good balance of flexibility, toughness, and resistance to chemicals and water.",
+      "features": {
+        "feature1": "Cost-effective",
+        "feature2": "Good durability and weather resistance",
+        "feature3": "Waterproof and easy to clean",
+        "feature4": "Suitable for various colors and textures"
       },
-      "pvc": {
-        "name": "PVC (Polyvinyl Chloride)",
-        "description": "PVC is a versatile and economical material used for waterproof and durable soles. It offers a good balance of flexibility, toughness, and resistance to chemicals and water.",
-        "features": {
-          "feature1": "Cost-effective",
-          "feature2": "Good durability and weather resistance",
-          "feature3": "Waterproof and easy to clean",
-          "feature4": "Suitable for various colors and textures"
-        },
-        "applications": "Rain boots, fashion footwear, and economy shoes"
+      "applications": "Rain boots, fashion footwear, and economy shoes"
+    },
+    "rubber": {
+      "name": "Rubber / Caoutchouc",
+      "description": "Natural and synthetic rubber for maximum durability and grip.",
+      "features": {
+        "feature1": "Superior traction",
+        "feature2": "Extreme durability",
+        "feature3": "Weather resistant"
       },
-      "rubber": {
-        "name": "Rubber / Caoutchouc",
-        "description": "Natural and synthetic rubber for maximum durability and grip.",
-        "features": {
-          "feature1": "Superior traction",
-          "feature2": "Extreme durability",
-          "feature3": "Weather resistant"
-        },
-        "applications": "Work boots, outdoor footwear, heavy-duty shoes"
+      "applications": "Work boots, outdoor footwear, heavy-duty shoes"
+    },
+    "leather": {
+      "name": "Leather / Cuir",
+      "description": "Natural leather for classic elegance and breathability.",
+      "features": {
+        "feature1": "Natural breathability",
+        "feature2": "Premium aesthetics",
+        "feature3": "Timeless quality"
       },
-      "leather": {
-        "name": "Leather / Cuir",
-        "description": "Natural leather for classic elegance and breathability.",
-        "features": {
-          "feature1": "Natural breathability",
-          "feature2": "Premium aesthetics",
-          "feature3": "Timeless quality"
-        },
-        "applications": "Dress shoes, formal footwear, luxury footwear"
+      "applications": "Dress shoes, formal footwear, luxury footwear"
+    },
+    "prefabricated": {
+      "name": "Prefabricated Soles",
+      "description": "Ready-to-use sole solutions for fast production and consistency.",
+      "features": {
+        "feature1": "Quick delivery",
+        "feature2": "Consistent quality",
+        "feature3": "Various designs"
       },
-      "prefabricated": {
-        "name": "Prefabricated Soles",
-        "description": "Ready-to-use sole solutions for fast production and consistency.",
-        "features": {
-          "feature1": "Quick delivery",
-          "feature2": "Consistent quality",
-          "feature3": "Various designs"
-        },
-        "applications": "Mass production, quick turnaround projects, standard footwear"
+      "applications": "Mass production, quick turnaround projects, standard footwear"
+    },
+    "stats": {
+      "materials": "Material Types Mastered",
+      "quality": "Quality Guaranteed",
+      "market": "In Morocco"
+    },
+    "cta": {
+      "text": "Need custom soles with specific materials? Let's discuss your project.",
+      "button": "Contact Our Experts"
+    }
+  },
+  "prefabricated": {
+    "badge": "Ready-to-Use Solutions",
+    "title": {
+      "line1": "Prefabricated Outsoles",
+      "line2": "High-Quality & Ready for Production"
+    },
+    "subtitle": "We offer a wide range of prefabricated outsoles designed to fit different styles of footwear — from classic men's dress shoes to women's fashion silhouettes. Our full catalogue includes various shapes, profiles, thicknesses, materials, and finishing options.",
+    "models": {
+      "heading": "Sample Models",
+      "subheading": "Examples Only - Full Catalogue Available",
+      "mens": {
+        "title": "Men's Dress Outsoles",
+        "feature1": "Smooth leather finish",
+        "feature2": "Reinforced heel with rubber insert",
+        "feature3": "Elegant stitching line",
+        "feature4": "Suitable for Oxford, Derby, Moccasin styles"
       },
-      "stats": {
-        "materials": "Material Types Mastered",
-        "quality": "Quality Guaranteed",
-        "market": "In Morocco"
+      "womens": {
+        "title": "Women's Leather Outsoles",
+        "feature1": "Lightweight, flexible construction",
+        "feature2": "Front grip pattern for comfort & traction",
+        "feature3": "Slim silhouette for feminine footwear designs"
       },
-      "cta": {
-        "text": "Need custom soles with specific materials? Let's discuss your project.",
-        "button": "Contact Our Experts"
+      "pointed": {
+        "title": "Pointed Fashion Outsoles",
+        "feature1": "Streamlined pointed shape",
+        "feature2": "Rubber-reinforced heel",
+        "feature3": "Ideal for pumps and fashion shoes"
       }
+    },
+    "craftsmanship": {
+      "inventory": {
+        "title": "Large Material Inventory",
+        "description": "Our extensive stock of leather rolls, welts, and heel components ensures continuous production, reliable supply, and consistent finishing across all orders."
+      },
+      "production": {
+        "title": "Industrial Machines + Skilled Artisans",
+        "item1": "Precision-cutting machinery",
+        "item2": "Pressing and molding tools",
+        "item3": "Welting and stitching stations",
+        "item4": "Manual edge finishing",
+        "item5": "Multi-step quality control"
+      }
+    },
+    "why": {
+      "title": "Why Brands Choose Us"
+    },
+    "benefits": {
+      "benefit1": "Wide variety of outsole shapes & sizes",
+      "benefit2": "Premium leather and durable rubber components",
+      "benefit3": "Consistent quality across large batches",
+      "benefit4": "Fast production thanks to material stock",
+      "benefit5": "Customization possible on request (color, embossing, stitching, finish)"
+    },
+    "b2b": {
+      "title": "Available for B2B Orders",
+      "description": "Our prefabricated outsoles are developed for businesses and professionals in the footwear industry:",
+      "target1": "Shoe factories",
+      "target2": "Independent shoemakers",
+      "target3": "Footwear brands",
+      "target4": "Designers & private labels",
+      "cta": "Request B2B Catalogue"
+    },
+    "video": {
+      "title": "See Our Craftsmanship in Action",
+      "description": "Watch how we produce premium outsoles with precision and care"
+    }
   }
 }

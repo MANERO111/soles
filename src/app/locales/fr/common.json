@@ -362,31 +362,31 @@
         "prefix": "Notre",
         "highlight": "Parcours"
       },
-      "subtitle": "De notre fondation à devenir le leader incontesté de la fabrication de semelles au Maroc",
-      "1995": {
-        "year": "Janvier 1995",
+      "subtitle": "De nos débuts modestes à notre position actuelle de leader incontesté de la fabrication de semelles au Maroc",
+      "2000": {
+        "year": "2000 – Début d'une Vision",
         "title": "Fondation de Casa Semelle",
-        "description": "Établie le 16 janvier 1995 à Casablanca avec une mission claire : devenir la référence en fabrication de semelles au Maroc"
+        "description": "L'entreprise a été fondée en 2000 par Aziz Benkhouili, le propriétaire, qui a démarré entièrement à partir de zéro. Avec une vision claire et une détermination forte, l'entreprise a débuté comme une petite opération axée sur l'achat et la revente de semelles aux fabricants locaux de chaussures. Une réputation solide s'est construite grâce à la constance, au travail acharné et à l'intégrité."
       },
-      "2020": {
-        "year": "2020",
-        "title": "Leadership sur le Marché",
-        "description": "Atteinte de la position de numéro un marocain en fabrication de semelles, gagnant la confiance des grandes marques locales de chaussures et établissant une présence dominante sur le marché"
+      "2010": {
+        "year": "2010 – Vers la Fabrication",
+        "title": "Transition Industrielle",
+        "description": "Après une décennie d'expérience et de croissance sur le marché, l'entreprise a effectué un virage stratégique décisif : passer du commerce de semelles à la fabrication à grande échelle. La première usine de production a ouvert à Tit Mellil, marquant le début de l'évolution vers une opération industrielle axée sur la production."
       },
-      "2022": {
-        "year": "2022",
-        "title": "Reconnaissance Internationale",
-        "description": "Partenariat avec le groupe Inditex et autres clients internationaux, confirmant notre capacité à répondre aux standards mondiaux les plus exigeants"
+      "2013": {
+        "year": "2013 – Expansion à Mediouna",
+        "title": "Croissance de la Capacité",
+        "description": "Face à la demande croissante, l'entreprise a déménagé son usine de fabrication à Mediouna en 2013. Cela a permis d'augmenter la capacité de production, d'introduire des machines avancées, d'élargir la gamme de modèles de semelles et de renforcer la présence sur le marché national."
       },
-      "2024": {
-        "year": "2024",
-        "title": "Expansion Industrielle",
-        "description": "Augmentation de la capacité de production avec des machines modernes, maîtrisant tous les principaux matériaux de semelles de l'EVA au cuir, servant la chaussure de sécurité, casual et de designer"
+      "2015": {
+        "year": "2015 – Installation à Ain Sebaâ",
+        "title": "Milestone Stratégique",
+        "description": "En 2015, CASA SEMELLE s'est installée dans la zone industrielle d'Ain Sebaâ, l'un des pôles industriels les plus importants de Casablanca. Ce déménagement a positionné l'entreprise au cœur de l'écosystème manufacturier de la ville, où elle continue d'opérer avec précision, constance et un engagement fort envers la qualité."
       },
       "today": {
         "year": "Aujourd'hui",
-        "title": "Pionnier de l'Industrie",
-        "description": "Leader historique au service des grandes marques marocaines, ateliers industriels, artisans et groupes internationaux. La référence incontestée dans la fabrication de semelles marocaine"
+        "title": "Fabricant de Référence",
+        "description": "Établie en tant que fabricant leader, CASA SEMELLE continue d'élargir ses capacités, d'innover ses produits et de servir des usines, des marques et des designers à travers le Maroc et au-delà. D'une petite entreprise commerciale à un grand fabricant industriel, ce parcours est la preuve de ce que la détermination et l'engagement peuvent accomplir."
       }
     },
     "values": {
@@ -563,6 +563,73 @@
       "text": "Besoin de semelles sur mesure avec des matériaux spécifiques ? Discutons de votre projet.",
       "button": "Contactez Nos Experts"
     }
+  },
+  "prefabricated": {
+  "badge": "Solutions Prêtes à l'Emploi",
+  "title": {
+    "line1": "Semelles Extérieures",
+    "line2": "Préfabriquées Haut de Gamme"
+  },
+  "subtitle": "Nous offrons une large gamme de semelles extérieures préfabriquées conçues pour s'adapter à différents styles de chaussures — des souliers habillés classiques pour hommes aux silhouettes mode pour femmes. Notre catalogue complet comprend diverses formes, profils, épaisseurs, matériaux et options de finition.",
+  "models": {
+    "heading": "Modèles Exemples",
+    "subheading": "Exemples uniquement - Catalogue complet disponible",
+    "mens": {
+      "title": "Semelles Hommes Habillées",
+      "feature1": "Finition cuir lissé",
+      "feature2": "Talon renforcé avec insert caoutchouc",
+      "feature3": "Ligne de couture élégante",
+      "feature4": "Adapté aux styles Oxford, Derby, Mocassin"
+    },
+    "womens": {
+      "title": "Semelles Femmes en Cuir",
+      "feature1": "Construction légère et flexible",
+      "feature2": "Motif de traction à l'avant pour confort et adhérence",
+      "feature3": "Silhouette fine pour designs de chaussures féminines"
+    },
+    "pointed": {
+      "title": "Semelles Mode Pointues",
+      "feature1": "Forme pointue élancée",
+      "feature2": "Talon renforcé en caoutchouc",
+      "feature3": "Idéal pour escarpins et chaussures de mode"
+    }
+  },
+  "craftsmanship": {
+    "inventory": {
+      "title": "Large Stock de Matières Premières",
+      "description": "Notre stock étendu de rouleaux de cuir, tiges et composants de talons garantit une production continue, un approvisionnement fiable et une finition uniforme sur toutes les commandes."
+    },
+    "production": {
+      "title": "Machines Industrielles + Artisans Qualifiés",
+      "item1": "Machines de découpe de précision",
+      "item2": "Outils de pressage et de moulage",
+      "item3": "Postes de tigeage et couture",
+      "item4": "Finition manuelle des bords",
+      "item5": "Contrôle qualité multi-étapes"
+    }
+  },
+  "why": {
+    "title": "Pourquoi les Marques Nous Choisissent"
+  },
+  "benefits": {
+    "benefit1": "Grande variété de formes et tailles de semelles",
+    "benefit2": "Composants en cuir premium et caoutchouc durable",
+    "benefit3": "Qualité constante sur les grands lots",
+    "benefit4": "Production rapide grâce au stock de matières",
+    "benefit5": "Personnalisation possible sur demande (couleur, gaufrage, couture, finition)"
+  },
+  "b2b": {
+    "title": "Disponible pour Commandes B2B",
+    "description": "Nos semelles extérieures préfabriquées sont développées pour les entreprises et professionnels de l'industrie de la chaussure :",
+    "target1": "Usines de chaussures",
+    "target2": "Cordonniers indépendants",
+    "target3": "Marques de chaussures",
+    "target4": "Designers & marques privées",
+    "cta": "Demander le Catalogue B2B"
+  },
+  "video": {
+    "title": "Découvrez Notre Savoir-Faire en Action",
+    "description": "Regardez comment nous produisons des semelles premium avec précision et soin"
   }
-  
+  }
 }

@@ -134,10 +134,10 @@ function AboutUsPage() {
   ];
 
   const milestones = [
-    { year: t('about.timeline.1995.year'), title: t('about.timeline.1995.title'), description: t('about.timeline.1995.description'), icon: '🏭' },
-    { year: t('about.timeline.2020.year'), title: t('about.timeline.2020.title'), description: t('about.timeline.2020.description'), icon: '🌱' },
-    { year: t('about.timeline.2022.year'), title: t('about.timeline.2022.title'), description: t('about.timeline.2022.description'), icon: '⚡' },
-    { year: t('about.timeline.2024.year'), title: t('about.timeline.2024.title'), description: t('about.timeline.2024.description'), icon: '🌍' },
+    { year: t('about.timeline.2000.year'), title: t('about.timeline.2000.title'), description: t('about.timeline.2000.description'), icon: '🏭' },
+    { year: t('about.timeline.2010.year'), title: t('about.timeline.2010.title'), description: t('about.timeline.2010.description'), icon: '🌱' },
+    { year: t('about.timeline.2013.year'), title: t('about.timeline.2013.title'), description: t('about.timeline.2013.description'), icon: '⚡' },
+    { year: t('about.timeline.2015.year'), title: t('about.timeline.2015.title'), description: t('about.timeline.2015.description'), icon: '🌍' },
     { year: t('about.timeline.today.year'), title: t('about.timeline.today.title'), description: t('about.timeline.today.description'), icon: '👑' }
   ];
 
