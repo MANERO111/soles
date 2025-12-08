@@ -94,21 +94,29 @@
       "quality": "Contrôle qualité et production"
     },
     "timeline": {
-      "1995": {
-        "year": "Janvier 1995 - Fondation",
-        "description": "Casa Semelle a été fondée le 16 janvier 1995 à Casablanca avec une vision claire : devenir la référence marocaine en fabrication de semelles grâce à la qualité et l'innovation."
+      "2000": {
+        "year": "2000 - Fondation",
+        "description": "Casa Semelle a été fondée en 2000 à Casablanca par le propriétaire Aziz Benkhouili, démarrant de zéro avec une vision claire : devenir la référence marocaine en fabrication de semelles grâce à la qualité, l'innovation et l'intégrité."
       },
-      "2020": {
-        "year": "2020 - Leadership sur le Marché",
-        "description": "Atteinte de la position numéro un sur le marché marocain, gagnant la confiance des grandes marques locales et nous établissant comme le partenaire privilégié pour des semelles de qualité."
+      "2010": {
+        "year": "2010 - Transition Industrielle",
+        "description": "Passage du commerce de semelles à la fabrication à grande échelle avec l'ouverture de notre première usine de production à Tit Mellil, marquant notre évolution vers une opération de niveau industriel."
+      },
+      "2013": {
+        "year": "2013 - Expansion des Capacités",
+        "description": "Déménagement vers des installations plus grandes à Mediouna pour répondre à la demande croissante, augmentant la capacité de production et introduisant des machines avancées pour une gamme plus large de modèles de semelles."
+      },
+      "2015": {
+        "year": "2015 - Relocalisation Stratégique",
+        "description": "Établissement dans la zone industrielle d'Ain Sebaâ, nous positionnant au cœur de l'écosystème manufacturier de Casablanca et consolidant notre présence en tant qu'acteur industriel majeur."
       },
       "2022": {
         "year": "2022 - Reconnaissance Internationale",
-        "description": "Le partenariat avec le groupe Inditex valide notre capacité à répondre aux standards internationaux. Expertise matériaux étendue à travers l'EVA, le Caoutchouc, le PU, TPU, TR et le Cuir."
+        "description": "Partenariat avec le groupe Inditex valide notre capacité à répondre aux standards internationaux. Expertise matériaux étendue à travers l'EVA, le Caoutchouc, le PU, TPU, TR et le Cuir."
       },
       "today": {
         "year": "Aujourd'hui - Pionnier de l'Industrie",
-        "description": "Le leader historique au service des grandes marques, ateliers industriels, artisans et groupes internationaux. Une machinerie moderne alliée à un savoir-faire expert fait de nous la référence incontestée."
+        "description": "Le leader historique au service des grandes marques, ateliers industriels, artisans et groupes internationaux. Une machinerie moderne alliée à un savoir-faire expert fait de nous la référence incontestée dans la fabrication de semelles marocaine."
       }
     },
     "cta": "Découvrez Notre Histoire",
