@@ -41,13 +41,19 @@ const ProductsShowcase: React.FC = () => {
     {id : 14, name: 'échantillon ', price: 85, originalPrice: 0, description: 'PU échantillon ', image_url: '7.jpg', category_id: '4', rating: 5, stock_quantity: 50},
     {id : 15, name: 'échantillon ', price: 85, originalPrice: 0, description: 'PU échantillon ', image_url: '4.jpg', category_id: '4', rating: 5, stock_quantity: 50},
     {id : 16, name: 'échantillon ', price: 85, originalPrice: 0, description: 'PU échantillon ', image_url: '3.jpg', category_id: '4', rating: 5, stock_quantity: 50},
+    {id : 17, name: 'échantillon ', price: 85, originalPrice: 0, description: 'Fabricated outsoles échantillon ', image_url: '27.jpg', category_id: '5', rating: 5, stock_quantity: 50},
+    {id : 18, name: 'échantillon ', price: 85, originalPrice: 0, description: 'Fabricated outsoles échantillon ', image_url: '28.jpg', category_id: '5', rating: 5, stock_quantity: 50},
+    {id : 19, name: 'échantillon ', price: 85, originalPrice: 0, description: 'Fabricated outsoles échantillon ', image_url: '29.jpg', category_id: '5', rating: 5, stock_quantity: 50},
+    {id : 20, name: 'échantillon ', price: 85, originalPrice: 0, description: 'Fabricated outsoles échantillon ', image_url: '30.jpg', category_id: '5', rating: 5, stock_quantity: 50},
+    {id : 21, name: 'échantillon ', price: 85, originalPrice: 0, description: 'Fabricated outsoles échantillon ', image_url: '31.jpg', category_id: '5', rating: 5, stock_quantity: 50},
   ]);
   const [categories, setCategories] = useState<Category[]>([
     { id: 'all', name: 'All' },
     { id: '1', name: 'EVA' },
     { id: '2', name: 'TR' },
     { id: '3', name: 'TPU' },
-    { id: '4', name: 'PU' }
+    { id: '4', name: 'PU' },
+    { id: '5', name: 'Fabricated outsoles' },
   ]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
