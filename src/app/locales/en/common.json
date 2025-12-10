@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "products": "Products",
+    "products": "samples",
     "news": "News",
     "contact": "Contact",
     "materials": "Materials",
@@ -249,7 +249,7 @@
     "logoAlt": "Casa Semelle Logo",
     "description": "Morocco's #1 sole manufacturer. Historic leader with 30+ years of expertise, serving major brands with quality, innovation, and reliability.",
     "contact": {
-      "phone": "+212 522 359 446 / +212 661 214 798",
+      "phone": "+212 522 359 446 / +212 661 205 886",
       "email": "casasemelle@gmail.com",
       "address": "22 Rue Abou Bakr Ibnou Koutia Oukacha, Casablanca, Morocco"
     },
