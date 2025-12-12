@@ -1,9 +1,10 @@
 "use client";
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
-import { Award, Users, Factory, Globe, TrendingUp, Heart, Shield, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { Award, Users, Factory, Globe, TrendingUp, Heart, Shield, Zap, Target, CheckCircle, ArrowRight, PcCase } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
 import PresidentMessageSection from './components/president';
+import { defaultTransformValue } from 'framer-motion';
 
 function AboutUsPage() {
   const [isVisible, setIsVisible] = useState(false);

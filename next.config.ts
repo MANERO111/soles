@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Add other config if needed
-}
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true, // required for static hosting
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+
