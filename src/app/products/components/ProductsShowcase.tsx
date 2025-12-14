@@ -124,7 +124,7 @@ const ProductsShowcase: React.FC = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0 }
     );
 
     if (sectionRef.current) {
