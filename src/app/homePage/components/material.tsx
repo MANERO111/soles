@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Layers, Zap, Shield, Sparkles, CheckCircle, ArrowRight, Camera } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
 import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
+
 function MaterialsTechnologySection() {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -211,10 +213,12 @@ function MaterialsTechnologySection() {
           <div className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-[#f2413b]/30 transition-all duration-700 hover:-translate-y-3">
             <div className="aspect-video relative overflow-hidden bg-slate-900">
               {/* Image */}
-              <img 
+              <Image 
                 src="/img/DSC03648 copie.jpg" 
                 alt="Advanced Manufacturing Process" 
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                fill
+                className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               
               {/* Gradient Overlay - Always visible */}
@@ -252,10 +256,12 @@ function MaterialsTechnologySection() {
           <div className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-700 hover:-translate-y-3">
             <div className="aspect-video relative overflow-hidden bg-blue-900">
               {/* Image */}
-              <img 
+              <Image 
                 src="/img/DSC03646 copie.jpg" 
                 alt="Premium Material Selection" 
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                fill
+                className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               
               {/* Gradient Overlay - Always visible */}

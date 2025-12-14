@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Package, CheckCircle, Star, Users, Zap, Layers, ArrowRight, Play } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/languageContext';
+import Image from 'next/image';
 
 function PrefabricatedOutsolesSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -160,10 +161,12 @@ function PrefabricatedOutsolesSection() {
               >
                 {/* Image Section */}
                 <div className="relative h-64 overflow-hidden bg-slate-100">
-                  <img 
+                  <Image 
                     src={model.image} 
                     alt={model.title}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                    fill
+                    className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   
                   {/* Gradient Overlay on Image */}
@@ -175,7 +178,7 @@ function PrefabricatedOutsolesSection() {
                   </div>
 
                   {/* Icon Badge on Image */}
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute top-4 left-4 z-10">
                     <div className={`w-16 h-16 bg-gradient-to-br ${model.color} rounded-2xl flex items-center justify-center text-3xl shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 border-2 border-white`}>
                       {model.icon}
                     </div>
@@ -183,7 +186,7 @@ function PrefabricatedOutsolesSection() {
 
                   {/* Active Indicator */}
                   {activeModel === index && (
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4 z-10">
                       <div className="relative">
                         <div className="w-4 h-4 bg-[#f2413b] rounded-full"></div>
                         <div className="absolute inset-0 w-4 h-4 bg-[#f2413b] rounded-full animate-ping"></div>

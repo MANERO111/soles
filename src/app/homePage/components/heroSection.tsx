@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/app/contexts/languageContext';
+import Image from 'next/image';
 
 function HeroSection() {
   const [isClient, setIsClient] = useState(false);
@@ -279,8 +280,14 @@ function HeroSection() {
                 {/* Product Preview */}
                 <div className="aspect-square bg-gradient-to-br from-slate-50 to-amber-50 rounded-xl flex items-center justify-center relative overflow-hidden group border border-slate-200">
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-amber-100/30 group-hover:from-amber-50/20 group-hover:to-amber-100/40 transition-all duration-500"></div>
-                  <div className="text-8xl relative z-10 transform group-hover:scale-110 transition-transform duration-500">
-                    <img src="img/15.png" alt="Product Preview" className="w-full h-full object-contain" />
+                  <div className="relative w-full h-full z-10 transform group-hover:scale-110 transition-transform duration-500">
+                    <Image 
+                      src="/img/15.png" 
+                      alt="Product Preview" 
+                      fill
+                      className="object-contain p-4"
+                      priority
+                    />
                   </div>
                 </div>
               </div>
@@ -324,7 +331,15 @@ function HeroSection() {
           ease: [0.4, 0, 0.2, 1]
         }}
       >
-        <img src="img/casaSemelle.png" alt="casaSemelle logo" className="h-32 sm:h-44" />
+        <div className="relative h-32 sm:h-44 w-[400px]">
+          <Image 
+            src="/img/casaSemelle.png" 
+            alt="casaSemelle logo" 
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </motion.div>
 
       {/* Scroll Indicator - only show after content visible */}

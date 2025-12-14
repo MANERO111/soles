@@ -72,7 +72,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, product, onClose })
             <div className="relative w-full aspect-square max-w-lg">
               <img
                 // src={getProductImageUrl(product.image_url)}
-                src={'img/'+product.image_url}
+                src={'img/'+product.image_url || 'img/placeholder.jpg'}
                 alt={product.name || t('products.defaults.name')}
                 className="w-full h-full object-cover rounded-2xl sm:rounded-3xl shadow-2xl"
               />
@@ -135,7 +135,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, product, onClose })
         </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         @keyframes fade-in {
           from { opacity: 0; }
           to { opacity: 1; }
