@@ -326,7 +326,7 @@ function PrefabricatedOutsolesSection() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/video/Casa Seumelle_2_compressed.mp4" type="video/mp4" />
+                <source src="/video/Casa%20Seumelle_2_compressed.mp4" type="video/mp4" />
               </video>
               
               {/* Overlay */}

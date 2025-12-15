@@ -78,29 +78,7 @@ function HeroSection() {
   // Video autoplay with increased speed
   useEffect(() => {
     if (isClient && videoRef.current) {
-      const timer = setTimeout(() => {
-        try {
-          if (videoRef.current) {
-            videoRef.current.playbackRate = 1.5;
-            const playPromise = videoRef.current.play();
-            if (playPromise !== undefined) {
-              playPromise.catch((error) => {
-                console.error("Autoplay prevented:", error);
-                setVideoEnded(true);
-                setFadeOut(true);
-                setContentVisible(true);
-              });
-            }
-          }
-        } catch (error) {
-          console.error("Video play error:", error);
-          setVideoEnded(true);
-          setFadeOut(true);
-          setContentVisible(true);
-        }
-      }, 100);
-
-      return () => clearTimeout(timer);
+      videoRef.current.playbackRate = 1.5;
     }
   }, [isClient]);
 
@@ -199,7 +177,7 @@ function HeroSection() {
             onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnd}
           >
-            <source src="video/Casa-Seumelle-compressed.mp4" type="video/mp4" />
+            <source src="/video/Casa-Seumelle-compressed.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </motion.video>
         )}
