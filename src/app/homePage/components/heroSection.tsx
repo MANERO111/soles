@@ -173,7 +173,8 @@ function HeroSection() {
             }}
             autoPlay
             muted
-            loop
+            webkit-playsinline="true" 
+            preload="metadata"  
             playsInline={true}
             onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnd}
