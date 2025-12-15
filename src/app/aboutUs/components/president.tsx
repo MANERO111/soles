@@ -9,6 +9,11 @@ function PresidentMessageSection() {
   const { t } = useLanguage();
 
   useEffect(() => {
+    // Safety fallback
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 800);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,7 +22,7 @@ function PresidentMessageSection() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 } // Reduced threshold
     );
 
     if (sectionRef.current) {
@@ -25,6 +30,7 @@ function PresidentMessageSection() {
     }
 
     return () => {
+      clearTimeout(timer);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }

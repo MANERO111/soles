@@ -57,6 +57,11 @@ function AboutUsPage() {
   };
 
   useEffect(() => {
+    // Safety fallback to ensure content is visible even if observer fails
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -66,7 +71,7 @@ function AboutUsPage() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0 } // Changed from 0.1 to 0 to trigger as soon as any part is visible
     );
 
     if (sectionRef.current) {
@@ -74,6 +79,7 @@ function AboutUsPage() {
     }
 
     return () => {
+      clearTimeout(timer);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
