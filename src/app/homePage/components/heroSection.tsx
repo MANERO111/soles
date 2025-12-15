@@ -99,7 +99,7 @@ function HeroSection() {
       (entries) => {
         if (entries[0].isIntersecting) {
           if (videoRef.current && !videoEnded) {
-            videoRef.current.play();
+            videoRef.current.play().catch(e => console.log('Autoplay prevented', e));
           }
         } else {
           if (videoRef.current) {
@@ -174,6 +174,8 @@ function HeroSection() {
             autoPlay
             muted
             playsInline
+            loop 
+            poster="/img/15.jpg"
             onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnd}
           >

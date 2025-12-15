@@ -323,7 +323,10 @@ function PrefabricatedOutsolesSection() {
                 autoPlay
                 loop
                 muted
-                playsInline
+                playsInline           
+                webkit-playsinline="true" 
+                preload="metadata"   
+                poster="/img/DSC03627 copie.jpg"
                 className="w-full h-full object-cover"
               >
                 <source src="/video/Casa%20Seumelle_2_compressed.mp4" type="video/mp4" />
