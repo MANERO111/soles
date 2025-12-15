@@ -154,12 +154,12 @@ function HeroSection() {
       </div>
 
       {/* Video Background Container with perfect centering */}
-      <motion.div
+      <div
         ref={videoContainerRef}
         className="absolute inset-0 flex justify-center items-center z-0"
       >
         {isClient && (
-          <motion.video
+          <video
             ref={videoRef}
             className="object-cover object-center"
             style={{
@@ -173,17 +173,16 @@ function HeroSection() {
             }}
             autoPlay
             muted
-            playsInline
-            loop 
-            poster="/img/15.jpg"
+            loop
+            playsInline={true}
             onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnd}
           >
             <source src="/video/Casa-Seumelle-compressed.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </motion.video>
+          </video>
         )}
-      </motion.div>
+      </div>
 
       {/* Content with staggered animations */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-40 z-10 w-full">

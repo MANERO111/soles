@@ -12,6 +12,11 @@ function PrefabricatedOutsolesSection() {
   const { t } = useLanguage();
 
   useEffect(() => {
+    // Safety fallback to ensure content is visible even if observer fails
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,7 +25,7 @@ function PrefabricatedOutsolesSection() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0 } // Reduced threshold
     );
 
     if (sectionRef.current) {
@@ -28,6 +33,7 @@ function PrefabricatedOutsolesSection() {
     }
 
     return () => {
+      clearTimeout(timer);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
@@ -326,7 +332,7 @@ function PrefabricatedOutsolesSection() {
                 playsInline           
                 webkit-playsinline="true" 
                 preload="metadata"   
-                poster="/img/DSC03627 copie.jpg"
+                // poster="/img/DSC03627 copie.jpg"
                 className="w-full h-full object-cover"
               >
                 <source src="/video/Casa%20Seumelle_2_compressed.mp4" type="video/mp4" />
